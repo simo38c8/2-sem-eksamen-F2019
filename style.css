@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+
+    /*NAVIGATION*/
+
+
+@media only screen and (min-width: 768px) {
+
+    
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1.5rem;
+}
+
+nav ul li{
+    position: relative;
+ }
+        
+
+    
+    .dropdown_content{
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown_content{
+        display: block
+    }
+    
+        .malerier{
+    display: none;
+    position: absolute;
+    left: 100%;
+    min-width: 160px;
+    top: 0%;
+    z-index: 1;
+}
+
+.malerier_dropdown:hover .malerier{
+    display: block;
+}
+
+    
+    .dropdown2{
+    position: relative;
+  display: inline-block;
+    }
+
+    
+    .dropdown_content2{
+    display: none;
+    position: absolute;
+    left: -20%;
+    min-width: 160px;
+    z-index: 1;
+        
+    }
+    
+    .dropdown2:hover .dropdown_content2{
+        display: block;
+    }
+
+    
+    
+     
+    .dropdown3{
+    position: relative;
+  display: inline-block;
+    }
+
+    
+    .dropdown_content3{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    }
+    
+         .dropdown_content3 li{
+        width: 13vw;
+    }
+    
+    .dropdown3:hover .dropdown_content3{
+        display: block;
+    }
+
+    
+        
+    .dropdown4{
+    position: relative;
+  display: inline-block;
+    }
+
+    
+    .dropdown_content4{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    left: 100%;
+    top: 12%;
+    z-index: 1;
+    }
+    
+    
+    .dropdown4:hover .dropdown_content4{
+        display: block;
+    }
+
+    
+    
+nav ul li ul{
+        position: absolute;
+        border-radius: 0rem 0rem 0.5rem 0.5rem;
+    }
+
+
+        
+
+nav ul li ul li a{
+        padding: 1rem 1rem;
+        text-align: left;
+    }
+
+ nav ul li ul li a:hover{
+        background-color: gold;
+        background-size: cover;
+        color: black;
+    }
+    nav ul li ul li{
+        width: 10vw;
+    }
+
+
+
+#logo {
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+
+    #logo img {
+        width: 20%;
+    }
+
+.active {
+    font-weight: bolder;
+}
+
+    }
+
+
+@media only screen and (min-width: 1024px) {
+
+    .burgermenu{
+        display: none;
+    }
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1.5rem;
+}
+
+li a:hover {
+    color: gray;
+
+}
+
+#logo {
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+
+.active {
+    font-weight: bolder;
+    border-bottom: 1.5px solid #ffd700;
+}
+
+    }
