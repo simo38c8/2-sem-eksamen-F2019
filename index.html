@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <style>
 
@@ -19,16 +20,17 @@
     </style>
 </head>
 
-<body>
-  <div id="logo">
-   <img  src="SVG/Logo_sort.png" alt="Per Hillo's Logo">
-   </div>
-    <nav>
+<body> 
+ 
+    <nav id="navbar">
+        <div id="logo">
+   <img  src="SVG/Logo_hvid.svg" alt="Per Hillo's Logo">
+        </div>
         <ul class="pcmenu">
             <li class="active"><a href="index.html">Forside</a></li>
             <li class="dropdown"><p>Værker ▾</p>
-                <ul class="dropdown_content">
-                    <li class="malerier_dropdown"><p class="listelink">Malerier▸ </p>
+                <ul id="dropdown_content">
+                    <li class="malerier_dropdown"><p>Malerier▸ </p>
                     <ul class="malerier">
                         <li><a href="">Malerier på lærred</a></li>
                         <li><a href="">Malerier på papir</a></li>
@@ -36,7 +38,7 @@
                     </ul></li>
                     <li><a href="">Plakater</a></li>
                     <li><a href="">Skulpturer</a></li>
-                    <li class="dropdown4"><p class="listelink">Andet▸</p>
+                    <li class="dropdown4"><p>Andet▸</p>
                     <ul class=dropdown_content4>
                      <li><a href="">Bøger</a></li>
                       <li><a href="">Digte</a></li>
@@ -73,7 +75,7 @@
             <ul id="topmenu" class="hidden">
                 <!--Menuen som dukker op med navigationslisten.-->
                 <li><a href="index.html" class="link">Forside</a></li>
-                <div id="dropdownmobil"><li>Værker ▾</li> <div id="dropdown-contentmobil">
+                <li id="dropdownmobil">Værker ▾ <div id="dropdown-contentmobil">
                 <ul>
      <li> <a href="#" >- Malerier</a></li>
       <li><a href="#">- Plakater</a></li>
@@ -81,28 +83,68 @@
     
       </ul>
     </div>
-                </div>
-                 <div id="dropdownmobil2"><li>Om ▾</li> <div id="dropdown-contentmobil2">
+                </li>
+                 <li id="dropdownmobil2">Om  <div id="dropdown-contentmobil2">
                 <ul>
      <li> <a href="#">- Per Hillo</a></li>
       <li><a href="#">- Brochure</a></li>
     
       </ul>
     </div>
-                </div>
-                 <div id="dropdownmobil3"><li>Aktuelt ▾</li> <div id="dropdown-contentmobil3">
+                </li>
+                 <li id="dropdownmobil3">Aktuelt ▾ <div id="dropdown-contentmobil3">
                 <ul>
      <li> <a href="#">- Projekter</a></li>
       <li><a href="#">- Arrangmenter</a></li>
     
       </ul>
     </div>
-                </div>
+                </li>
                 <li><a href="kontakt.hmtl">Kontakt</a></li>
 
             </ul>
         </div>
     </nav>
+    
+    
+    
+      <section id="splash">
+
+       <div id="opacity"></div> <video id="splashdesktop" controls muted loop autoplay src="video/Per%20Hillo_version1.mp4"></video>
+        <img src="billeder/mobilsplash.jpg" id="mobilsplash" alt="Splash billede af Per Hillo til mobil devices" >
+        
+        <button type="button" id="play_button">Play</button>
+
+    </section>
+    
+    <section id="news">
+     <div class="column">
+    <img src="billeder/mobilsplash.jpg" class="" alt="">
+      </div>
+      <div class="column">
+       <h1>Det sker</h1>
+        <p class="">Per Hillo vil deltage i DR’s KulterRådet med Adrian Hughes tirsdag kl. 21:00. </p>
+        </div>
+
+    </section>
+    
+    <section id="meet">
+    <div class="column">
+    <h1>Mød Per</h1>
+    <p>Mød Per Hillo! Kulturhuset, Slagelse 28. Juli 13:00-15:00</p>
+    </div>
+    <div class="column">
+    <img src="billeder/mobilsplash.jpg" alt="">
+    </div>
+    </section>
+    
+    <footer>
+    <div class="somelogo">
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+    
     <script src="main.js">
 
     </script>
