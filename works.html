@@ -14,8 +14,8 @@
 </head>
 
 <body>
- 
-   <div id="popup">
+
+    <div id="popup">
         <div id="luk">
             <button>X</button>
 
@@ -23,64 +23,85 @@
 
         <div id="indhold"></div>
     </div>
-    
-    
-  <h1>Værker</h1>
-  
-   <h1>Alle</h1>
-        <div class="menu">
-            <button class="filter valgt" data-hold="alle">Alle</button>
-            <button class="filter" data-hold="Hovedret">Malerier</button>
-            <button class="filter" data-hold="Sideorders">Plakater</button>
-            <button class="filter" data-hold="Drinks">Andet</button>
-            <div class = streg><hr> </div>
+
+
+    <h1>Værker</h1>
+
+
+    <div class="menu">
+        <button class="filter valgt" data-kategori="all">Alle</button>
+        <button class="filter" data-kategori="malerier">Malerier</button>
+        <button class="filter" data-kategori="plakater">Plakater</button>
+        <button class="filter" data-kategori="andet">Andet</button>
+        <div class=streg>
+            <hr>
         </div>
+    </div>
 
-  
-   <main class="produkter">
-   <template>
-      <div class="grid-layout">
-       <div class="grid-item">
-           <h2></h2>
-           <img src="" alt="">
-           <p></p>
-       </section>
-       </div>
-   </template>
-   </main>
-    
-    <script src="main.js">
 
-    </script>
-    
-    <script> 
-        let produkter =[];
-            document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
+    <main class="produkter"></main>
+
+    <template>
+        <div class="grid-layout">
+            <div class="grid-item">
+                <h2></h2>
+                <img src="" alt="">
+                <p></p>
+                </section>
+            </div>
+    </template>
+
+
+    <script>
+        let filter = "all";
+        let produkter = [];
+        document.addEventListener("DOMContentLoaded", start);
+
         function start() {
-            async function getJson(){
-            console.log("produkt json hentes ind");
-            let url="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter/";
-            let jsonData = await fetch(url);
-            produkter = await jsonData.json();
-            visProdukter();
+
+            async function getJson() {
+                console.log("produkt json hentes ind");
+                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter/";
+                let jsonData = await fetch(url);
+                produkter = await jsonData.json();
+                visProdukter();
             }
-            
-            function visProdukter(){
-            let dest = document.querySelector(".produkter")  
-            let temp = document.querySelector("template");
-            produkter.forEach(produkt=> {
-                let klon = temp.cloneNode(true).content;
-                klon.querySelector("img").src=produkt.picture.guid;
-                klon.querySelector("h2").textContent=produkt.titel;
-                klon.querySelector("p").textContent=produkt.price;
-                dest.appendChild(klon);
-            })
+
+            function visProdukter() {
+                let dest = document.querySelector(".produkter")
+                let temp = document.querySelector("template");
+
+                dest.innerHTML = "";
+                produkter.forEach(produkt => {
+
+                    if (filter == "all" || filter == produkt.kategori) {
+                        let klon = temp.cloneNode(true).content;
+                        klon.querySelector("img").src = produkt.picture.guid;
+                        klon.querySelector("h2").textContent = produkt.titel;
+                        klon.querySelector("p").textContent = produkt.price;
+                        dest.appendChild(klon);
+                    }
+                })
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.addEventListener("click", filtrering);
+                })
             }
+
+            function filtrering() {
+
+                filter = this.getAttribute("data-kategori");
+
+                document.querySelector("h1").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                visProdukter();
+            }
+
             getJson();
         }
-        
-    
-        
+
     </script>
 </body>
 
