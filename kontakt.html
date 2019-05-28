@@ -18,29 +18,44 @@
       
       <div class="column">
       <h2>Per Hillo Atelier</h2>
-      <p>Slotsalleen 22B
-      4200 Slagelse
-      Åbent efter aftale på Per Hilo tlf. 51508275
-      eller per@hillo.dk</p>
+      <p class="ateliertext"></p>
       </div>
        <div class="column">
-      <img src="billeder/mobilsplash.jpg" alt="">
+      <img src="" alt="" class="atelierpicture">
       </div>
       
       <div class="column">
       <h2>Per Hillo Kunstgalleri Charlottenlund</h2>
-      <p>Ordrupvej 55 A., 2920 Charlottenlund
-Åbent onsdag til fredag kl.11 til kl.18. Lørdag kl. 10 til kl.15. 
-Aftal også gerne tid med kunstkonsulenterne
-Nancy tlf. 23248623
-Susse tlf. 28127908</p>
+      <p class="galleritext"></p>
      </div>
       <div class="column">
-      <img src="billeder/mobilsplash.jpg" alt="">
+      <img src="" alt="" class="galleripicture">
       </div>
   </section>
     <script src="main.js">
 
     </script>
+    
+    <script>
+        let kontakt;
+            document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
+        function start() {
+     async function getJson(){
+            console.log("kontakt json hentes ind");
+            let url="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/kontakt/67";
+            let jsonData = await fetch(url);
+            kontakt = await jsonData.json();
+            visKontakt();
+            }
+            
+            function visKontakt(){
+             document.querySelector(".atelierpicture").src = kontakt.atelier_picture.guid;
+            document.querySelector(".ateliertext").innerHTML = kontakt.atelier_adress;
+            document.querySelector(".galleritext").innerHTML = kontakt.galleri_adress;
+            document.querySelector(".galleripicture").src = kontakt.galleri_picture.guid;      
+            }
+            getJson();
+        }
+            </script>
 </body>
 </html>

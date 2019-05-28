@@ -7,7 +7,6 @@ window.addEventListener("load", sidenVises);
             document.querySelector("#dropdownmobil").addEventListener("click", toggledropdown);
             document.querySelector("#dropdownmobil2").addEventListener("click", toggledropdown2);
             document.querySelector("#dropdownmobil3").addEventListener("click", toggledropdown3);
-            document.querySelector("#play_button").addEventListener("click", play);
             scroll();
 
 } /*Denne funktion sætte eventlistener på navigastionsbaren og bekræfter vinduet bliver loadet korrekt.*/
@@ -82,36 +81,22 @@ console.log("funktion toggledropdown3 virker");
    
   }
 function scroll(){ 
-    /*javascript kode taget fra: https://codepen.io/jhiam/pen/woZaKZ*/
 window.onscroll = () => {
-  const nav = document.querySelector('#navbar, #dropdown_content');
-  if(this.scrollY <= 10) nav.className = ''; else nav.classList.add ('scroll');
+  if(this.scrollY <= 600){
+      document.querySelector('#navbar').className = ''; 
+      document.querySelector('#dropdown_content').className = ''; 
+      document.querySelector('#dropdown_content2').className = '';
+      document.querySelector('#dropdown_content3').className = '';
+      document.querySelector('#dropdown_content4').className = '';
+      document.querySelector('#malerier').className = '';
+  } else {
+      document.querySelector('#navbar').className = 'scroll'; 
+      document.querySelector('#dropdown_content').className = 'scroll';
+      document.querySelector('#dropdown_content2').className = 'scroll';
+      document.querySelector('#dropdown_content3').className = 'scroll'; 
+      document.querySelector('#dropdown_content4').className = 'scroll';
+      document.querySelector('#malerier').className = 'scroll';
+  }
+    
 };
 }
-
-
-
-
-function play(){
-let playButton = document.getElementById("play_button");
-let video = document.getElementById("splashdesktop");
-    
-// Event listener for the play/pause button
-playButton.addEventListener("click", function() {
-  if (video.paused == true) {
-    // Play the video
-    video.play();
-      document.getElementById("opacity").style.display = "none";
-
-    // Update the button text to 'Pause'
-    playButton.innerHTML = "Pause";
-  } else {
-    // Pause the video
-    video.pause();
-    document.getElementById("opacity").style.display = "block";
-
-    // Update the button text to 'Play'
-    playButton.innerHTML = "Play";
-  }
-});}
-

@@ -14,20 +14,73 @@
 </head>
 
 <body>
-    <div id="logo">
-        <img src="SVG/logo_placeholder2.svg" alt="Per Hillo's Logo">
-    </div>
-    <nav>
-        <ul class="pc_menu">
-            <li><a href="index.html">Forside</a></li>
-            <li class="active"><a href="works.html">Værker</a></li>
-            <li><a href="om.html">Om</a></li>
-            <li><a href="">Aktuelt</a></li>
-            <li><a href="">Kontakt</a></li>
-        </ul>
-    </nav>
-    <script>
+ 
+   <div id="popup">
+        <div id="luk">
+            <button>X</button>
 
+        </div>
+
+        <div id="indhold"></div>
+    </div>
+    
+    
+  <h1>Værker</h1>
+  
+   <h1>Alle</h1>
+        <div class="menu">
+            <button class="filter valgt" data-hold="alle">Alle</button>
+            <button class="filter" data-hold="Hovedret">Malerier</button>
+            <button class="filter" data-hold="Sideorders">Plakater</button>
+            <button class="filter" data-hold="Drinks">Andet</button>
+            <div class = streg><hr> </div>
+        </div>
+
+  
+   <main class="produkter">
+   <template>
+      <div class="grid-layout">
+       <div class="grid-item">
+           <h2></h2>
+           <img src="" alt="">
+           <p></p>
+       </section>
+       </div>
+   </template>
+   </main>
+    
+    <script src="main.js">
+
+    </script>
+    
+    <script> 
+        let produkter =[];
+            document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
+        function start() {
+            async function getJson(){
+            console.log("produkt json hentes ind");
+            let url="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter/";
+            let jsonData = await fetch(url);
+            produkter = await jsonData.json();
+            visProdukter();
+            }
+            
+            function visProdukter(){
+            let dest = document.querySelector(".produkter")  
+            let temp = document.querySelector("template");
+            produkter.forEach(produkt=> {
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("img").src=produkt.picture.guid;
+                klon.querySelector("h2").textContent=produkt.titel;
+                klon.querySelector("p").textContent=produkt.price;
+                dest.appendChild(klon);
+            })
+            }
+            getJson();
+        }
+        
+    
+        
     </script>
 </body>
 

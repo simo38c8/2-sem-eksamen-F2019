@@ -13,140 +13,177 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <style>
 
-
-    </style>
 </head>
 
-<body> 
- 
-    <nav id="navbar">
+<body>
+
+    <nav id="navbar" class="farve">
         <div id="logo">
-   <img  src="SVG/Logo_hvid.svg" alt="Per Hillo's Logo">
+            <img src="SVG/Logo_hvid.svg" alt="Per Hillo's Logo">
         </div>
         <ul class="pcmenu">
             <li class="active"><a href="index.html">Forside</a></li>
-            <li class="dropdown"><p>Værker ▾</p>
+            <li class="dropdown">
+                <p>Værker ▾</p>
                 <ul id="dropdown_content">
-                    <li class="malerier_dropdown"><p>Malerier▸ </p>
-                    <ul class="malerier">
-                        <li><a href="">Malerier på lærred</a></li>
-                        <li><a href="">Malerier på papir</a></li>
-                        <li><a href="">Kunsttryk</a></li>
-                    </ul></li>
+                    <li class="malerier_dropdown">
+                        <p>Malerier▸ </p>
+                        <ul id="malerier">
+                            <li><a href="">Malerier på lærred</a></li>
+                            <li><a href="">Malerier på papir</a></li>
+                            <li><a href="">Kunsttryk</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">Plakater</a></li>
                     <li><a href="">Skulpturer</a></li>
-                    <li class="dropdown4"><p>Andet▸</p>
-                    <ul class=dropdown_content4>
-                     <li><a href="">Bøger</a></li>
-                      <li><a href="">Digte</a></li>
-                       <li><a href="">Krukker</a></li>
-                        <li><a href="">Tørklæder</a></li>
-                         <li><a href="">Gavekort</a></li>
-                          <li><a href="">CD'er</a></li>
-                          </ul>
-                          </li>
-                </ul></li>
-            <li class="dropdown2"><p>Om ▾</p>
-            <ul class="dropdown_content2">
-                <li><a href="">Per Hillo</a></li>
-                <li><a href="">Brochurer</a></li>
-            </ul></li>
-            <li class="dropdown3"><p>Aktuelt ▾</p>
-            <ul class="dropdown_content3">
-                <li><a href="projekter.html">Projekter</a></li>
-                <li><a href="arrangementer.html">Arrangementer</a></li>
-            </ul></li>
+                    <li class="dropdown4">
+                        <p>Andet▸</p>
+                        <ul id="dropdown_content4">
+                            <li><a href="">Bøger</a></li>
+                            <li><a href="">Digte</a></li>
+                            <li><a href="">Krukker</a></li>
+                            <li><a href="">Tørklæder</a></li>
+                            <li><a href="">Gavekort</a></li>
+                            <li><a href="">CD'er</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown2">
+                <p>Om ▾</p>
+                <ul id="dropdown_content2">
+                    <li><a href="">Per Hillo</a></li>
+                    <li><a href="">Brochurer</a></li>
+                </ul>
+            </li>
+            <li class="dropdown3">
+                <p>Aktuelt ▾</p>
+                <ul id="dropdown_content3">
+                    <li><a href="projekter.html">Projekter</a></li>
+                    <li><a href="arrangementer.html">Arrangementer</a></li>
+                </ul>
+            </li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        
-        
-        
-   <div class="burgermenu">
+
+
+
+        <div class="burgermenu">
             <div id="menuknap" class="">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
 
             <!--Knappen som bringer burgermenuen frem.-->
             <ul id="topmenu" class="hidden">
                 <!--Menuen som dukker op med navigationslisten.-->
                 <li><a href="index.html" class="link">Forside</a></li>
                 <li id="dropdownmobil">Værker ▾ <div id="dropdown-contentmobil">
-                <ul>
-     <li> <a href="#" >- Malerier</a></li>
-      <li><a href="#">- Plakater</a></li>
-      <li><a href="#">- Andet</a></li>
-    
-      </ul>
-    </div>
+                        <ul>
+                            <li> <a href="#">- Malerier</a></li>
+                            <li><a href="#">- Plakater</a></li>
+                            <li><a href="#">- Andet</a></li>
+
+                        </ul>
+                    </div>
                 </li>
-                 <li id="dropdownmobil2">Om  <div id="dropdown-contentmobil2">
-                <ul>
-     <li> <a href="#">- Per Hillo</a></li>
-      <li><a href="#">- Brochure</a></li>
-    
-      </ul>
-    </div>
+                <li id="dropdownmobil2">Om <div id="dropdown-contentmobil2">
+                        <ul>
+                            <li> <a href="#">- Per Hillo</a></li>
+                            <li><a href="#">- Brochure</a></li>
+
+                        </ul>
+                    </div>
                 </li>
-                 <li id="dropdownmobil3">Aktuelt ▾ <div id="dropdown-contentmobil3">
-                <ul>
-     <li> <a href="#">- Projekter</a></li>
-      <li><a href="#">- Arrangmenter</a></li>
-    
-      </ul>
-    </div>
+                <li id="dropdownmobil3">Aktuelt ▾ <div id="dropdown-contentmobil3">
+                        <ul>
+                            <li> <a href="#">- Projekter</a></li>
+                            <li><a href="#">- Arrangmenter</a></li>
+
+                        </ul>
+                    </div>
                 </li>
                 <li><a href="kontakt.hmtl">Kontakt</a></li>
 
             </ul>
         </div>
     </nav>
-    
-    
-    
-      <section id="splash">
 
-       <div id="opacity"></div> <video id="splashdesktop" controls muted loop autoplay src="video/Per%20Hillo_version1.mp4"></video>
-        <img src="billeder/mobilsplash.jpg" id="mobilsplash" alt="Splash billede af Per Hillo til mobil devices" >
-        
-        <button type="button" id="play_button">Play</button>
+
+
+    <section id="splash">
+
+        <video id="splashdesktop" controls muted loop autoplay src="video/Per%20Hillo_version1.mp4"></video>
+        <img src="billeder/mobilsplash.jpg" id="mobilsplash" alt="Splash billede af Per Hillo til mobil devices">
+
 
     </section>
-    
+
     <section id="news">
-     <div class="column">
-    <img src="billeder/mobilsplash.jpg" class="" alt="">
-      </div>
-      <div class="column">
-       <h1>Det sker</h1>
-        <p class="">Per Hillo vil deltage i DR’s KulterRådet med Adrian Hughes tirsdag kl. 21:00. </p>
+        <div class="column">
+            <img src="#" class="newspicture" alt="">
+        </div>
+        <div class="column">
+            <h1>Det sker</h1>
+            <p class="newstext"></p>
         </div>
 
     </section>
-    
+
     <section id="meet">
-    <div class="column">
-    <h1>Mød Per</h1>
-    <p>Mød Per Hillo! Kulturhuset, Slagelse 28. Juli 13:00-15:00</p>
-    </div>
-    <div class="column">
-    <img src="billeder/mobilsplash.jpg" alt="">
-    </div>
+        <div class="column">
+            <div id="mobilemeet">
+                <h1>Mød Per</h1>
+                <p class="meettext"></p>
+            </div>
+        </div>
+        <div class="column">
+            <img src="#" class="meetpicture desktoponly" alt="">
+        </div>
     </section>
-    
+
     <footer>
-    <div class="somelogo">
-    <i class="fab fa-facebook-square"></i>
-    <i class="fab fa-instagram"></i>
+        <div class="somelogo">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-instagram"></i>
         </div>
     </footer>
-    
+
     <script src="main.js">
 
+    </script>
+
+    <script>
+        let forside; /*Her bliver forside erklæderet som en variable*/
+        document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
+        function start() {
+            async function getJson() {
+                console.log("JSon bliver hentet ned");
+                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/forside/64"
+                let jsonData = await fetch(url);
+                forside = await jsonData.json();
+                visIndhold();
+            } /*Her bliver JSON hentet fra vores backend (wordpress) til at hente dynamisk data. */
+            function visIndhold() {
+                document.querySelector(".newspicture").src = forside.news_picture.guid;
+                document.querySelector(".newstext").innerHTML = forside.news_text;
+                document.querySelector(".meettext").innerHTML = forside.meet_text;
+                document.querySelector(".meetpicture").src = forside.meet_picture.guid;
+            } /*Her bliver de angivet HTML-elementer ændret dynamisk fra JSON. */
+            getJson();
+        }
     </script>
 </body>
 </html>

@@ -26,11 +26,6 @@ position: absolute;
     top: 4vw
     }
 
-
-#news, #meet{
-display:none
-}
-
 .column {
     flex-basis: 400px;
     flex-grow: 1;
@@ -38,22 +33,14 @@ display:none
     padding-left: 7.14286vw;
 }
 
-#start {
-    display: inline-grid;
-    grid-template-rows: 100px 100px 100px; 
-    padding: 7.14286vw;
-}
+
 
 #start h1{
  text-align: center;
 }
 
 .somelogo{
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    grid-gap: 2rem;
-     font-size: 3em;
+   
 }
 
 
@@ -70,7 +57,7 @@ display:none
     height: 106%;
     top: -1rem;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url(billeder/burgermenu.png);
 }
 
 
@@ -83,7 +70,7 @@ display:none
 
 #topmenu li {
     padding-top: 4.5rem;
-    padding-left: 6rem;
+    padding-left: 9rem;
     font-size: 1.6rem;
     color: white;
     
@@ -148,7 +135,7 @@ display:none
     padding-top: 1rem;
     padding-left: 0rem;
     font-size: 1.6rem;
-    right: 20%;
+    right: 68%;
     position: relative;
 }
 
@@ -170,7 +157,7 @@ display:none
     padding-top: 1rem;
     padding-left: 0rem;
     font-size: 1.6rem;
-    right: 20%;
+    right: 45%;
     position: relative;
 }
 
@@ -184,7 +171,7 @@ display:none
 #dropdown-contentmobil3 {
     display: none;
     position: relative;
-    left: 70%;
+    left: 22%;
     top: 75%;
     min-width: 160px;
     
@@ -202,6 +189,49 @@ display:none
 
 /*BURGERMENU SLUT*/
 
+/*OM*/
+
+#videomobil{
+    display: block;
+}
+
+#mobilvideo{
+    width: 90vw;
+    padding: 7.14286vw;
+    margin-left: 5%
+}
+
+.desktoponly{
+    display: none;
+}
+
+#start{
+        flex-direction:column-reverse;
+    display: flex; 
+    }
+
+
+/*forside*/
+#news
+{display: none}
+
+#mobilemeet{
+display: block;
+    position: absolute;
+    top: 73%;
+    left: 0%;
+    color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+    background-color: #00000085;
+    width: 100vw;
+    height: 20vw;
+}
+
+.somelogo{
+    display: none;
+}
+
+
 
 /*Ipad*/
 @media only screen and (min-width: 768px) {
@@ -210,16 +240,14 @@ display:none
 
     nav {
         position: fixed;
-        background-color: rgba(0, 0, 0, 0.28);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
         top: 0;
         left: 0;
         transition:  background-color 0.5s ease-out;
         z-index: 3;
+        width: 100vw;
         
-    }
-    
-    .scroll{
-        background-color: red;
     }
     
     
@@ -250,7 +278,7 @@ display:none
         position: relative;
         color: white;
         text-align: center;
-        width: 10vw;
+        width: 11vw;
     }
 
     nav a {
@@ -277,24 +305,28 @@ display:none
     #dropdown_content {
         display: none;
         z-index: 2;
-        background-color: rgba(0, 0, 0, 0.28);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
        
     }
+    
+        
 
     .dropdown:hover #dropdown_content {
         display: block
     }
 
-    .malerier {
+    #malerier {
         display: none;
         position: absolute;
         left: 100%;
         top: 0%;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.28);
+        z-index: 2;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     }
 
-    .malerier_dropdown:hover .malerier {
+    .malerier_dropdown:hover #malerier {
         display: block;
     }
 
@@ -307,14 +339,14 @@ display:none
     }
 
 
-    .dropdown_content2 {
-        display: none;
-        position: absolute;
+    #dropdown_content2 {
+      display: none;
         z-index: 2;
-        background-color: rgba(0, 0, 0, 0.28);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     }
 
-    .dropdown2:hover .dropdown_content2 {
+    .dropdown2:hover #dropdown_content2 {
         display: block;
     }
 
@@ -323,23 +355,18 @@ display:none
         position: relative;
         display: inline-block;
         z-index: 2;
-        
-    
     }
 
-
-    .dropdown_content3 {
-        display: none;
-        position: absolute;
-
-        background-color: rgba(0, 0, 0, 0.28);
+    #dropdown_content3 {
+      display: none;
+        z-index: 2;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     }
 
-    .dropdown_content3 li {
-        width: 13vw;
-    }
+  
 
-    .dropdown3:hover .dropdown_content3 {
+    .dropdown3:hover #dropdown_content3 {
         display: block;
     }
 
@@ -351,20 +378,25 @@ display:none
     }
 
 
-    .dropdown_content4 {
+    #dropdown_content4 {
         display: none;
         position: absolute;
-
         left: 100%;
         bottom: -198%;
-        background-color: rgba(0, 0, 0, 0.28);
+        z-index: 2;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     }
 
 
-    .dropdown4:hover .dropdown_content4 {
+    .dropdown4:hover #dropdown_content4 {
         display: block;
     }
 
+    
+    .scroll{
+        background-color: #000000;
+    }
 
 
     nav li ul {
@@ -405,22 +437,132 @@ display:none
     #mobilsplash{
         display: none;
     }
-    
-    /*#opacity{
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.28);
-        width: 100%;
-        height: 113.4%;
-    }*/
 
-    #news, #meet, #about, #start #contact {
-    display: block;
+
+    #news, #meet, #about, #start, #contact {
     display: flex;
     flex-wrap: wrap;
     padding: 7.14286vw;
 }
 
+    .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 10px;
+    grid-auto-rows: minmax(180px, auto);
+    grid-auto-flow: dense;
+    padding: 10px;
+}
 
+.grid-item {
+    padding: 1rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #929796;
+    background-color: #333;
+    border-radius: 5px;
+    &:nth-child(odd) {
+        background-color: #424242;
+    }
+}
+
+.span-2 {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+.span-3 {
+    grid-column-end: span 3;
+    grid-row-end: span 4;
+}
+    
+     /*OM*/
+    
+    #videomobil{
+        display: none;
+    }
+    
+    .desktoponly{
+    display: block;
+}
+    
+    #start{
+        flex-direction:column;
+    }
+    
+/*Forside*/ 
+    
+#mobilemeet{
+    
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    color: black;
+    box-shadow: none;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+ 
+    
+    }
+
+
+
+.somelogo{
+    display: block
+}
+    
+    
+    /*værker*/
+    
+    
+ #popup {
+     top: 0;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     background-color: hsla(0, 1%, 69%, 0.5);
+     display: none;
+ }
+
+ #indhold {
+     min-height: 50vh;
+     width: 30vw;
+     margin: 4rem auto;
+     color: white;
+     padding-top: 3em;
+
+ }
+
+
+
+ .menu button {
+     width: 6rem;
+     height: 4rem;
+     cursor: pointer;
+     font-weight: bold;
+     background-color: white;
+     border-radius: 60px;
+ }
+
+ .valgt {
+     background-color: #ef1111;
+ }
+
+ #luk {
+     position: fixed;
+     right: 25em;
+    top: 7.2em;
+ }
+
+ #luk button {
+     font-size: 2rem;
+     padding: 1rem 1rem;
+     background-color: black;
+     color: #EEDDC4;
+ }
  
 }
 

@@ -17,13 +17,19 @@
 
 <body>
     
+    <section id="videomobil">
+         <h1>Om Per</h1>
+          <video id="mobilvideo" controls muted loop autoplay src="video/Per%20Hillo_version1.mp4"></video>
+          <p><b>Se den korte video om hvorfor Per begyndte at male, og hvad der inspirerer ham</b></p>
+    </section>
+    
      <section id="about">
      <div class="column">
-    <img src="billeder/mobilsplash.jpg" class="" alt="">
+    <img src="" class="profilepicture desktoponly" alt="">
       </div>
       <div class="column">
-       <h1>Per Hillo's kunst</h1>
-        <p class="">Per Hillo indrømmer, at han er en vaskeægte romantiker og i hans malerier er det da også skønheden, der så at sige udpensles. Og han er bestemt ikke bange for at bruge farver, som andre ikke bruger helt så flittigt.  </p>
+       <h1 class="desktoponly">Per Hillo's kunst</h1>
+        <p class="profiletext"></p>
         </div>
 
     </section>
@@ -31,17 +37,38 @@
     
     <section id="start">
        
-        <h1>Sådan startede det</h1>
-        <p>I dag stilles beskueren overfor et komplekst sæt af kommunikationer af allehånde art, samtidigt med er kravene til den personlige myndighed er stigende og kravene til den personlige vurderingsevne meget store, idet normer og roller man kan indtræde i er ganske åbne og flydende. Refleksionen får en central placering og jeg kan via billedsproget stille betingelser, præmisser og rammer og inspiration op for denne refleksionsproces.
-
-Og nok kan man sige, at i en verden præget af risici, selvmodsigelser og brud er en kunst med skønhed og harmoni forløjet, men uanset dette peger jeg med mine kompositioner på behovet for at skabe sig et stort personligt råderum, og det gør jeg bl.a. via de temaer, jeg behandler. Jeg stiller åbne spørgsmål til relationer, menneskelighed, nærvær og kontakt.</p>
+        <h1 class="desktoponly">Sådan startede det</h1>
+        <p class="storytext"></p>
   
-   <img src="billeder/mobilsplash.jpg" class="" alt="">
+   <img src="" class="storypicture" alt="">
    
     </section>
     
     
     <script src="main.js">
 
+    </script>
+    
+    <script>
+        let om;
+            document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
+        function start() {
+    async function getJson(){
+            console.log("om json hentes ind");
+            let url="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/om/72";
+            let jsonData = await fetch(url);
+            om = await jsonData.json();
+        
+            visOm();
+            }
+            
+            function visOm(){
+            document.querySelector(".profilepicture").src = om.top_picture.guid;
+            document.querySelector(".profiletext").innerHTML = om.top_text;
+            document.querySelector(".storytext").innerHTML = om.bottom_text;
+            document.querySelector(".storypicture").src = om.bottom_picture.guid;   
+            }
+            getJson();
+        }
     </script>
 </body></html>
