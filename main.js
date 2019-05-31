@@ -7,7 +7,7 @@ window.addEventListener("load", sidenVises);
             document.querySelector("#dropdownmobil").addEventListener("click", toggledropdown);
             document.querySelector("#dropdownmobil2").addEventListener("click", toggledropdown2);
             document.querySelector("#dropdownmobil3").addEventListener("click", toggledropdown3);
-            scroll();
+            
 
 } /*Denne funktion sætte eventlistener på navigastionsbaren og bekræfter vinduet bliver loadet korrekt.*/
 
@@ -80,26 +80,9 @@ console.log("funktion toggledropdown3 virker");
 }
    
   }
-function scroll(){ 
-window.onscroll = () => {
-  if(this.scrollY <= 600){
-      document.querySelector('#navbar').className = ''; 
-      document.querySelector('#dropdown_content').className = ''; 
-      document.querySelector('#dropdown_content2').className = '';
-      document.querySelector('#dropdown_content3').className = '';
-      document.querySelector('#dropdown_content4').className = '';
-      document.querySelector('#malerier').className = '';
-  } else {
-      document.querySelector('#navbar').className = 'scroll'; 
-      document.querySelector('#dropdown_content').className = 'scroll';
-      document.querySelector('#dropdown_content2').className = 'scroll';
-      document.querySelector('#dropdown_content3').className = 'scroll'; 
-      document.querySelector('#dropdown_content4').className = 'scroll';
-      document.querySelector('#malerier').className = 'scroll';
-  }
-    
-};
-}
+
+
+
 
 
 

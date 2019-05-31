@@ -8,54 +8,186 @@
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
-  
-  
-  <section id="contact">
-      <h1>Kontakt</h1>
-      
-      <div class="column">
-      <h2>Per Hillo Atelier</h2>
-      <p class="ateliertext"></p>
-      </div>
-       <div class="column">
-      <img src="" alt="" class="atelierpicture">
-      </div>
-      
-      <div class="column">
-      <h2>Per Hillo Kunstgalleri Charlottenlund</h2>
-      <p class="galleritext"></p>
-     </div>
-      <div class="column">
-      <img src="" alt="" class="galleripicture">
-      </div>
-  </section>
+
+    <nav id="navbarwhite" class="scroll">
+        <a href="index.html" id="logoa"><div id="logo2">
+            </div></a>
+        <ul class="pcmenu">
+            <li ><a href="index.html" >Forside</a></li>
+            <li class="dropdown">
+                <p>Værker ▾</p>
+                <ul id="dropdown_content" class="scroll">
+                    <li class="malerier_dropdown" class="scroll"> 
+                        <p>Malerier▸ </p>
+                        <ul id="malerier" class="scroll">
+                            <li><a href="">Malerier på lærred</a></li>
+                            <li><a href="">Malerier på papir</a></li>
+                            <li><a href="">Kunsttryk</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Plakater</a></li>
+                    <li><a href="">Skulpturer</a></li>
+                    <li class="dropdown4">
+                        <p>Andet▸</p>
+                        <ul id="dropdown_content4" class="scroll">
+                            <li><a href="">Bøger</a></li>
+                            <li><a href="">Digte</a></li>
+                            <li><a href="">Krukker</a></li>
+                            <li><a href="">Tørklæder</a></li>
+                            <li><a href="">Gavekort</a></li>
+                            <li><a href="">CD'er</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown2">
+                <p>Om ▾</p>
+                <ul id="dropdown_content2" class="scroll">
+                    <li><a href="">Per Hillo</a></li>
+                    <li><a href="">Brochurer</a></li>
+                </ul>
+            </li>
+            <li class="dropdown3">
+                <p>Aktuelt ▾</p>
+                <ul id="dropdown_content3" class="scroll">
+                    <li><a href="projekter.html">Projekter</a></li>
+                    <li><a href="arrangementer.html">Arrangementer</a></li>
+                </ul>
+            </li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+
+
+
+        <div class="burgermenu">
+            <div id="menuknap" class="">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <!--Knappen som bringer burgermenuen frem.-->
+            <ul id="topmenu" class="hidden">
+                <!--Menuen som dukker op med navigationslisten.-->
+                <li><a href="index.html" class="link">Forside</a></li>
+                <li id="dropdownmobil">Værker ▾ <div id="dropdown-contentmobil">
+                        <ul>
+                            <li> <a href="#">- Malerier</a></li>
+                            <li><a href="#">- Plakater</a></li>
+                            <li><a href="#">- Andet</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li id="dropdownmobil2">Om <div id="dropdown-contentmobil2">
+                        <ul>
+                            <li> <a href="#">- Per Hillo</a></li>
+                            <li><a href="#">- Brochure</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li id="dropdownmobil3">Aktuelt ▾ <div id="dropdown-contentmobil3">
+                        <ul>
+                            <li> <a href="#">- Projekter</a></li>
+                            <li><a href="#">- Arrangmenter</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <h1 id="contacth1">Kontakt</h1>
+    <section id="form">
+        <div class="column">
+            <form action="mailto:simo38c8@stud.kea.dk" method="post" enctype="text/plain">
+                <div class="container">
+                    <h2>Skriv til mig</h2>
+                    <br>
+
+
+                    <label for="name">Navn*</label>
+                    <br>
+                    <input type="text" name="name" required oninvalid="this.setCustomValidity('Udfyld navn')"
+ oninput="setCustomValidity('')">
+                    <br>
+                    <label for="email">Email*</label>
+                    <br>
+                    <input type="email" name="email" required oninvalid="this.setCustomValidity('Udfyld email')"
+ oninput="setCustomValidity('')">
+                    <br>
+
+                    <label for="phone">Telefon</label>
+                    <br>
+                    <input type="phone" name="phone">
+                    <br><label for="message">Besked*</label>
+                    <br>
+
+                    <textarea name="message" form="message" required></textarea>
+
+                    <br>
+                    <button type="submit" class="submit">Send besked</button>
+                </div>
+
+
+
+            </form>
+        </div>
+           
+            <div class="column">
+
+
+
+
+
+            <h2>Per Hillo Kunstgalleri <br> Charlottenlund</h2>
+            <p class="galleritext"></p>
+
+            <h2>Per Hillo Atelier</h2>
+            <p class="ateliertext"></p>
+
+        </div>
+            </section>
+            
+           
+
+    
+    <div class="streg2"></div>
+
     <script src="main.js">
 
     </script>
-    
+
     <script>
         let kontakt;
-            document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
+        document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
         function start() {
-     async function getJson(){
-            console.log("kontakt json hentes ind");
-            let url="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/kontakt/67";
-            let jsonData = await fetch(url);
-            kontakt = await jsonData.json();
-            visKontakt();
+            async function getJson() {
+                console.log("kontakt json hentes ind");
+                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/kontakt/67";
+                let jsonData = await fetch(url);
+                kontakt = await jsonData.json();
+                visKontakt();
             }
-            
-            function visKontakt(){
-             document.querySelector(".atelierpicture").src = kontakt.atelier_picture.guid;
-            document.querySelector(".ateliertext").innerHTML = kontakt.atelier_adress;
-            document.querySelector(".galleritext").innerHTML = kontakt.galleri_adress;
-            document.querySelector(".galleripicture").src = kontakt.galleri_picture.guid;      
+
+            function visKontakt() {
+                document.querySelector(".ateliertext").innerHTML = kontakt.atelier_adress;
+                document.querySelector(".galleritext").innerHTML = kontakt.galleri_adress;
+
             }
             getJson();
         }
-            </script>
+    </script>
 </body>
 </html>

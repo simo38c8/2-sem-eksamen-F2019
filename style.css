@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 img {
@@ -18,12 +19,53 @@ img {
     display: none;
 }
 
-#logo img {
-        
-position: absolute;
-    width: 50%;
-    left: 25vw;
-    top: 4vw
+#logo{
+    background-image: url(SVG/Logo_sort.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50vw;
+    height: 12vw;
+    top: 3vw;
+    left: 28%;
+    background-size: 100%;
+    }
+
+
+#logo2{
+    background-image: url(SVG/Logo_sort.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50vw;
+    height: 12vw;
+    top: 3vw;
+    left: 28%;
+    background-size: 100%;
+    }
+
+
+
+
+.streg1{
+    background-image: url(SVG/stregtegning_familie.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    left: 1vw;
+    bottom: -110vw;
+    background-size: 100%;
+    }
+
+.streg2{
+    background-image: url(SVG/stregtegning_familie.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 19vw;
+    height: 20vw;
+    left: 81vw;
+    bottom: -0vw;
+    background-size: 100%;
+
     }
 
 .column {
@@ -39,9 +81,71 @@ position: absolute;
  text-align: center;
 }
 
-.somelogo{
-   
+
+#infografik {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 25vw;
+    margin: 0;
+    padding-right: 7.14286vw;
+    padding-left: 7.14286vw;
 }
+
+.infowrap h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+.infowrap {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.info1 {
+    text-align: center;
+    height: 25vw;
+    margin: 0;
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info1 div {
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.info2 p,
+ol {
+    padding: 0 2rem 0 2rem;
+}
+
+
+.info2 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.67);
+    height: 25vw;
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.infowrap:hover {
+    margin-top: -25vw;
+    transition: 1.0s;
+}
+
+
 
 
 /*BURGERMENU*/
@@ -57,7 +161,9 @@ position: absolute;
     height: 106%;
     top: -1rem;
     position: fixed;
-    background-image: url(billeder/burgermenu.png);
+    background-image: url(SVG/blomst.svg);
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 
@@ -69,7 +175,7 @@ position: absolute;
 
 
 #topmenu li {
-    padding-top: 4.5rem;
+    padding-top: 4.7rem;
     padding-left: 9rem;
     font-size: 1.6rem;
     color: white;
@@ -189,6 +295,8 @@ position: absolute;
 
 /*BURGERMENU SLUT*/
 
+
+
 /*OM*/
 
 #videomobil{
@@ -197,7 +305,7 @@ position: absolute;
 
 #mobilvideo{
     width: 90vw;
-    padding: 7.14286vw;
+    padding: 2.5vw;
     margin-left: 5%
 }
 
@@ -209,6 +317,7 @@ position: absolute;
         flex-direction:column-reverse;
     display: flex; 
     }
+
 
 
 /*forside*/
@@ -232,23 +341,134 @@ display: block;
 }
 
 
+/*kontakt*/
+
+.container{
+        margin-bottom: 10vw;
+    }
+
+#contacth1
+{
+ text-align: center;
+margin-top: 8%;
+        margin-bottom: 5%;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=phone] {
+  width: 84.4vw;
+  padding: 1%;
+  margin: 0vw 0 1vw 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=phone]:focus {
+  background-color: #d8d5d5;
+}
+
+
+textarea{
+  width: 84.4vw;
+  height: 30vw;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+
+
+.submit {
+  background-color: #ad2222;
+  color: white;
+  padding: 2.5% 1.5%;
+  margin: 2vw 22vw;
+  cursor: pointer;
+  width: 45%;
+  font-size: 1rem;
+}
+
+label{
+    color: #806a6a;
+}
+
+#adress{
+    margin-top: 7%;
+}
+
+/*aktuel*/
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#actual h1
+{
+ text-align: center;
+margin-top: 8%;
+margin-bottom: 5%;
+}
+
+
+
+footer{
+   background-color: black;
+    color: white;
+}
+
+.columnfooter{
+     flex-basis: 400px;
+    flex-grow: 1;
+  
+}
 
 /*Ipad*/
 @media only screen and (min-width: 768px) {
 
+    
+    #logo{
+    background-image: url(SVG/Logo_hvid.svg);
+    position: fixed;
+    width: 20vw;
+    top: 0.1vw;
+    height: 5vw;
+    left: 1vw;
+    }
+    
+    
+#logo2{
+    position: fixed;
+    width: 20vw;
+    top: 0.1vw;
+    height: 5vw;
+    left: 1vw;
+    }
+    
+    p{
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1,h2,h3{
+        font-family: 'Merriweather', serif;
+        font-size: 3rem;
+        
+    }
+    
+    
     /*NAVIGATION*/
 
     nav {
         position: fixed;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
         top: 0;
         left: 0;
         transition:  background-color 0.5s ease-out;
         z-index: 3;
         width: 100vw;
-        
     }
+    
     
     
     
@@ -259,57 +479,71 @@ display: block;
     nav p {
         font-family: 'Montserrat', sans-serif;
         padding: 1.5rem;
-        color: white;
         font-weight: bolder;
-        
     }
     
      nav p:hover {
         background-color: gold;
         background-size: cover;
-        color: black;
+      
         cursor: default;
     }
+    
+     nav a:hover {
+        background-color: gold;
+        background-size: cover;
+    }
+    
+     .top2:hover {
+        background-color: gold;
+        background-size: cover;
+         color: black;
+    }
+    
+   
 
 
 
     nav li {
         display: inline-block;
         position: relative;
-        color: white;
+        color: black;
         text-align: center;
         width: 11vw;
     }
 
-    nav a {
+    #navbar a {
         text-decoration: none;
-        color: white;
         display: block;
         font-family: 'Montserrat', sans-serif;
         padding: 1.5rem;
         font-weight: bolder;
         
     }
-
-    nav a:hover {
-        background-color: gold;
-        background-size: cover;
-        color: black;
-    }
-
     
- 
-
+    #navbarwhite a {
+        text-decoration: none;
+        color: #000000;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        padding: 1.5rem;
+        font-weight: bolder;
+        }
+    
+#navbarwhite #logoa{
+    padding: 0rem; 
+}
+    
+ #navbar #logoa{
+    padding: 0rem; 
+}
+    
 
 
     #dropdown_content {
         display: none;
         z-index: 2;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-       
     }
-    
         
 
     .dropdown:hover #dropdown_content {
@@ -322,8 +556,7 @@ display: block;
         left: 100%;
         top: 0%;
         z-index: 2;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+
     }
 
     .malerier_dropdown:hover #malerier {
@@ -342,8 +575,6 @@ display: block;
     #dropdown_content2 {
       display: none;
         z-index: 2;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
     }
 
     .dropdown2:hover #dropdown_content2 {
@@ -360,8 +591,7 @@ display: block;
     #dropdown_content3 {
       display: none;
         z-index: 2;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+
     }
 
   
@@ -384,8 +614,7 @@ display: block;
         left: 100%;
         bottom: -198%;
         z-index: 2;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+        
     }
 
 
@@ -395,8 +624,34 @@ display: block;
 
     
     .scroll{
-        background-color: #000000;
+        background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+        background-color: transparent;
+        color: black;
     }
+    
+    .scroll:hover {
+        background-color: gold;
+        background-size: cover;
+         color: black;
+    }
+    
+    
+    .top{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+        background-color: transparent;
+        color: white;
+    }
+
+    
+     .top2{
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+        background-color: transparent;
+        color: white;
+    }
+    
 
 
     nav li ul {
@@ -414,16 +669,6 @@ display: block;
         display: none;
     }
 
-    #logo{padding: 1rem 0 0 1rem; }
-
-    #logo img {
-        position: static;
-        float: left;
-        width: 20%;
-    left: 0vw;
-    top: 0vw
-    }
-
     .pcmenu {
         display: block;
         float: right;
@@ -439,10 +684,12 @@ display: block;
     }
 
 
-    #news, #meet, #about, #start, #contact {
+    #news, #meet, #about, #start, #form {
     display: flex;
     flex-wrap: wrap;
-    padding: 7.14286vw;
+    padding-right:  8vw;
+    padding-left:  8vw;
+    padding-top:  4vw;
 }
 
     .grid-layout {
@@ -453,6 +700,8 @@ display: block;
     grid-auto-flow: dense;
     padding: 10px;
 }
+    
+   
 
 .grid-item {
     padding: 1rem;
@@ -475,7 +724,7 @@ display: block;
 .span-3 {
     grid-column-end: span 3;
     grid-row-end: span 4;
-}
+}    
     
      /*OM*/
     
@@ -504,8 +753,7 @@ display: block;
     background-color: transparent;
     width: auto;
     height: auto;
- 
-    
+
     }
 
 
@@ -563,6 +811,40 @@ display: block;
      background-color: black;
      color: #EEDDC4;
  }
+    
+    
+    /*kontakt*/
+    
+    .container{
+        margin-bottom: 0vw;
+    }
+    
+    #contacth1
+{
+        margin-bottom: 0%;
+}
+   
+input[type=text], input[type=password], input[type=email], input[type=phone] {
+  width: 24.4vw;
+
+}
+
+
+textarea{
+  width: 24.4vw;
+  height: 10vw;
+}
+
+
+.submit {
+  margin: 2vw 5vw;
+}
+    
+    #adress{
+    margin-top: 0%;
+}
+
+
  
 }
 

@@ -14,6 +14,99 @@
 </head>
 
 <body>
+      <nav id="navbar">
+        <div id="logo">
+            <img src="SVG/Logo_hvid.svg" alt="Per Hillo's Logo">
+        </div>
+        <ul class="pcmenu">
+            <li class="active"><a href="index.html">Forside</a></li>
+            <li class="dropdown">
+                <p>Værker ▾</p>
+                <ul id="dropdown_content">
+                    <li class="malerier_dropdown">
+                        <p>Malerier▸ </p>
+                        <ul id="malerier">
+                            <li><a href="">Malerier på lærred</a></li>
+                            <li><a href="">Malerier på papir</a></li>
+                            <li><a href="">Kunsttryk</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Plakater</a></li>
+                    <li><a href="">Skulpturer</a></li>
+                    <li class="dropdown4">
+                        <p>Andet▸</p>
+                        <ul id="dropdown_content4">
+                            <li><a href="">Bøger</a></li>
+                            <li><a href="">Digte</a></li>
+                            <li><a href="">Krukker</a></li>
+                            <li><a href="">Tørklæder</a></li>
+                            <li><a href="">Gavekort</a></li>
+                            <li><a href="">CD'er</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown2">
+                <p>Om ▾</p>
+                <ul id="dropdown_content2">
+                    <li><a href="">Per Hillo</a></li>
+                    <li><a href="">Brochurer</a></li>
+                </ul>
+            </li>
+            <li class="dropdown3">
+                <p>Aktuelt ▾</p>
+                <ul id="dropdown_content3">
+                    <li><a href="projekter.html">Projekter</a></li>
+                    <li><a href="arrangementer.html">Arrangementer</a></li>
+                </ul>
+            </li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
+
+
+        <div class="burgermenu">
+            <div id="menuknap" class="">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <!--Knappen som bringer burgermenuen frem.-->
+            <ul id="topmenu" class="hidden">
+                <!--Menuen som dukker op med navigationslisten.-->
+                <li><a href="index.html" class="link">Forside</a></li>
+                <li id="dropdownmobil">Værker ▾ <div id="dropdown-contentmobil">
+                        <ul>
+                            <li> <a href="#">- Malerier</a></li>
+                            <li><a href="#">- Plakater</a></li>
+                            <li><a href="#">- Andet</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li id="dropdownmobil2">Om <div id="dropdown-contentmobil2">
+                        <ul>
+                            <li> <a href="#">- Per Hillo</a></li>
+                            <li><a href="#">- Brochure</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li id="dropdownmobil3">Aktuelt ▾ <div id="dropdown-contentmobil3">
+                        <ul>
+                            <li> <a href="#">- Projekter</a></li>
+                            <li><a href="#">- Arrangmenter</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
 
     <div id="popup">
         <div id="luk">
@@ -50,7 +143,11 @@
                 </section>
             </div>
     </template>
+    
+    
+  <script src="main.js">
 
+    </script>
 
     <script>
         let filter = "all";
