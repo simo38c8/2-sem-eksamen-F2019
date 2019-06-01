@@ -15,6 +15,7 @@ window.addEventListener("load", sidenVises);
             console.log("toggle topmenu");
           document.querySelector("#topmenu").classList.toggle("hidden");
 
+
         } /*Her bliver burgermenuen tooglet fra og til*/
 
     
