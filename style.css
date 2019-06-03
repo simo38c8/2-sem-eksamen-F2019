@@ -65,6 +65,7 @@ h6 {
     background-image: url(SVG/blomst.svg);
     background-repeat: no-repeat;
     background-color: white;
+    z-index: 4;
 }
 
 
@@ -79,13 +80,10 @@ h6 {
     padding-top: 4.7rem;
     padding-left: 9rem;
     font-size: 1.6rem;
-
-
 }
 
 .hidden {
     transform: translatey(-150%);
-
 }
 
 #menuknap {
@@ -94,7 +92,7 @@ h6 {
     position: fixed;
     left: 88vw;
     top: 4vw;
-    z-index: 3;
+    z-index: 5;
 }
 
 .bar1,
@@ -179,7 +177,7 @@ h6 {
     width: 100vw;
     position: absolute;
    height: 177.6vw;
-    z-index: 2;
+    z-index: 1;
     pointer-events: none;
     left: 0vw;
 }
@@ -188,7 +186,7 @@ h6 {
     position: absolute;
     color: white;
     top: 60%;
-    z-index: 3;
+    z-index: 2;
     font-size: 2rem;
     text-align: center
 }
@@ -206,6 +204,9 @@ h6 {
     font-size: 1rem;
 }
 
+#unique h1, #meet h1, #news h1{
+text-align:center;}
+
 
 
 
@@ -218,7 +219,7 @@ h6 {
     top: 3vw;
     left: 28%;
     background-size: 100%;
-    z-index: 3;
+    z-index: 2;
 }
 
 
@@ -255,7 +256,7 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    height: 25vw;
+    height: auto;
     padding-right: 7.14286vw;
     padding-left: 7.14286vw;
 }
@@ -276,7 +277,7 @@ p {
 
 .info1 {
     text-align: center;
-    height: 25vw;
+    height: auto;
     margin: 0;
     padding: 10px 10px 0 10px;
     display: flex;
@@ -291,8 +292,10 @@ p {
 }
 
 .info2 p,
-ol {
+.info2 ul {
     padding: 0 2rem 0 2rem;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -691,13 +694,10 @@ footer p {
         color: #fff;
         transition: opacity .3s;
     }
-
-
+    
     .animate a:hover {
         opacity: .5;
     }
-
-
 
     #arrow a span {
         position: absolute;
@@ -774,10 +774,11 @@ footer p {
         font-size: 2.5rem;
         margin-bottom: 5%;
     }
-
-    #infografik img {
-        width: 70%;
-    }
+    
+    #unique h1, #unique p{
+    margin-bottom: 3%
+}
+    
 
     nav p {
         padding: 0rem;
@@ -813,6 +814,20 @@ footer p {
         grid-row: 2;
         padding: 6rem 5rem 5rem 2.5rem;
     }
+    
+     /*infografik ipad*/
+    #infografik {
+    height: 25vw;
+}
+      #infografik img {
+        width: 70%;
+    }
+
+
+.info1 {
+    height: 25vw;
+
+}
 
 
     /*Aktuelt Ipad*/
