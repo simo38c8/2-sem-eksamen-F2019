@@ -10,179 +10,19 @@ img {
 }
 
 
-
-/*Forside indhold*/
-
-
-
-#splashdesktop {
-    display: none;
-}
-
-
-#opacity{
-    background-color: rgba(1, 7, 11, 0.22);
-    width: 100vw;
-    position: absolute;
-    height: 55.6vw;
-    z-index: 2;
-    pointer-events: none;
+ p{
+        font-family: 'Montserrat', sans-serif;
+    }
     
-}
-#logo{
-    background-image: url(SVG/Logo_hvid.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 50vw;
-    height: 12vw;
-    top: 3vw;
-    left: 28%;
-    background-size: 100%;
+    h1,h2,h3,h4, h5, h6{
+        font-family: 'Merriweather', serif;
     }
 
 
-#logo2{
-    background-image: url(SVG/Logo_sort.svg);
-    background-repeat: no-repeat;
-    position: relative;
-    width: 50vw;
-    height: 12vw;
-    top: 3vw;
-    left: 28%;
-    background-size: 100%;
-    }
-
-
-#splashtekst{
-    position: absolute;
-    color: white;
-    top: 65%;
-    left: 18%;
-    z-index: 3;
+h2{
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
-
-
-
-
-#splashtekst h1{
-    font-size: 5rem;
-    text-align: center;
-}
-
-#splashtekst p{
-    font-size: 2.5rem;
-}
-
-#infografik {
-        padding-right: 14vw;
-    padding-left: 14vw;
-    padding-top: 4vw;
-}
-
-
-.streg1{
-    background-image: url(SVG/stregtegning_familie.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    left: 1vw;
-    bottom: -110vw;
-    background-size: 100%;
-    }
-
-.streg2{
-    background-image: url(SVG/stregtegning_familie.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 19vw;
-    height: 20vw;
-    left: 0vw;
-    bottom: 15vw;
-    background-size: 100%;
-    z-index: -1;
-
-    }
-
-.column {
-    flex-basis: 400px;
-    flex-grow: 1;
-    
-    padding-left: 7.14286vw;
-}
-
-
-
-#start h1{
- text-align: center;
-}
-
-
-#infografik {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    height: 25vw;
-    margin: 0;
-    padding-right: 7.14286vw;
-    padding-left: 7.14286vw;
-}
-
-.infowrap h1,
-h2,
-p {
-    margin-top: 0;
-}
-
-.infowrap {
-    flex-basis: 200px;
-    flex-grow: 1;
-    margin: 0;
-    transition: 0.5s;
-    text-align: center;
-}
-
-.info1 {
-    text-align: center;
-    height: 25vw;
-    margin: 0;
-    padding: 10px 10px 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.info1 div {
-    flex-basis: 300px;
-    flex-grow: 1;
-}
-
-.info2 p,
-ol {
-    padding: 0 2rem 0 2rem;
-}
-
-
-.info2 {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.67);
-    height: 25vw;
-    margin: 0;
-    display: inline-block;
-    text-align: left;
-    display: table-cell;
-    vertical-align: middle;
-
-}
-
-.infowrap:hover {
-    margin-top: -25vw;
-    transition: 1.0s;
-}
-
-
-
 
 /*BURGERMENU*/
 .pcmenu {
@@ -333,7 +173,194 @@ ol {
 
 
 
-/*OM*/
+
+
+
+
+/*forside mobil*/
+
+#splashdesktop {
+    display: none;
+}
+
+
+#opacity{
+    background-color: rgba(1, 7, 11, 0.22);
+    width: 100vw;
+    position: absolute;
+    height: 55.6vw;
+    z-index: 2;
+    pointer-events: none;
+    
+}
+#logo{
+    background-image: url(SVG/Logo_hvid.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 50vw;
+    height: 12vw;
+    top: 3vw;
+    left: 28%;
+    background-size: 100%;
+    }
+
+
+#logo2{
+    background-image: url(SVG/Logo_sort.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    width: 50vw;
+    height: 12vw;
+    top: 3vw;
+    left: 28%;
+    background-size: 100%;
+    }
+
+
+#splashtekst{
+    position: absolute;
+    color: white;
+    top: 65%;
+    left: 18%;
+    z-index: 3;
+}
+
+
+
+
+#splashtekst h1{
+    font-size: 5rem;
+    text-align: center;
+}
+
+#splashtekst p{
+    font-size: 2.5rem;
+}
+
+#infografik {
+        padding-right: 14vw;
+    padding-left: 14vw;
+    padding-top: 4vw;
+}
+
+
+.streg1{
+    background-image: url(SVG/stregtegning_familie.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    left: 1vw;
+    bottom: -110vw;
+    background-size: 100%;
+    }
+
+.streg2{
+    background-image: url(SVG/stregtegning_familie.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 19vw;
+    height: 20vw;
+    left: 0vw;
+    bottom: 15vw;
+    background-size: 100%;
+    z-index: -1;
+
+    }
+
+.column {
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+.column2 {
+    flex-basis: 400px;
+    flex-grow: 1;
+}
+
+
+
+#start h1{
+ text-align: center;
+}
+
+
+#infografik {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 25vw;
+    margin: 0;
+    padding-right: 7.14286vw;
+    padding-left: 7.14286vw;
+}
+
+.infowrap h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+.infowrap {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin: 0;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.info1 {
+    text-align: center;
+    height: 25vw;
+    margin: 0;
+    padding: 10px 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info1 div {
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.info2 p,
+ol {
+    padding: 0 2rem 0 2rem;
+}
+
+
+.info2 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.67);
+    height: 25vw;
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+.infowrap:hover {
+    margin-top: -25vw;
+    transition: 1.0s;
+}
+
+
+
+
+/*værker mobil */
+
+ .produkter {
+     display: grid;
+      grid-template-columns: repeat(1, 1fr);
+     margin: 1rem;
+     grid-gap: 3rem;
+ }
+
+/*om mobil*/
 
 #videomobil{
     display: block;
@@ -355,25 +382,31 @@ ol {
     }
 
 
+/*aktuelt mobil*/
 
-/*forside*/
-
-
-#mobilemeet{
-display: block;
-    position: absolute;
-    top: 73%;
-    left: 0%;
-    color: white;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-    background-color: #00000085;
-    width: 100vw;
-    height: 20vw;
+#actual {
+    padding-right: 7vw;
+    padding-left:7vw;
 }
 
-.somelogo{
-    display: none;
+#actual img{
+    padding-top: 7%;
 }
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column-reverse;  
+}
+
+
+
+#actual h1
+{
+ text-align: center;
+margin-top: 8%;
+margin-bottom: 5%;
+}
+
 
 
 /*kontakt mobil*/
@@ -439,38 +472,67 @@ label{
     color: #806a6a;
 }
 
-
-
-
-
-
-
-
-
-/*aktuel*/
-
-.sectionwrapper {
-    display: flex;
-    flex-wrap: wrap;
+#galleri{
+    
 }
 
-#actual h1
-{
- text-align: center;
-margin-top: 8%;
-margin-bottom: 5%;
+#atelier{
+    padding-right: 7vw;
+    padding-left:7vw;
+}
+
+#galleri img, #galleri h2, #atelier img, #atelier h2{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.streg2{
+    display: none;
 }
 
 
 
 
-
-
-
-/*Ipad*/
+/*Ipad media query*/
 @media only screen and (min-width: 768px) {
 
+    /*Generelt*/
+     .column{
+    flex-basis: 320px;
+         padding-right: 2vw;
+    padding-left:7vw;
+    }
     
+    .column2{
+        flex-basis: 320px;
+    flex-grow: 1;
+        padding-right: 7vw;
+    padding-left:5vw;
+    }
+    
+    
+    #logo2{
+        top: 2.1vw;
+    }
+    
+    /*aktuelt ipad*/
+    #actual {
+    padding-right: 0vw;
+    padding-left:0vw;
+}
+    
+    #actual img{
+    padding-top: 0%;
+}
+    
+    #actual h2{ padding-top: 0%;}
+
+    
+    .sectionwrapper{
+        padding-bottom: 4vw;
+        flex-direction:row;
+    }
+/*forside ipad*/
     #logo{
     background-image: url(SVG/Logo_hvid.svg);
     position: fixed;
@@ -486,18 +548,14 @@ margin-bottom: 5%;
 #logo2{
     position: fixed;
     width: 20vw;
-    top: 0.1vw;
+    top: 2.1vw;
     height: 5vw;
     left: 1vw;
     }
     
-    p{
-        font-family: 'Montserrat', sans-serif;
-    }
     
-    h1,h2,h3,h4, h5, h6{
-        font-family: 'Merriweather', serif;
-    }
+    
+   
     
     h1{
         font-size: 2.5rem;
@@ -509,6 +567,26 @@ margin-bottom: 5%;
         width: 70%;
     }
     
+    nav p{
+        padding: 0rem;
+    }
+    
+        
+#mobilemeet{
+    
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    color: black;
+    box-shadow: none;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+
+    }
+
+
     
     /*NAVIGATION*/
 
@@ -746,41 +824,10 @@ margin-bottom: 5%;
     padding-top:  4vw;
 }
 
-    .grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-gap: 10px;
-    grid-auto-rows: minmax(180px, auto);
-    grid-auto-flow: dense;
-    padding: 10px;
-}
+    
     
    
-
-.grid-item {
-    padding: 1rem;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #929796;
-    background-color: #333;
-    border-radius: 5px;
-    &:nth-child(odd) {
-        background-color: #424242;
-    }
-}
-
-.span-2 {
-    grid-column-end: span 2;
-    grid-row-end: span 2;
-}
-
-.span-3 {
-    grid-column-end: span 3;
-    grid-row-end: span 4;
-}    
-    
-     /*OM*/
+    /*om ipad*/
     
     #videomobil{
         display: none;
@@ -794,28 +841,8 @@ margin-bottom: 5%;
         flex-direction:column;
     }
     
-/*Forside*/ 
-    
-#mobilemeet{
-    
-    display: block;
-    position: relative;
-    top: auto;
-    left: auto;
-    color: black;
-    box-shadow: none;
-    background-color: transparent;
-    width: auto;
-    height: auto;
-
-    }
 
 
-
-.somelogo{
-    display: block
-}
-    
     
    /* div zealand*/
     
@@ -892,6 +919,7 @@ margin-bottom: 5%;
 .slagelse:hover #atelier {
         display: block;
     }
+    
         
         footer{
          display: grid;
@@ -990,7 +1018,9 @@ margin-bottom: 5%;
     
     
     /*værker ipad*/
-    
+    .produkter {
+      grid-template-columns: repeat(2, 1fr);
+ }
     
  #popup {
      top: 0;
@@ -1039,10 +1069,13 @@ margin-bottom: 5%;
  }
     
     
+    
+    
     /*kontakt ipad*/
     
     .streg2{
     bottom: 20%;
+    display: block;
 
 
     }
@@ -1090,7 +1123,11 @@ textarea{
 }
 
 /*Desktop*/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
+    
+    #logo2{
+        top: 0.1vw;
+    }
     
      nav li {
         display: inline-block;
@@ -1103,6 +1140,8 @@ textarea{
      nav p {
         padding: 1.5rem;
     }
+    
+   
     
     #logo{
     width: 14vw;
@@ -1120,5 +1159,19 @@ margin-top: 8%;
     bottom: -3%;
     }
 
+    
+    /*værker desktop*/
+       .produkter {
+      grid-template-columns: repeat(4, 1fr);
+ }
+    
+    /*aktuel desktop*/
+    
+    .column2{
+        flex-basis: 600px;
+        flex-grow: 2;
+    }
+    
+    
     
 }
