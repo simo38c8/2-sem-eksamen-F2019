@@ -10,16 +10,21 @@ img {
 }
 
 
- p{
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    h1,h2,h3,h4, h5, h6{
-        font-family: 'Merriweather', serif;
-    }
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+}
 
 
-h2{
+h2 {
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -55,7 +60,7 @@ h2{
     padding-left: 9rem;
     font-size: 1.6rem;
 
-    
+
 }
 
 .hidden {
@@ -147,7 +152,7 @@ h2{
 #dropdownmobil3 {
     position: relative;
     display: inline-block;
-    
+
 }
 
 #dropdown-contentmobil3 {
@@ -156,7 +161,7 @@ h2{
     left: 22%;
     top: 75%;
     min-width: 160px;
-    
+
 }
 
 #dropdown-contentmobil3 li {
@@ -184,16 +189,17 @@ h2{
 }
 
 
-#opacity{
+#opacity {
     background-color: rgba(1, 7, 11, 0.22);
     width: 100vw;
     position: absolute;
     height: 55.6vw;
     z-index: 2;
     pointer-events: none;
-    
+
 }
-#logo{
+
+#logo {
     background-image: url(SVG/Logo_hvid.svg);
     background-repeat: no-repeat;
     position: absolute;
@@ -202,22 +208,22 @@ h2{
     top: 3vw;
     left: 28%;
     background-size: 100%;
-    }
+}
 
 
-#logo2{
+#logo2 {
     background-image: url(SVG/Logo_sort.svg);
     background-repeat: no-repeat;
     position: relative;
     width: 50vw;
     height: 12vw;
     top: 3vw;
-    left: 28%;
+    left: 27%;
     background-size: 100%;
-    }
+}
 
 
-#splashtekst{
+#splashtekst {
     position: absolute;
     color: white;
     top: 65%;
@@ -228,23 +234,23 @@ h2{
 
 
 
-#splashtekst h1{
+#splashtekst h1 {
     font-size: 5rem;
     text-align: center;
 }
 
-#splashtekst p{
+#splashtekst p {
     font-size: 2.5rem;
 }
 
 #infografik {
-        padding-right: 14vw;
+    padding-right: 14vw;
     padding-left: 14vw;
     padding-top: 4vw;
 }
 
 
-.streg1{
+.streg1 {
     background-image: url(SVG/stregtegning_familie.svg);
     background-repeat: no-repeat;
     position: absolute;
@@ -253,9 +259,9 @@ h2{
     left: 1vw;
     bottom: -110vw;
     background-size: 100%;
-    }
+}
 
-.streg2{
+.streg2 {
     background-image: url(SVG/stregtegning_familie.svg);
     background-repeat: no-repeat;
     position: absolute;
@@ -266,7 +272,7 @@ h2{
     background-size: 100%;
     z-index: -1;
 
-    }
+}
 
 .column {
     flex-basis: 400px;
@@ -280,8 +286,8 @@ h2{
 
 
 
-#start h1{
- text-align: center;
+#start h1 {
+    text-align: center;
 }
 
 
@@ -353,140 +359,173 @@ ol {
 
 /*værker mobil */
 
- .produkter {
-     display: grid;
-      grid-template-columns: repeat(1, 1fr);
-     margin: 1rem;
-     grid-gap: 3rem;
- }
+.produkter {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem;
+    grid-gap: 3rem;
+}
 
 /*om mobil*/
 
-#videomobil{
+
+
+#videomobil,
+#about,
+#start {
+    padding-right: 7vw;
+    padding-left: 7vw;
+}
+
+#videomobil p {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#start img {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#videomobil h1 {
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+#videomobil {
     display: block;
 }
 
-#mobilvideo{
-    width: 90vw;
-    padding: 2.5vw;
-    margin-left: 5%
+#mobilvideo {
+    width: 85vw;
 }
 
-.desktoponly{
+.desktoponly {
     display: none;
 }
 
-#start{
-        flex-direction:column-reverse;
-    display: flex; 
-    }
+#start {
+    flex-direction: column-reverse;
+    display: flex;
+}
 
 
 /*aktuelt mobil*/
 
 #actual {
     padding-right: 7vw;
-    padding-left:7vw;
+    padding-left: 7vw;
 }
 
-#actual img{
+#actual img {
     padding-top: 7%;
 }
+
 .sectionwrapper {
     display: flex;
     flex-wrap: wrap;
-    flex-direction:column-reverse;  
+    flex-direction: column-reverse;
 }
 
 
 
-#actual h1
-{
- text-align: center;
-margin-top: 8%;
-margin-bottom: 5%;
+#actual h1 {
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 5%;
 }
 
 
 
 /*kontakt mobil*/
 
-.container{
-        margin-bottom: 10vw;
-    }
-
-#contacth1
-{
- text-align: center;
-margin-top: 6%;
-        margin-bottom: 5%;
+.container {
+    margin-bottom: 10vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=phone] {
-  width: 84.4vw;
-  padding: 1%;
-  margin: 0vw 0 1vw 0;
-  display: inline-block;
-  border: 2px solid #ccc;
-  background-color: #f8f8f8;
+#contacth1 {
+    text-align: center;
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=phone] {
+    width: 84.4vw;
+    padding: 1%;
+    margin: 0vw 0 1vw 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
 }
 
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=phone]:focus {
-  background-color: #d8d5d5;
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=phone]:focus {
+    background-color: #d8d5d5;
 }
 
 
-textarea{
-  width: 84.4vw;
-  height: 30vw;
-  padding: 12px 20px;
-  border: 2px solid #ccc;
-  background-color: #f8f8f8;
-  resize: none;
+textarea {
+    width: 84.4vw;
+    height: 30vw;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+    resize: none;
 }
 
-.zealand{
-    display: none;
+.zealand {
+   padding-left: 7vw;
+   padding-right: 7vw;
 }
 
-.atelierpicture{
+.zealand a{
+    color: black;
+    text-decoration: none
+}
+
+
+
+.atelierpicture {
     display: flex;
 }
 
-.galleripicture{
+.galleripicture {
     display: flex;
 }
 
 .submit {
-  background-color: #ad2222;
-  color: white;
-  padding: 2.5% 1.5%;
-  margin: 2vw 22vw;
-  cursor: pointer;
-  width: 45%;
-  font-size: 1rem;
+    background-color: #ad2222;
+    color: white;
+    padding: 2.5% 1.5%;
+    margin: 2vw 22vw;
+    cursor: pointer;
+    width: 45%;
+    font-size: 1rem;
 }
 
-label{
+label {
     color: #806a6a;
 }
 
-#galleri{
-    
-}
 
-#atelier{
-    padding-right: 7vw;
-    padding-left:7vw;
-}
-
-#galleri img, #galleri h2, #atelier img, #atelier h2{
+#galleri img,
+#galleri h2,
+#atelier img,
+#atelier h2 {
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.streg2{
+.streg2 {
     display: none;
 }
 
@@ -497,142 +536,149 @@ label{
 @media only screen and (min-width: 768px) {
 
     /*Generelt*/
-     .column{
-    flex-basis: 320px;
-         padding-right: 2vw;
-    padding-left:7vw;
-    }
-    
-    .column2{
+    .column {
         flex-basis: 320px;
-    flex-grow: 1;
-        padding-right: 7vw;
-    padding-left:5vw;
+        padding-right: 2vw;
+        padding-left: 7vw;
     }
-    
-    
-    #logo2{
+
+    .column2 {
+        flex-basis: 320px;
+        flex-grow: 1;
+        padding-right: 7vw;
+        padding-left: 5vw;
+    }
+
+
+    #form .column2 {
+        padding-top: 8vw;
+    }
+
+    #logo2 {
         top: 2.1vw;
     }
-    
+
     /*aktuelt ipad*/
     #actual {
-    padding-right: 0vw;
-    padding-left:0vw;
-}
-    
-    #actual img{
-    padding-top: 0%;
-}
-    
-    #actual h2{ padding-top: 0%;}
+        padding-right: 0vw;
+        padding-left: 0vw;
+    }
 
-    
-    .sectionwrapper{
+    #actual img {
+        padding-top: 0%;
+    }
+
+    #actual h2 {
+        padding-top: 0%;
+    }
+
+
+    .sectionwrapper {
         padding-bottom: 4vw;
-        flex-direction:row;
+        flex-direction: row;
     }
-/*forside ipad*/
-    #logo{
-    background-image: url(SVG/Logo_hvid.svg);
-    position: fixed;
-    width: 19vw;
-    top: 2.5vw;
-    height: 5vw;
-    left: 1vw;
+
+    /*forside ipad*/
+    #logo {
+        background-image: url(SVG/Logo_hvid.svg);
+        position: fixed;
+        width: 19vw;
+        top: 2.5vw;
+        height: 5vw;
+        left: 1vw;
     }
-    
-    
-    
-    
-#logo2{
-    position: fixed;
-    width: 20vw;
-    top: 2.1vw;
-    height: 5vw;
-    left: 1vw;
+
+
+
+
+    #logo2 {
+        position: fixed;
+        width: 20vw;
+        top: 2.1vw;
+        height: 5vw;
+        left: 1vw;
     }
-    
-    
-    
-   
-    
-    h1{
+
+
+
+
+
+    h1 {
         font-size: 2.5rem;
         margin-bottom: 5%;
-        
+
     }
-    
-    #infografik img{
+
+    #infografik img {
         width: 70%;
     }
-    
-    nav p{
+
+    nav p {
         padding: 0rem;
     }
-    
-        
-#mobilemeet{
-    
-    display: block;
-    position: relative;
-    top: auto;
-    left: auto;
-    color: black;
-    box-shadow: none;
-    background-color: transparent;
-    width: auto;
-    height: auto;
+
+
+    #mobilemeet {
+
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        color: black;
+        box-shadow: none;
+        background-color: transparent;
+        width: auto;
+        height: auto;
 
     }
 
 
-    
+
     /*NAVIGATION*/
 
     nav {
         position: fixed;
         top: 0;
         left: 0;
-        transition:  background-color 0.5s ease-out;
+        transition: background-color 0.5s ease-out;
         z-index: 3;
         width: 100vw;
     }
-    
-    
-    
-    
+
+
+
+
     #splashvideo {
-        z-index: -1; 
+        z-index: -1;
     }
-    
+
     nav p {
         font-family: 'Montserrat', sans-serif;
         font-weight: bolder;
     }
-    
-     nav p:hover {
+
+    nav p:hover {
         background-color: gold;
         background-size: cover;
         cursor: default;
     }
-    
-    #dropdown_content p{
+
+    #dropdown_content p {
         padding: 1.5rem;
     }
-    
-     nav a:hover {
+
+    nav a:hover {
         background-color: gold;
         background-size: cover;
     }
-    
-     .top2:hover {
+
+    .top2:hover {
         background-color: gold;
         background-size: cover;
-         color: black;
+        color: black;
     }
-    
-   
+
+
 
 
 
@@ -650,9 +696,9 @@ label{
         font-family: 'Montserrat', sans-serif;
         padding: 1.5rem;
         font-weight: bolder;
-        
+
     }
-    
+
     #navbarwhite a {
         text-decoration: none;
         color: #000000;
@@ -660,23 +706,23 @@ label{
         font-family: 'Montserrat', sans-serif;
         padding: 1.5rem;
         font-weight: bolder;
-        }
-    
-#navbarwhite #logoa{
-    padding: 0rem; 
-}
-    
- #navbar #logoa{
-    padding: 0rem; 
-}
-    
+    }
+
+    #navbarwhite #logoa {
+        padding: 0rem;
+    }
+
+    #navbar #logoa {
+        padding: 0rem;
+    }
+
 
 
     #dropdown_content {
         display: none;
         z-index: 2;
     }
-        
+
 
     .dropdown:hover #dropdown_content {
         display: block
@@ -700,12 +746,12 @@ label{
         position: relative;
         display: inline-block;
         z-index: 2;
-        
+
     }
 
 
     #dropdown_content2 {
-      display: none;
+        display: none;
         z-index: 2;
     }
 
@@ -721,12 +767,12 @@ label{
     }
 
     #dropdown_content3 {
-      display: none;
+        display: none;
         z-index: 2;
 
     }
 
-  
+
 
     .dropdown3:hover #dropdown_content3 {
         display: block;
@@ -746,7 +792,7 @@ label{
         left: 100%;
         bottom: -198%;
         z-index: 2;
-        
+
     }
 
 
@@ -754,36 +800,36 @@ label{
         display: block;
     }
 
-    
-    .scroll{
+
+    .scroll {
         background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 25px rgb(173, 165, 165);
         background-color: transparent;
         color: black;
     }
-    
+
     .scroll:hover {
         background-color: gold;
         background-size: cover;
-         color: black;
+        color: black;
     }
-    
-    
-    .top{
+
+
+    .top {
         background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
         background-color: transparent;
         color: white;
     }
 
-    
-     .top2{
+
+    .top2 {
         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
         box-shadow: 0 0 25px rgba(0, 0, 0, 0);
         background-color: transparent;
         color: white;
     }
-    
+
 
 
     nav li ul {
@@ -805,373 +851,404 @@ label{
         display: block;
         float: right;
     }
-    
+
     #splashdesktop {
-    display: block;
-    width: 100%;
-}
-    
-    #mobilsplash{
+        display: block;
+        width: 100%;
+    }
+
+    #mobilsplash {
         display: none;
     }
 
 
-    #news, #meet, #about, #start, #form {
-    display: flex;
-    flex-wrap: wrap;
-    padding-right:  8vw;
-    padding-left:  8vw;
-    padding-top:  4vw;
-}
+    #news,
+    #meet,
+    #about,
+    #start,
+    #form {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        padding-top: 2vw;
+    }
 
-    
-    
-   
+
+
+
     /*om ipad*/
-    
-    #videomobil{
+
+    #videomobil {
         display: none;
     }
-    
-    .desktoponly{
-    display: block;
-}
-    
-    #start{
-        flex-direction:column;
+
+    .desktoponly {
+        display: block;
     }
-    
+
+    #start {
+        flex-direction: column;
+    }
+
+    #about {
+        margin-top: 8%;
+
+    }
 
 
-    
-   /* div zealand*/
-    
-    
-        footer h6 {
-            font-size: 1.3rem;
-            padding: 1rem 0 0.5rem 0;
-        }
-        
-         footer h3{
-            font-size: 1.5rem;
-            padding: 0.5rem 0;
-        }
-        
-         footer h2{
-            font-size: 2rem;
-        }
-         
-        footer h5{
-            font-size: 1.3rem;
-            padding: 1rem 0;
-        }
-        .zealand {
-            width: 30vw;
-            height: 30vw;
-            background-image: url(SVG/zealand.svg);
-            background-size: contain;
-            display: inline-block;
-            position: relative;
-        }
 
-        .slagelse {
-            width: 3vw;
-            height: 3.5vw;
-            background-image: url(SVG/lokation.svg);
-            background-size: 100%;
-            position: absolute;
-            top: 14vw;
-            left: 8vw;
-        }
+    /* div zealand*/
 
-        .ordrup {
-            width: 3vw;
-            height: 3.5vw;
-            background-image: url(SVG/lokation.svg);
-            background-size: 100%;
-            position: absolute;
-            top: 6vw;
-            left: 25vw;
-        }
-    
-#galleri{
-    display: none;
-    width: 25%;
-    background-color: red;
-    position: absolute;
-    left: 86%;
-    top: 10%
-}
 
-#atelier{
-    display: none;
-    background-color: blue;
-    max-width: 16%;
-    position: absolute;
-    left: 50%;
-    top: 50%
-}
-    
+    footer h6 {
+        font-size: 1.3rem;
+        padding: 1rem 0 0.5rem 0;
+    }
+
+    footer h3 {
+        font-size: 1.5rem;
+        padding: 0.5rem 0;
+    }
+
+    footer h2 {
+        font-size: 2rem;
+    }
+
+    footer h5 {
+        font-size: 1.3rem;
+        padding: 1rem 0;
+    }
+
+    .zealand {
+        width: 30vw;
+        height: 30vw;
+        background-image: url(SVG/zealand.svg);
+        background-size: contain;
+        display: inline-block;
+        position: relative;
+        padding-left: 0vw;
+   padding-right: 0vw;
+    }
+
+    .slagelse {
+        width: 3vw;
+        height: 3.5vw;
+        background-image: url(SVG/lokation.svg);
+        background-size: 100%;
+        position: absolute;
+        top: 14vw;
+        left: 8vw;
+    }
+
+    .ordrup {
+        width: 3vw;
+        height: 3.5vw;
+        background-image: url(SVG/lokation.svg);
+        background-size: 100%;
+        position: absolute;
+        top: 6vw;
+        left: 25vw;
+    }
+
+    #galleri {
+        display: none;
+        background-color: rgb(149, 122, 122);
+        color: white;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        left: 4vw;
+        top: -7vw;
+        padding: 2vw;
+    }
+
+    #atelier {
+        display: none;
+        background-color: rgb(149, 122, 122);
+        color: white;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        right: 3vw;
+        top: -10vw;
+        padding: 2vw;
+    }
+
     .ordrup:hover #galleri {
         display: block;
     }
 
-.slagelse:hover #atelier {
+    .slagelse:hover #atelier {
         display: block;
     }
-    
-        
-        footer{
-         display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-            text-align: center;
-            padding: 4rem 5rem 0rem 4rem;
-            background-color: black;
-            color: white;
-            
-        }
-        
-        .footer1 img {
-            width: 10%;
-        }
-        
-        .social{
-            text-align: center;
-            padding: 4rem;
-        }
-        
-        .footer1 {
-            grid-column: 1;
-            grid-row: 1;
-            display: inline-block;
-            text-align: left;
-            max-width: 40vw;
-        }
-        
-        .footer2 {
-            grid-column: 2;
-            grid-row: 1;
-            display: inline-block;
-            text-align: left;
-            padding: 0 0 0 5rem;
-            max-width: 60vw;
-            
-        }
-        
-        .kontakt_os p{
-            padding: 0 0 0.5rem 0;
-        }
-        
-        .grid2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
-            
-        }
-        
-        .grid2 p {
-            padding: 0.1rem 0;
-        }
-        
-        .lokationer {
-            grid-column: 1;
-            grid-row: 1;
-        }
-        
-        .lokationer p {
-            padding: 0.5rem 0;
-        }
-        
-        
-        .kontakt_oplysninger {
-            grid-column: 2;
-            grid-row: 1;
-        }
-        
-           .kontakt_oplysninger p {
-           padding: 0.5rem 0;
-        }
-        
-        .borderbottom {
-            border-bottom: 1px solid white;
-        }
-        
-        .lokationer a {
-            text-decoration: none;
-            color: white;
-        }
-        
-        .lokationer a:hover {
-            text-decoration: underline;
-        }
-        
-        .kontakt_per a{
-            text-decoration: none;
-            color: white;
-        }
-        
-        .kontakt_per a:hover {
-            text-decoration: underline;
-        }
-                
-    
-    
+
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+        padding: 4rem 5rem 0rem 4rem;
+        background-color: black;
+        color: white;
+
+    }
+
+    .footer1 img {
+        width: 10%;
+    }
+
+    .social {
+        text-align: center;
+        padding: 4rem;
+    }
+
+    .footer1 {
+        grid-column: 1;
+        grid-row: 1;
+        display: inline-block;
+        text-align: left;
+        max-width: 40vw;
+    }
+
+    .footer2 {
+        grid-column: 2;
+        grid-row: 1;
+        display: inline-block;
+        text-align: left;
+        padding: 0 0 0 5rem;
+        max-width: 60vw;
+
+    }
+
+    .kontakt_os p {
+        padding: 0 0 0.5rem 0;
+    }
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+    }
+
+    .grid2 p {
+        padding: 0.1rem 0;
+    }
+
+    .lokationer {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .lokationer p {
+        padding: 0.5rem 0;
+    }
+
+
+    .kontakt_oplysninger {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .kontakt_oplysninger p {
+        padding: 0.5rem 0;
+    }
+
+    .borderbottom {
+        border-bottom: 1px solid white;
+    }
+
+    .lokationer a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .lokationer a:hover {
+        text-decoration: underline;
+    }
+
+    .kontakt_per a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .kontakt_per a:hover {
+        text-decoration: underline;
+    }
+
+
+
     /*værker ipad*/
     .produkter {
-      grid-template-columns: repeat(2, 1fr);
- }
-    
- #popup {
-     top: 0;
-     width: 100vw;
-     height: 100vh;
-     position: fixed;
-     background-color: hsla(0, 1%, 69%, 0.5);
-     display: none;
- }
+        grid-template-columns: repeat(2, 1fr);
+    }
 
- #indhold {
-     min-height: 50vh;
-     width: 30vw;
-     margin: 4rem auto;
-     color: white;
-     padding-top: 3em;
+    #popup {
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: hsla(0, 1%, 69%, 0.5);
+        display: none;
+    }
 
- }
+    #indhold {
+        min-height: 50vh;
+        width: 30vw;
+        margin: 4rem auto;
+        color: white;
+        padding-top: 3em;
+
+    }
 
 
 
- .menu button {
-     width: 6rem;
-     height: 4rem;
-     cursor: pointer;
-     font-weight: bold;
-     background-color: white;
-     border-radius: 60px;
- }
+    .menu button {
+        width: 6rem;
+        height: 4rem;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: white;
+        border-radius: 60px;
+    }
 
- .valgt {
-     background-color: #ef1111;
- }
+    .valgt {
+        background-color: #ef1111;
+    }
 
- #luk {
-     position: fixed;
-     right: 25em;
-    top: 7.2em;
- }
+    #luk {
+        position: fixed;
+        right: 25em;
+        top: 7.2em;
+    }
 
- #luk button {
-     font-size: 2rem;
-     padding: 1rem 1rem;
-     background-color: black;
-     color: #EEDDC4;
- }
-    
-    
-    
-    
+    #luk button {
+        font-size: 2rem;
+        padding: 1rem 1rem;
+        background-color: black;
+        color: #EEDDC4;
+    }
+
+
+
+
     /*kontakt ipad*/
-    
-    .streg2{
-    bottom: 20%;
-    display: block;
 
+    .streg2 {
+        bottom: 20%;
+        display: block;
 
     }
-    
-    .container{
+
+    .container {
         margin-bottom: 0vw;
+        padding-left: 0vw;
+        padding-right: 0vw;
     }
-    
-    #contacth1
-{
+
+    #contacth1 {
         margin-bottom: 0%;
-    margin-top: 10%;
-}
-   
-input[type=text], input[type=password], input[type=email], input[type=phone] {
-  width: 24.4vw;
+        margin-top: 12%;
+    }
 
-}
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=phone] {
+        width: 24.4vw;
 
-
-textarea{
-  width: 24.4vw;
-  height: 10vw;
-}
+    }
 
 
-.submit {
-  margin: 2vw 4.5vw;
-}
-    
-    #adress{
-    margin-top: 0%;
-}7
-    
-    .atelierpicture{
-    display: none;
-}
-
-.galleripicture{
-    display: none;
-}
+    textarea {
+        width: 24.4vw;
+        height: 10vw;
+    }
 
 
- 
+    .submit {
+        margin: 2vw 4.5vw;
+    }
+
+    #adress {
+        margin-top: 0%;
+    }
+
+
+
+    .galleripicture {
+        display: none;
+    }
+
+    .atelierpicture {
+        display: none;
+    }
+
 }
 
 /*Desktop*/
 @media only screen and (min-width: 1025px) {
-    
-    #logo2{
-        top: 0.1vw;
-    }
-    
-     nav li {
+
+
+    nav li {
         display: inline-block;
         position: relative;
         color: black;
         text-align: center;
         width: 11vw;
     }
-    
-     nav p {
+
+    nav p {
         padding: 1.5rem;
     }
-    
-   
-    
-    #logo{
-    width: 14vw;
-    top: 0.5vw;
-    height: 5vw;
-    left: 1vw;
+
+
+
+    #logo {
+        width: 14vw;
+        top: 0.5vw;
+        height: 5vw;
+        left: 1vw;
     }
     
-    #contacth1
-{
-margin-top: 8%;
-       
-}
-    .streg2{
-    bottom: -3%;
+    
+    
+    #logo2 {
+        width: 14vw;
+        top: 0.5vw;
+        height: 5vw;
+        left: 1vw;
+    }
+    
+    
+
+    #contacth1 {
+        margin-top: 8%;
+
     }
 
-    
+    .streg2 {
+        bottom: -3%;
+    }
+
+
     /*værker desktop*/
-       .produkter {
-      grid-template-columns: repeat(4, 1fr);
- }
-    
-    /*aktuel desktop*/
-    
-    .column2{
+    .produkter {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /*aktuelt desktop*/
+
+    .column2 {
         flex-basis: 600px;
         flex-grow: 2;
     }
-    
-    
-    
+
+    /*om desktop*/
+    #form .column2 {
+        padding-top: 0vw;
+    }
+
+
+
 }
