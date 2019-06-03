@@ -165,12 +165,16 @@
            
            <div id="galleri">
                <h2>Per Hillo Kunstgalleri <br> Charlottenlund</h2>
+               <img src="" alt="" class="galleripicture">
             <p class="galleritext"></p>
+            
            </div>
            
            <div id="atelier">
             <h2>Per Hillo Atelier</h2>
             <p class="ateliertext"></p>
+             <img src="" alt="" class="atelierpicture">
+            
            </div>
 
     
@@ -231,6 +235,8 @@
             function visKontakt() {
                 document.querySelector(".ateliertext").innerHTML = kontakt.atelier_adress;
                 document.querySelector(".galleritext").innerHTML = kontakt.galleri_adress;
+                document.querySelector(".atelierpicture").src = kontakt.atelier_picture.guid;
+            document.querySelector(".galleripicture").src = kontakt.galleri_picture.guid;  
 
             }
             getJson();

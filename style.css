@@ -376,7 +376,7 @@ display: block;
 }
 
 
-/*kontakt*/
+/*kontakt mobil*/
 
 .container{
         margin-bottom: 10vw;
@@ -413,7 +413,17 @@ textarea{
   resize: none;
 }
 
+.zealand{
+    display: none;
+}
 
+.atelierpicture{
+    display: flex;
+}
+
+.galleripicture{
+    display: flex;
+}
 
 .submit {
   background-color: #ad2222;
@@ -1065,6 +1075,14 @@ textarea{
     
     #adress{
     margin-top: 0%;
+}7
+    
+    .atelierpicture{
+    display: none;
+}
+
+.galleripicture{
+    display: none;
 }
 
 
