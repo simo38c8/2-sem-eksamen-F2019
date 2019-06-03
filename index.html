@@ -10,7 +10,7 @@
     <meta name="robots" content="noindex">
     <title>Per Hillo</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -127,11 +127,10 @@
 
     </div>
 <div id="splashtekst">
-    <h1>Per Hillo</h1>
-    <p><i>Jeg vil gerne udtrykke ro, glæde og kærlighed. <br> Jeg er kærlighedsmaleren</i></p>
+    <p><i><i class="fas fa-quote-right"></i>Jeg maler for at gøre folk glade og påvirke<br> mennesker  med kærlighed og omsorg <i class="fas fa-quote-left"></i></i></p>
 </div>
        <div id="opacity"></div>
-        <video id="splashdesktop" controls muted loop autoplay src="video/Per%20Hillo_version1.mp4"></video>
+        <video id="splashdesktop" muted loop autoplay src="video/splash.mp4"></video>
         <img src="billeder/mobile_portrait.jpg" id="mobilsplash" alt="Splash billede af Per Hillo til mobil devices">
 
 
@@ -298,7 +297,7 @@
             } /*Her bliver de angivet HTML-elementer ændret dynamisk fra JSON. */
             getJson();
             scroll();
-            scroll2();
+            
         }
         
         
@@ -380,31 +379,7 @@ window.onscroll = () => {
 }
     
         
-           
-        function scroll2(){ 
-window.onscroll = () => {
-  if(this.scrollY <= 370){
-    
-      document.querySelector('.bar1').style.backgroundColor = 'white';
-      document.querySelector('.bar2').style.backgroundColor= 'white';
-      document.querySelector('.bar3').style.backgroundColor = 'white';
-       
-      
-      
-      
-       
-  } else {
-     
-        document.querySelector('.bar1').style.backgroundColor = 'black';
-      document.querySelector('.bar2').style.backgroundColor= 'black';
-      document.querySelector('.bar3').style.backgroundColor = 'black';
-      
-      
-     
-  }
-    
-};
-}
+        
 
     
     </script>

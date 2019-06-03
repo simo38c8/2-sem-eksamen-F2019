@@ -149,30 +149,6 @@ h2 {
 }
 
 
-#dropdownmobil3 {
-    position: relative;
-    display: inline-block;
-
-}
-
-#dropdown-contentmobil3 {
-    display: none;
-    position: relative;
-    left: 22%;
-    top: 75%;
-    min-width: 160px;
-
-}
-
-#dropdown-contentmobil3 li {
-    list-style-type: none;
-    padding-top: 1rem;
-    padding-left: 0rem;
-    font-size: 1.6rem;
-    right: 20%;
-    position: relative;
-}
-
 
 /*BURGERMENU SLUT*/
 
@@ -226,22 +202,32 @@ h2 {
 #splashtekst {
     position: absolute;
     color: white;
-    top: 65%;
-    left: 18%;
+    top: 50%;
+    left: 13%;
     z-index: 3;
-}
-
-
-
-
-#splashtekst h1 {
-    font-size: 5rem;
-    text-align: center;
-}
-
-#splashtekst p {
     font-size: 2.5rem;
+    text-align: center;
+    padding-left: 7vw;
+    padding-right: 7vw;  
 }
+
+#splashtekst .fas{
+    font-size: 3rem;
+}
+
+.fa-quote-left{
+ 
+    position: relative;
+    top: 2vw;
+    left: 1%;
+}
+
+.fa-quote-right{
+    position: relative;
+    bottom: 2;
+    right: 1%;
+}
+
 
 #infografik {
     padding-right: 14vw;
@@ -816,9 +802,6 @@ label {
 
 
     .top {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.21));
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-        background-color: transparent;
         color: white;
     }
 
