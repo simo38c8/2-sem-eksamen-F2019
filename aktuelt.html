@@ -126,11 +126,13 @@
    <main class="actual"></main>
 
     <template>
-       
-          <div class="sectionwrapper">
-           <div class="column"><img src="#" alt=""></div>
-           <div class="column2"><h2> </h2>
-              <p></p></div>
+       <h2> </h2>
+          <div class="news">
+           <div class="newspicture"><img src="#" alt=""></div>
+           <div class="newstext">
+              <p class="text"></p>
+              <p class="date"></p>
+              </div>
                </div>
                 
     </template>
@@ -201,7 +203,7 @@
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("img").src=nyhed.picture.guid;
                 klon.querySelector("h2").textContent=nyhed.title.rendered;
-                klon.querySelector("p").innerHTML=nyhed.text;
+                klon.querySelector(".text").innerHTML=nyhed.text;
                 dest.appendChild(klon);
             })
             }
