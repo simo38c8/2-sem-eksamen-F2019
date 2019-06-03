@@ -40,7 +40,10 @@ h6 {
 
 #about,
 #start,
-#form {
+#form, 
+#news,
+#unique, 
+#meet {
     display: flex;
     flex-wrap: wrap;
     padding-left: 7vw;
@@ -205,9 +208,14 @@ h6 {
 }
 
 #unique h1, #meet h1, #news h1{
-text-align:center;}
+text-align:center;
+    
+}
 
-
+ #unique h1, #unique p{
+    margin-bottom: 3%;
+     text-align: center;
+}
 
 
 #logo {
@@ -257,8 +265,6 @@ text-align:center;}
     flex-wrap: wrap;
     overflow: hidden;
     height: auto;
-    padding-right: 7.14286vw;
-    padding-left: 7.14286vw;
 }
 
 .infowrap h1,
@@ -317,7 +323,6 @@ p {
 }
 
 
-
 /*værker mobil */
 
 .produkter {
@@ -329,48 +334,37 @@ p {
 
 /*om mobil*/
 
+
+#omvideo {
+    
+        width: 100%;
+        padding-left: 7vw;
+    padding-right: 7vw;
+    padding-top: 4vw;
+    }
+
+
 #start h1 {
     text-align: center;
 }
 
-#videomobil,
+,
 #about,
 #start {
     padding-right: 7vw;
     padding-left: 7vw;
 }
 
-#videomobil p {
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
+
 
 #start img {
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-#videomobil h1 {
-    text-align: center;
-    margin-top: 8%;
-    margin-bottom: 8%;
-}
-
-#videomobil {
-    display: block;
-}
-
-#mobilvideo {
-    width: 85vw;
-}
 
 .desktoponly {
     display: none;
-}
-
-#start {
-    flex-direction: column-reverse;
-    display: flex;
 }
 
 
@@ -402,9 +396,7 @@ p {
 /*kontakt mobil*/
 
 .container {
-    margin-bottom: 10vw;
-    padding-left: 7vw;
-    padding-right: 7vw;
+    margin-bottom: 8vw;
 }
 
 #contacth1 {
@@ -524,6 +516,7 @@ footer p {
             background-color: #807c7c;
             color: white;
             border-bottom: 2vw solid #035693;
+            margin-top: 7vw;
         }
 
 
@@ -621,16 +614,16 @@ footer p {
 
     /*Generelt*/
     .column {
-        flex-basis: 320px;
+        flex-basis: 300px;
         padding-right: 2vw;
         padding-left: 7vw;
     }
 
     .column2 {
-        flex-basis: 320px;
-        flex-grow: 1;
+        flex-basis: 300px;
+        flex-grow: 2;
         padding-right: 7vw;
-        padding-left: 5vw;
+        padding-left: 2vw;
     }
     
     .desktoponly {
@@ -651,8 +644,8 @@ footer p {
     }
     
     #opacity {
-    height: 55.6vw;
-    left: -1.1vw;
+    height: 56.4vw;
+    left: 0;
 }
     
     #splashtekst {
@@ -775,9 +768,7 @@ footer p {
         margin-bottom: 5%;
     }
     
-    #unique h1, #unique p{
-    margin-bottom: 3%
-}
+   
     
 
     nav p {
@@ -828,6 +819,10 @@ footer p {
     height: 25vw;
 
 }
+
+.infowrap {
+    flex-basis: 156px;
+   }
 
 
     /*Aktuelt Ipad*/
@@ -1015,14 +1010,6 @@ footer p {
 
     /*om ipad*/
 
-    #videomobil {
-        display: none;
-    }
-
-
-    #start {
-        flex-direction: column;
-    }
 
     #about {
         margin-top: 8%;
@@ -1095,15 +1082,14 @@ footer p {
         left: 0vw;
         background-size: 100%;
         z-index: -1;
-        bottom: 20%;
+        bottom: 14%;
         display: block;
 
     }
 
     .container {
         margin-bottom: 0vw;
-        padding-left: 0vw;
-        padding-right: 0vw;
+
     }
 
     #contacth1 {
@@ -1233,6 +1219,7 @@ footer p {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr;
                 border-bottom: 0.5vw solid #035693;
+                margin-top: 0vw;
             }
 
             .footer1 img {
@@ -1377,6 +1364,11 @@ footer p {
                 max-width: 60vw;
 
             }
+    
+    #opacity {
+    height: 60vw;
+    left: -1.1vw;
+}
 
 
 }
