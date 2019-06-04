@@ -736,7 +736,7 @@ footer p {
     .animate a {
         position: absolute;
         bottom: 20px;
-        left: 48%;
+        left: 52%;
         z-index: 2;
         display: inline-block;
         -webkit-transform: translate(0, -50%);
@@ -751,7 +751,7 @@ footer p {
 
     #arrow a span {
         position: absolute;
-        top: 44vw;
+        top: 48vw;
         left: 10%;
         width: 46px;
         height: 46px;
@@ -1144,7 +1144,7 @@ footer p {
     }
 
     .filter {
-        width: 6rem;
+        width: 9rem;
         height: 4rem;
         cursor: pointer;
         font-weight: bold;
@@ -1383,6 +1383,13 @@ footer p {
     height: 55.6vw;
     left: -1.1vw;
 }
+    
+    .animate a{
+left: 50%}
+
+#arrow a span{
+top:44vw;
+}
 
     .uniquetext{
     margin-left: 24%;
@@ -1393,6 +1400,13 @@ footer p {
     .produkter {
     column-count: 4;
   }
+    
+#luk{
+right: 5.5em}
+
+#indhold{
+width: 28vw;
+margin-left: auto;}
 
     /*Aktuelt Desktop*/
 
