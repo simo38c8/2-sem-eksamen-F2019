@@ -21,44 +21,27 @@
             <li ><a href="index.html" >Forside</a></li>
             <li class="dropdown">
                 <p>Værker ▾</p>
-                <ul id="dropdown_content" class="scroll">
-                    <li class="malerier_dropdown scroll"> 
+                <ul id="dropdown_content" class="scroll active">
+                    <li class="malerier_dropdown" class="scroll"> 
                         <p>Malerier▸ </p>
                         <ul id="malerier" class="scroll">
                             <li><a href="">Malerier på lærred</a></li>
                             <li><a href="">Malerier på papir</a></li>
-                            <li><a href="">Kunsttryk</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Plakater</a></li>
-                    <li><a href="">Skulpturer</a></li>
-                    <li class="dropdown4">
-                        <p>Andet▸</p>
-                        <ul id="dropdown_content4" class="scroll">
-                            <li><a href="">Bøger</a></li>
-                            <li><a href="">Digte</a></li>
-                            <li><a href="">Krukker</a></li>
-                            <li><a href="">Tørklæder</a></li>
-                            <li><a href="">Gavekort</a></li>
-                            <li><a href="">CD'er</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="products.html">Kunst tryk</a></li>
+                    <li><a href="products.html">Streg tegninger</a></li>
+                    <li><a href="products.html">Plakater</a></li>
                 </ul>
             </li>
-            <li class="dropdown2">
-                <p>Om ▾</p>
-                <ul id="dropdown_content2" class="scroll">
-                    <li><a href="">Per Hillo</a></li>
-                    <li><a href="">Brochurer</a></li>
-                </ul>
-            </li>
-            <li ><a href="aktuelt.html" >Aktuelt</a></li>
-            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            <li><a href="om.html">Om</a></li>
+            <li ><a href="aktuelt.html">Aktuelt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
 
 
 
-        <div class="burgermenu">
+         <div class="burgermenu">
             <div id="menuknap" class="">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -71,10 +54,10 @@
                 <li><a href="index.html" class="link">Forside</a></li>
                 <li id="dropdownmobil">Værker ▾ <div id="dropdown-contentmobil">
                         <ul>
-                            <li> <a href="#">- Malerier</a></li>
-                            <li><a href="#">- Kunst tryk</a></li>
-                            <li><a href="#">- Stregtegninger</a></li>
-                            <li><a href="#">- Plakater</a></li>
+                            <li> <a href="products.html" class="link">- Malerier</a></li>
+                            <li><a href="products.html" class="link">- Kunst tryk</a></li>
+                            <li><a href="products.html" class="link">- Stregtegninger</a></li>
+                            <li><a href="products.html" class="link">- Plakater</a></li>
                         </ul>
                     </div>
                 </li>
@@ -103,8 +86,10 @@
     <div class="menu">
         <button class="filter valgt" data-kategori="all">Alle</button>
         <button class="filter" data-kategori="malerier">Malerier</button>
+        <button class="filter" data-kategori="kunst tryk">Kunst tryk</button>
+        <button class="filter" data-kategori="streg tegning">Streg tegninger</button>
         <button class="filter" data-kategori="plakater">Plakater</button>
-        <button class="filter" data-kategori="andet">Andet</button>
+        
     </div>
 
 
@@ -150,12 +135,26 @@
                         klon.querySelector(".title").textContent = produkt.title.rendered;
                         klon.querySelector(".price").textContent = produkt.price;
                         dest.appendChild(klon);
+                        dest.lastElementChild.addEventListener("click", () => {
+                    visSingle(produkt);
+                    });
                     }
+                    
                 })
                 document.querySelectorAll(".filter").forEach(elm => {
                     elm.addEventListener("click", filtrering);
                 })
             }
+            
+            function visSingle(produkt){
+          console.log("vis single virker");
+            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <p>${produkt.product_text}</p> <br> <p>Pris: ${produkt.price},-</p></div>`;
+                        document.querySelector("#popup").style.display = "block";
+                        document.querySelector("#popup #luk").addEventListener("click", close);
+                    }
+                    function close() {
+                        document.querySelector("#popup").style.display = "none";
+                    }
 
             function filtrering() {
 
@@ -173,14 +172,7 @@
         }
 
         
-      /*  function visSingle(produkt){
-            document.querySelector("#indhold").innerHTML = ``;
-                        document.querySelector("#popup").style.display = "block";
-                        document.querySelector("#popup #luk").addEventListener("click", close);
-                    }
-                    function close() {
-                        document.querySelector("#popup").style.display = "none";
-                    }*/
+      
         
     </script>
    

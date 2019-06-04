@@ -324,15 +324,53 @@ p {
 }
 
 
+ #popup {
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: hsla(0, 1%, 69%, 0.5);
+        display: none;
+        z-index: 1;
+    }
+
+    #indhold {
+    min-height: 50vh;
+    margin: 1.5rem auto;
+    padding-top: 1em;
+
+    }
+
+    #luk {
+        position: fixed;
+        right: 1.2em;
+    top: 3.2em;
+    }
+
+    #luk button {
+        font-size: 4rem;
+        border: none;
+        color: #100c0c;
+        background-color: transparent;
+    }
+
+.ramme{
+    background-color: white;
+    text-align: center;
+}
+
 /*om mobil*/
 
 
-#omvideo {
-    
-        width: 100%;
+#kampagnevideo {
         padding-left: 7vw;
     padding-right: 7vw;
     padding-top: 6vw;
+    }
+
+iframe{
+        height: 180px;
+        width: 100%;
     }
 
 #sektioncitat h1, #about h1, #start h1{
@@ -379,28 +417,33 @@ p {
 
 /*aktuelt mobil*/
 
-#actualsection {
+#sectionactual {
     padding-left: 7vw;
     padding-right: 7vw;
     
 }
 
 
+.actual{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-#actual h2 {
+#sectionactual h1{
     text-align: center;
+    margin-top: 6%;
+    margin-bottom: 5%;
 }
 
-.news {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+.actual h2{
+    margin-left: 5vw;
 }
+
 
 .newspicture,
 .text {
     padding: 1rem;
-    line-height: 2rem;
+
 }
 
 
@@ -625,6 +668,8 @@ footer p {
 
 
     /*Generelt*/
+
+    
     .column {
         flex-basis: 300px;
         padding-right: 2vw;
@@ -849,11 +894,19 @@ footer p {
 
 
     /*Aktuelt Ipad*/
-    #actual {
+
+    
+     .actual .column {
+        flex-basis: 300px;
         padding-right: 0vw;
         padding-left: 0vw;
     }
-
+    
+    #sectionactual h1{
+    margin-top: 15%;
+}
+    
+  
 
     /*NAVIGATION*/
 
@@ -951,41 +1004,6 @@ footer p {
     }
 
 
-    .dropdown2 {
-        position: relative;
-        display: inline-block;
-        z-index: 2;
-    }
-
-
-    #dropdown_content2 {
-        display: none;
-        z-index: 2;
-    }
-
-    .dropdown2:hover #dropdown_content2 {
-        display: block;
-    }
-
-
-    .dropdown4 {
-        position: relative;
-        display: inline-block;
-    }
-
-    #dropdown_content4 {
-        display: none;
-        position: absolute;
-        left: 100%;
-        bottom: -198%;
-        z-index: 2;
-    }
-
-
-    .dropdown4:hover #dropdown_content4 {
-        display: block;
-    }
-
 
     .scroll {
         background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
@@ -1033,13 +1051,20 @@ footer p {
 
     /*om ipad*/
 
-    #omvideo{
-    padding-top: 10vw;
+    #kampagnevideo{
+    padding-top: 12vw;
     }
+    
+    
    
     #sektioncitat h1, #about h1, #start h1 {
     margin-bottom: 3%;
 }
+    
+    iframe{
+        height:380px;
+        width: 100%; 
+    }
     
     .citat {
         margin-bottom: 0;
@@ -1065,7 +1090,7 @@ footer p {
         display: none;
     }
 
-    /*værker ipad*/
+    /*Værker Ipad*/
     
     .producth1{ 
     margin-bottom: 2%;
@@ -1101,23 +1126,15 @@ footer p {
         display: block;
     }
     
-
-    #popup {
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        background-color: hsla(0, 1%, 69%, 0.5);
-        display: none;
-    }
-
-    #indhold {
-        min-height: 50vh;
-        width: 30vw;
-        margin: 4rem auto;
-        color: white;
-        padding-top: 3em;
-
+    #indhold{
+    width: 39vw;
+    margin-left: 34vw;
+    margin: 6rem auto;
+}
+    
+    #luk{
+    right: 3.2em;
+    top: 8.2em;
     }
 
 
@@ -1136,20 +1153,7 @@ footer p {
     
     }
 
-   
 
-    #luk {
-        position: fixed;
-        right: 25em;
-        top: 7.2em;
-    }
-
-    #luk button {
-        font-size: 2rem;
-        padding: 1rem 1rem;
-        background-color: black;
-        color: #EEDDC4;
-    }
     
      .valgt {
         background-color: #ab2d28;
@@ -1158,7 +1162,6 @@ footer p {
 
 
     /*kontakt ipad*/
-
 
     .streg2 {
         background-image: url(SVG/stregtegning_familie.svg);
@@ -1393,12 +1396,30 @@ footer p {
 
     /*Aktuelt Desktop*/
 
-
-
-    /*Om Desktop*/
-    #omvideo {
-    padding-top: 5vw;
+ #sectionactual h1{
+    margin-top: 8%;
+     margin-bottom: 4%;
 }
+    
+ .actual .column {
+        flex-basis: 400px;
+        padding-right: 2vw;
+        padding-left: 7vw;
+    }
+    
+    .actual h2 {
+        margin-left: 50.5vw;}
+  
+    /*Om Desktop*/
+   #kampagnevideo {
+    padding-top: 8vw;
+}
+    
+    iframe{
+        height: 550px;
+        width: 70%;
+        margin-left: 14vw;
+    }
    
 
     /*Kontakt Desktop*/
