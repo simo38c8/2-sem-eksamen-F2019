@@ -5,7 +5,6 @@ window.addEventListener("load", sidenVises);
             document.querySelector("#menuknap").addEventListener("click", kryds);
             document.querySelector("#menuknap").addEventListener("click", toggletopmenu);
             document.querySelector("#dropdownmobil").addEventListener("click", toggledropdown);
-            document.querySelector("#dropdownmobil2").addEventListener("click", toggledropdown2);
             
 
 } /*Denne funktion sætte eventlistener på navigastionsbaren og bekræfter vinduet bliver loadet korrekt.*/
@@ -27,7 +26,7 @@ function kryds(){
 
          function toggledropdown() {
              
-console.log("funktion toggledropdown1 virker");
+console.log("funktion toggledropdown virker");
               
   let work = document.getElementById("dropdown-contentmobil");
         
@@ -36,32 +35,11 @@ console.log("funktion toggledropdown1 virker");
     work.style.display = "none";
   } else {
     work.style.display = "block";
-      document.getElementById("dropdown-contentmobil2").style.display = "none";
-      document.getElementById("dropdown-contentmobil3").style.display = "none";
           
 }
    
   }
 
-
-    function toggledropdown2() {
-             
-console.log("funktion toggledropdown2 virker");
-              
-  let about = document.getElementById("dropdown-contentmobil2");
-        
-             
-  if (about.style.display === "block") {
-    about.style.display = "none";
-  } else {
-    about.style.display = "block";
-      document.getElementById("dropdown-contentmobil").style.display = "none";
-      document.getElementById("dropdown-contentmobil3").style.display = "none";
-    
-          
-}
-   
-  }
 
    
 

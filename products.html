@@ -14,18 +14,17 @@
 </head>
 
 <body>
-      <nav id="navbar">
-        <div id="logo">
-            <img src="SVG/Logo_hvid.svg" alt="Per Hillo's Logo">
-        </div>
+       <nav id="navbarwhite" class="scroll">
+        <a href="index.html" id="logoa"><div id="logo2">
+            </div></a>
         <ul class="pcmenu">
-            <li class="active"><a href="index.html">Forside</a></li>
+            <li ><a href="index.html" >Forside</a></li>
             <li class="dropdown">
                 <p>Værker ▾</p>
-                <ul id="dropdown_content">
-                    <li class="malerier_dropdown">
+                <ul id="dropdown_content" class="scroll">
+                    <li class="malerier_dropdown scroll"> 
                         <p>Malerier▸ </p>
-                        <ul id="malerier">
+                        <ul id="malerier" class="scroll">
                             <li><a href="">Malerier på lærred</a></li>
                             <li><a href="">Malerier på papir</a></li>
                             <li><a href="">Kunsttryk</a></li>
@@ -35,7 +34,7 @@
                     <li><a href="">Skulpturer</a></li>
                     <li class="dropdown4">
                         <p>Andet▸</p>
-                        <ul id="dropdown_content4">
+                        <ul id="dropdown_content4" class="scroll">
                             <li><a href="">Bøger</a></li>
                             <li><a href="">Digte</a></li>
                             <li><a href="">Krukker</a></li>
@@ -48,19 +47,13 @@
             </li>
             <li class="dropdown2">
                 <p>Om ▾</p>
-                <ul id="dropdown_content2">
+                <ul id="dropdown_content2" class="scroll">
                     <li><a href="">Per Hillo</a></li>
                     <li><a href="">Brochurer</a></li>
                 </ul>
             </li>
-            <li class="dropdown3">
-                <p>Aktuelt ▾</p>
-                <ul id="dropdown_content3">
-                    <li><a href="projekter.html">Projekter</a></li>
-                    <li><a href="arrangementer.html">Arrangementer</a></li>
-                </ul>
-            </li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li ><a href="aktuelt.html" >Aktuelt</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
         </ul>
 
 
@@ -79,29 +72,15 @@
                 <li id="dropdownmobil">Værker ▾ <div id="dropdown-contentmobil">
                         <ul>
                             <li> <a href="#">- Malerier</a></li>
+                            <li><a href="#">- Kunst tryk</a></li>
+                            <li><a href="#">- Stregtegninger</a></li>
                             <li><a href="#">- Plakater</a></li>
-                            <li><a href="#">- Andet</a></li>
-
                         </ul>
                     </div>
                 </li>
-                <li id="dropdownmobil2">Om <div id="dropdown-contentmobil2">
-                        <ul>
-                            <li> <a href="#">- Per Hillo</a></li>
-                            <li><a href="#">- Brochure</a></li>
-
-                        </ul>
-                    </div>
-                </li>
-                <li id="dropdownmobil3">Aktuelt ▾ <div id="dropdown-contentmobil3">
-                        <ul>
-                            <li> <a href="#">- Projekter</a></li>
-                            <li><a href="#">- Arrangmenter</a></li>
-
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="om.html" class="link">Om </a></li>
+                <li><a href="aktuelt.html" class="link">Aktuelt</a></li>
+                <li><a href="kontakt.html" class="link">Kontakt</a></li>
 
             </ul>
         </div>
@@ -118,7 +97,7 @@
     </div>
 
 
-    <h1>Værker</h1>
+    <h1 class="producth1">Værker</h1>
 
 
     <div class="menu">
@@ -126,20 +105,16 @@
         <button class="filter" data-kategori="malerier">Malerier</button>
         <button class="filter" data-kategori="plakater">Plakater</button>
         <button class="filter" data-kategori="andet">Andet</button>
-        <div class=streg>
-            <hr>
-        </div>
     </div>
 
 
     <main class="produkter"></main>
 
     <template>
-        <div class="grid-item">
-                <h2></h2>
-                <img src="" alt="">
-                <p></p>
-            </div>
+                
+                <div class="produkt"><img src="" alt="værk af Per Hillo" class="item"><div class="produkthover"><h2 class="title"></h2>
+                    <p class="price"></p></div></div>
+                
     </template>
     
     
@@ -156,7 +131,7 @@
 
             async function getJson() {
                 console.log("produkt json hentes ind");
-                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter/";
+                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter?per_page=100";
                 let jsonData = await fetch(url);
                 produkter = await jsonData.json();
                 visProdukter();
@@ -171,9 +146,9 @@
 
                     if (filter == "all" || filter == produkt.kategori) {
                         let klon = temp.cloneNode(true).content;
-                        klon.querySelector("img").src = produkt.picture.guid;
-                        klon.querySelector("h2").textContent = produkt.titel;
-                        klon.querySelector("p").textContent = produkt.price;
+                        klon.querySelector(".item").src = produkt.picture.guid;
+                        klon.querySelector(".title").textContent = produkt.title.rendered;
+                        klon.querySelector(".price").textContent = produkt.price;
                         dest.appendChild(klon);
                     }
                 })
@@ -197,6 +172,16 @@
             getJson();
         }
 
+        
+      /*  function visSingle(produkt){
+            document.querySelector("#indhold").innerHTML = ``;
+                        document.querySelector("#popup").style.display = "block";
+                        document.querySelector("#popup #luk").addEventListener("click", close);
+                    }
+                    function close() {
+                        document.querySelector("#popup").style.display = "none";
+                    }*/
+        
     </script>
    
 </body>
