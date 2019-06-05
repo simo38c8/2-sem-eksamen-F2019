@@ -38,21 +38,7 @@
             </div></a>
         <ul class="pcmenu">
             <li class="active" ><a href="index.html" id="a3" class="top2">Forside</a></li>
-            <li class="dropdown">
-                <p class="top2" id="a1">Værker ▾</p>
-                <ul id="dropdown_content" class="top">
-                    <li class="malerier_dropdown">
-                        <p id="a6" class="top2">Malerier▸ </p>
-                        <ul id="malerier" class="top2">
-                            <li class="white"><a href="products.html" id="a7" class="top2">Malerier på lærred</a></li>
-                            <li><a href="products.html" id="a8" class="top2">Malerier på papir</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="products.html" id="a9" class="top2" >Kunst tryk</a></li>
-                    <li><a href="products.html" id="a10" class="top2">Stregtegninger</a></li>
-                    <li><a href="products.html" id="a11" class="top2">Plakater</a></li>
-                </ul>
-            </li>
+              <li><a href="products.html" class="top2" id="a1">Værker</a></li>
                 <li><a href="om.html" class="top2" id="a2">Om</a></li>
             <li><a href="aktuelt.html" class="top2" id="a4">Aktuelt</a></li>
             <li><a href="kontakt.html" class="top2" id="a5">Kontakt</a></li>
@@ -118,7 +104,7 @@
             <h2>Mød Per</h2>
             <p class="newstext"></p>
             <br>
-            <img src="#" class="newspicture" alt="">
+            <img src="#" class="newspicture" alt="Billede af nyhed på Per Hillo hjemmeside, kunstner med galleri i ordrup">
             </div>
         </section>
 
@@ -126,7 +112,7 @@
             <div>
                 <h2>Det sker</h2>
                 <p class="meettext"></p>
-                <img src="#" class="meetpicture" alt="">
+                <img src="#" class="meetpicture" alt="Læs mere om Per Hillo på hjemmeside, en kunstner med galleri i ordrup">
 
             </div>
 
@@ -146,7 +132,7 @@
             <div class="infowrap">
                 <div class="info1">
                     <div>
-                        <img src="svg/30.svg" alt="">
+                        <img src="billeder/30.png" alt="infografik af antal dage Per Hillo tager at skabe det bestilte værk">
                     </div>
                     <div>
                       
@@ -160,7 +146,7 @@
             <div class="infowrap">
                 <div class="info1">
                     <div>
-                        <img src="svg/100.svg" alt="">
+                        <img src="billeder/100.png" alt="100 procent tilfreds med dit maleri">
                     </div>
                     <div>
                       
@@ -173,7 +159,7 @@
             <div class="infowrap">
                 <div class="info1">
                     <div>
-                        <img src="svg/8.svg" alt="">
+                        <img src="billeder/8.png" alt="malerier og værker kan males i 8 foreskellige størrelser hos Per Hillo">
                     </div>
                     <div>
                      
@@ -192,7 +178,7 @@
             <div class="infowrap">
                 <div class="info1">
                     <div>
-                        <img src="svg/20.svg" alt="">
+                        <img src="billeder/20.png" alt="Per Hillos depression startede for 20 år siden og har siden malet med fokus på kærlighed">
                     </div>
                     <div>
                       
@@ -268,7 +254,7 @@
         function start() {
             async function getJson() {
                 console.log("JSon bliver hentet ned");
-                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/forside/64"
+                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/forside/64" /*Her defineres hvor JSON hentes fra*/
                 let jsonData = await fetch(url);
                 forside = await jsonData.json();
                 visIndhold();
@@ -278,49 +264,34 @@
                 document.querySelector(".newstext").innerHTML = forside.news_text;
                 document.querySelector(".meettext").innerHTML = forside.meet_text;
                 document.querySelector(".meetpicture").src = forside.meet_picture.guid;
-            } /*Her bliver de angivet HTML-elementer ændret dynamisk fra JSON. */
+            } /*Her bliver de angivet HTML-elementer indhold ændret dynamisk fra JSON dataen. */
             getJson();
             scroll();
             
         }
         
         
-        function scroll(){ 
+        function scroll(){  /*Denne funktion ændre navigationsbaren fra en gennemsigtig til hvid, 700 er den angivet længde bestemt */
 window.onscroll = () => {
   if(this.scrollY <= 700){
       document.querySelector('#navbar').className = 'top'; 
-      document.querySelector('#dropdown_content').className = 'top'; 
-      document.querySelector('#malerier').className = 'top';
       document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_hvid.svg')"; 
       document.querySelector('#a1').className = 'top2';
       document.querySelector('#a2').className = 'top2';
       document.querySelector('#a3').className = 'top2';
       document.querySelector('#a4').className = 'top2';
       document.querySelector('#a5').className = 'top2';
-      document.querySelector('#a6').className = 'top2';
-      document.querySelector('#a7').className = 'top2';
-      document.querySelector('#a8').className = 'top2';
-      document.querySelector('#a9').className = 'top2';
-      document.querySelector('#a10').className = 'top2';
-      document.querySelector('#a11').className = 'top2';
 
             
   } else {
       document.querySelector('#navbar').className = 'scroll3'; 
-      document.querySelector('#dropdown_content').className = 'scroll3';
-      document.querySelector('#malerier').className = 'scroll3';
       document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_sort.svg')";
       document.querySelector('#a1').className = 'scroll2';
       document.querySelector('#a2').className = 'scroll2';
       document.querySelector('#a3').className = 'scroll2';
       document.querySelector('#a4').className = 'scroll2';
       document.querySelector('#a5').className = 'scroll2';
-            document.querySelector('#a6').className = 'scroll2';
-      document.querySelector('#a7').className = 'scroll2';
-      document.querySelector('#a8').className = 'scroll2';
-      document.querySelector('#a9').className = 'scroll2';
-      document.querySelector('#a10').className = 'scroll2';
-      document.querySelector('#a11').className = 'scroll2';
+            
   }
     
 };

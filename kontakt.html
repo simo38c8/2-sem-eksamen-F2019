@@ -28,26 +28,12 @@
 
 <body>
 
-   <nav id="navbarwhite" class="scroll">
+    <nav id="navbarwhite" class="scroll">
         <a href="index.html" id="logoa"><div id="logo2">
             </div></a>
         <ul class="pcmenu">
             <li ><a href="index.html" >Forside</a></li>
-            <li class="dropdown">
-                <p>Værker ▾</p>
-                <ul id="dropdown_content" class="scroll3">
-                    <li class="malerier_dropdown scroll2"> 
-                        <p>Malerier▸ </p>
-                        <ul id="malerier" class="scroll3">
-                            <li><a href="products.html">Malerier på lærred</a></li>
-                            <li><a href="products.html">Malerier på papir</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="products.html">Kunsttryk</a></li>
-                    <li><a href="products.html">Stregtegninger</a></li>
-                    <li><a href="products.html">Plakater</a></li>
-                </ul>
-            </li>
+            <li><a href="products.html">Værker</a></li>
             <li><a href="om.html">Om</a></li>
             <li ><a href="aktuelt.html">Aktuelt</a></li>
             <li><a href="kontakt.html" class="active">Kontakt</a></li>
@@ -66,20 +52,14 @@
             <ul id="topmenu" class="hidden">
                <div class="backgroundimage"></div>
                 <!--Menuen som dukker op med navigationslisten.-->
-                <li><a href="index.html" class="link">Forside</a></li>
-                <li id="dropdownmobil">Værker ▾<div id="dropdown-contentmobil">
-                        <ul>
-                            <li> <a href="products.html" class="link">- Malerier</a></li>
-                            <li><a href="products.html" class="link">- Kunsttryk</a></li>
-                            <li><a href="products.html" class="link">- Stregtegninger</a></li>
-                            <li><a href="products.html" class="link">- Plakater</a></li>
-                        </ul>
-                    </div>
-                </li>
+                <div class="centre_menu">
+                <li><a href="index.html" class="link">Forside</a></li>          
+                <li><a href="products.html" class="link">Værker</a></li>
                 <li><a href="om.html" class="link">Om </a></li>
                 <li><a href="aktuelt.html" class="link">Aktuelt</a></li>
                 <li><a href="kontakt.html" class="link">Kontakt</a></li>
-
+                
+</div>
             </ul>
         </div>
     </nav>
@@ -136,33 +116,34 @@
           <div class="column2">
                <div class="zealand">
         <a href="https://www.google.com/maps/place/Per+Hillo/@55.3971216,11.358169,17z/data=!3m1!4b1!4m5!3m4!1s0x464d61782c5d5413:0xf0ba2e057862fff9!8m2!3d55.3971186!4d11.3603629" target="_blank">
-            <div class="slagelse">
-            <div id="atelier">
-            <h2>Per Hillo Atelier</h2>
-            <p class="ateliertext"></p>
-             <img src="#" alt="" class="atelierpicture">
-            
-           </div>
+            <div class="slagelse pulse">
             </div>
         </a>
         <a href="https://www.google.com/maps/place/Ordrupvej+55A,+2920+Charlottenlund/@55.76407,12.5782113,17z/data=!3m1!4b1!4m5!3m4!1s0x46524da31479cdb7:0x17d70658a15d5b1e!8m2!3d55.764067!4d12.5804053" target="_blank">
-            <div class="ordrup"> <div id="galleri">
-               <h2>Per Hillo Kunstgalleri <br> Charlottenlund</h2>
-               <img src="#" alt="" class="galleripicture">
-            <p class="galleritext"></p>
-            </div>
-            
-        
+            <div class="ordrup pulse"> 
     </div>
           </a>
 
           </div>
            
 
-        
            
           
            </div>
+           
+           <div id="galleri">
+               <h2>Per Hillo Kunstgalleri <br> Charlottenlund</h2>
+               <img src="#" alt="et billede af Per Hillos Kunstgalleri I Charlottenlund hvor han sælger kunstværker" class="galleripicture">
+            <p class="galleritext"></p>
+            </div>
+        
+          <div id="atelier">
+            <h2>Per Hillo Atelier</h2>
+            <p class="ateliertext"></p>
+             <img src="#" alt="et billede af Per Hillos atelier i slagelse hvor han maler kunstværker" class="atelierpicture">
+            
+           </div>
+           
            </section>
     
     <div class="streg2"></div>
@@ -224,7 +205,7 @@
         function start() {
             async function getJson() {
                 console.log("kontakt json hentes ind");
-                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/kontakt/67";
+                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/kontakt/67"; /*Her defineres hvor JSON hentes fra*/
                 let jsonData = await fetch(url);
                 kontakt = await jsonData.json();
                 visKontakt();
@@ -235,8 +216,7 @@
                 document.querySelector(".galleritext").innerHTML = kontakt.galleri_adress;
                 document.querySelector(".atelierpicture").src = kontakt.atelier_picture.guid;
             document.querySelector(".galleripicture").src = kontakt.galleri_picture.guid;  
-
-            }
+            } /*Her bliver de angivet HTML-elementer indhold ændret dynamisk fra JSON dataen. */
             getJson();
         }
     </script>

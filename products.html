@@ -19,21 +19,7 @@
             </div></a>
         <ul class="pcmenu">
             <li ><a href="index.html" >Forside</a></li>
-            <li class="dropdown">
-                <p class="active">Værker ▾</p>
-                <ul id="dropdown_content" class="scroll3">
-                    <li class="malerier_dropdown scroll2"> 
-                        <p>Malerier▸ </p>
-                        <ul id="malerier" class="scroll3">
-                            <li><a href="products.html">Malerier på lærred</a></li>
-                            <li><a href="products.html">Malerier på papir</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="products.html">Kunst tryk</a></li>
-                    <li><a href="products.html">Stregtegninger</a></li>
-                    <li><a href="products.html">Plakater</a></li>
-                </ul>
-            </li>
+            <li><a href="products.html" class="active">Værker</a></li>
             <li><a href="om.html">Om</a></li>
             <li ><a href="aktuelt.html">Aktuelt</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
@@ -53,16 +39,8 @@
                <div class="backgroundimage"></div>
                 <!--Menuen som dukker op med navigationslisten.-->
                 <div class="centre_menu">
-                <li><a href="index.html" class="link">Forside</a></li>
-                <li id="dropdownmobil">Værker ▾<div id="dropdown-contentmobil">
-                        <ul>
-                            <li> <a href="products.html" class="link">Malerier</a></li>
-                            <li><a href="products.html" class="link">Kunst tryk</a></li>
-                            <li><a href="products.html" class="link">Stregtegninger</a></li>
-                            <li><a href="products.html" class="link">Plakater</a></li>
-                        </ul>
-                    </div>
-                </li>
+                <li><a href="index.html" class="link">Forside</a></li>          
+                <li><a href="products.html" class="link">Værker</a></li>
                 <li><a href="om.html" class="link">Om </a></li>
                 <li><a href="aktuelt.html" class="link">Aktuelt</a></li>
                 <li><a href="kontakt.html" class="link">Kontakt</a></li>
@@ -164,13 +142,13 @@
     <script>
         let filter = "all";
         let produkter = [];
-        document.addEventListener("DOMContentLoaded", start);
+        document.addEventListener("DOMContentLoaded", start); /*Her defineres hvor JSON hentes fra*/
 
         function start() {
 
             async function getJson() {
                 console.log("produkt json hentes ind");
-                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter?per_page=100";
+                let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter?per_page=100"; /*Her defineres hvor JSON hentes fra*/
                 let jsonData = await fetch(url);
                 produkter = await jsonData.json();
                 visProdukter();
@@ -201,9 +179,9 @@
                 })
             }
             
-            function visSingle(produkt){
+            function visSingle(produkt){ /*Denne funktion angiver hvad der sker i singleview samt gøre det muligt at lukke singleview ned igen via #luk knappen*/
           console.log("vis single virker");
-            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <p>${produkt.product_text}</p> <br> <p>Pris: ${produkt.price},-</p></div>`;
+            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <p>${produkt.product_text}</p> <br> <p>Pris: ${produkt.price},-</p></div>`; 
                         document.querySelector("#popup").style.display = "block";
                         document.querySelector("#popup #luk").addEventListener("click", close);
                     }
@@ -211,7 +189,7 @@
                         document.querySelector("#popup").style.display = "none";
                     }
 
-            function filtrering() {
+            function filtrering() { /*Funktionen filtrering bestemmes ud fra data attributen tidligere angivet i HTML, her sortere den ud fra de angivet kategoriet fra JSON */
 
                 filter = this.getAttribute("data-kategori");
 

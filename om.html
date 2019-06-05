@@ -28,26 +28,12 @@
 
 <body>
 
-   <nav id="navbarwhite" class="scroll">
+    <nav id="navbarwhite" class="scroll">
         <a href="index.html" id="logoa"><div id="logo2">
             </div></a>
         <ul class="pcmenu">
             <li ><a href="index.html" >Forside</a></li>
-            <li class="dropdown">
-                <p>Værker ▾</p>
-                <ul id="dropdown_content" class="scroll3">
-                    <li class="malerier_dropdown scroll2"> 
-                        <p>Malerier▸ </p>
-                        <ul id="malerier" class="scroll3">
-                            <li><a href="products.html">Malerier på lærred</a></li>
-                            <li><a href="products.html">Malerier på papir</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="products.html">Kunst tryk</a></li>
-                    <li><a href="products.html">Stregtegninger</a></li>
-                    <li><a href="products.html">Plakater</a></li>
-                </ul>
-            </li>
+            <li><a href="products.html">Værker</a></li>
             <li><a href="om.html" class="active">Om</a></li>
             <li ><a href="aktuelt.html">Aktuelt</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
@@ -55,7 +41,7 @@
 
 
 
-        <div class="burgermenu">
+         <div class="burgermenu">
             <div id="menuknap" class="">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -66,20 +52,14 @@
             <ul id="topmenu" class="hidden">
                <div class="backgroundimage"></div>
                 <!--Menuen som dukker op med navigationslisten.-->
-                <li><a href="index.html" class="link">Forside</a></li>
-                <li id="dropdownmobil">Værker ▾<div id="dropdown-contentmobil">
-                        <ul>
-                            <li> <a href="products.html" class="link">- Malerier</a></li>
-                            <li><a href="products.html" class="link">- Kunst tryk</a></li>
-                            <li><a href="products.html" class="link">- Stregtegninger</a></li>
-                            <li><a href="products.html" class="link">- Plakater</a></li>
-                        </ul>
-                    </div>
-                </li>
+                <div class="centre_menu">
+                <li><a href="index.html" class="link">Forside</a></li>          
+                <li><a href="products.html" class="link">Værker</a></li>
                 <li><a href="om.html" class="link">Om </a></li>
                 <li><a href="aktuelt.html" class="link">Aktuelt</a></li>
                 <li><a href="kontakt.html" class="link">Kontakt</a></li>
-
+                
+</div>
             </ul>
         </div>
     </nav>
@@ -101,7 +81,7 @@
     
      <section id="about">
      <div class="column">
-    <img src="#" class="profilepicture" alt="">
+    <img src="#" class="profilepicture" alt="et billede af Per Hillo, kunstmaler kendt for sin kærlighed og varme">
       </div>
       <div class="column2">
        <h2>Per Hillo's kunst</h2>
@@ -122,7 +102,7 @@
         <p class="storytext"></p>
   </div>
   <div class="column2">
-   <img src="#" class="storypicture" alt="">
+   <img src="#" class="storypicture" alt="et billede som fortæller om Per Hillos historie som kunstner og erfaring">
    </div>
     </section>
     
@@ -182,8 +162,8 @@
             document.addEventListener("DOMContentLoaded", start); /*Funktion start bliver anvendt når dom er loadet.*/
         function start() {
     async function getJson(){
-            console.log("om json hentes ind");
-            let url="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/om/72";
+            console.log("om json hentes ind"); 
+            let url="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/om/72"; /*Her defineres hvor JSON hentes fra*/
             let jsonData = await fetch(url);
             om = await jsonData.json();
         
@@ -195,7 +175,7 @@
             document.querySelector(".profiletext").innerHTML = om.top_text;
             document.querySelector(".storytext").innerHTML = om.bottom_text;
             document.querySelector(".storypicture").src = om.bottom_picture.guid;   
-            }
+            }/*Her bliver de angivet HTML-elementer indhold ændret dynamisk fra JSON dataen. */
             getJson();
         }
         
