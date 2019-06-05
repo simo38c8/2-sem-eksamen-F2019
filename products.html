@@ -14,19 +14,19 @@
 </head>
 
 <body>
-       <nav id="navbarwhite" class="scroll">
+      <nav id="navbarwhite" class="scroll">
         <a href="index.html" id="logoa"><div id="logo2">
             </div></a>
         <ul class="pcmenu">
             <li ><a href="index.html" >Forside</a></li>
             <li class="dropdown">
                 <p class="active">Værker ▾</p>
-                <ul id="dropdown_content" class="scroll">
-                    <li class="malerier_dropdown scroll"> 
+                <ul id="dropdown_content" class="scroll3">
+                    <li class="malerier_dropdown scroll2"> 
                         <p>Malerier▸ </p>
-                        <ul id="malerier" class="scroll">
-                            <li><a href="">Malerier på lærred</a></li>
-                            <li><a href="">Malerier på papir</a></li>
+                        <ul id="malerier" class="scroll3">
+                            <li><a href="products.html">Malerier på lærred</a></li>
+                            <li><a href="products.html">Malerier på papir</a></li>
                         </ul>
                     </li>
                     <li><a href="products.html">Kunst tryk</a></li>
@@ -89,8 +89,8 @@
     <div class="menu">
         <button class="filter valgt" data-kategori="all">Malerier på lærred</button>
         <button class="filter" data-kategori="malerier">Malerier på papir</button>
-        <button class="filter" data-kategori="kunsttryk">Kunst tryk</button>
-        <button class="filter" data-kategori="stregtegning">Stregtegninger</button>
+        <button class="filter" data-kategori="kunst tryk">Kunsttryk</button>
+        <button class="filter" data-kategori="streg tegning">Stregtegninger</button>
         <button class="filter" data-kategori="plakater">Plakater</button>
     </div>
     
@@ -101,6 +101,7 @@
     <template>
                 
                 <div class="produkt"><img src="" alt="værk af Per Hillo" class="item"><div class="produkthover"><h2 class="title"></h2>
+                   <p class="size"></p>
                     <p class="price"></p></div></div>
                 
     </template>
@@ -187,6 +188,7 @@
                         klon.querySelector(".item").src = produkt.picture.guid;
                         klon.querySelector(".title").textContent = produkt.title.rendered;
                         klon.querySelector(".price").textContent = produkt.price;
+                        klon.querySelector(".size").textContent = produkt.size;
                         dest.appendChild(klon);
                         dest.lastElementChild.addEventListener("click", () => {
                     visSingle(produkt);

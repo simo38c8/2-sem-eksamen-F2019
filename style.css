@@ -46,6 +46,17 @@ h6 {
     font-family: 'Merriweather', serif;
 }
 
+h1 {
+    text-align: center;
+    padding-top: 10vw;
+    font-size: 2.5rem;
+}
+    
+
+h2 {
+    padding: 0vw 0vw 1vw 0vw
+}
+
 
 .column {
     flex-basis: 400px;
@@ -59,17 +70,43 @@ h6 {
 
 #about,
 #start,
-#form, 
+#form,
 #news,
-#unique, 
-#meet, #sektioncitat {
+#unique,
+#meet,
+#sektioncitat {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 7vw;
-    padding-right: 7vw;
-    padding-top: 2vw;
 }
 
+.grid_index {
+    padding: 3vw 10vw;
+}
+
+#unique {
+    padding: 3vw 10vw;
+}
+
+#form {
+    padding: 3vw 10vw;
+}
+
+#sectionactual {
+    padding: 3vw 10vw;
+}
+
+#sektioncitat {
+    padding: 3vw 10vw;
+}
+
+
+#about {
+    padding: 3vw 10vw;
+}
+
+#start {
+    padding: 3vw 10vw;
+}
 
 /*BURGERMENU*/
 .pcmenu {
@@ -231,10 +268,6 @@ h6 {
     font-size: 1rem;
 }
 
-#unique h1, #meet h1, #news h1{
-text-align:center;
-}
-
 .uniquetext{
     text-align: left;
     margin-left: 0vw;
@@ -269,19 +302,6 @@ text-align:center;
 
 
 
-.streg1 {
-    background-image: url(SVG/stregtegning_familie.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 20vw;
-    height: 20vw;
-    left: 1vw;
-    bottom: -110vw;
-    background-size: 100%;
-}
-
-
-
 
 /*infografik mobil*/
 
@@ -292,11 +312,7 @@ text-align:center;
     height: auto;
 }
 
-.infowrap h1,
-h2,
-p {
-    margin-top: 0;
-}
+
 
 .infowrap {
     flex-basis: 200px;
@@ -354,12 +370,7 @@ p {
 
 /*værker mobil */
 
- #producth1{ 
-    margin-bottom: 4%;
-    margin-top: 10%;
-    text-align: center;
-        
-    }
+
 
   .produkter { 
       padding-left: 20vw;
@@ -378,6 +389,7 @@ padding-left: 15%;
   margin: 0 0 1em;
   width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 #toparrow{
@@ -436,6 +448,7 @@ padding-left: 15%;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin: 1rem;
+    
     }
 
     .filter {
@@ -446,6 +459,8 @@ padding-left: 15%;
         background-color: transparent;
         border: none;
         padding-left: 2vw;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
     }
 
      .valgt {
@@ -454,7 +469,11 @@ text-decoration: underline solid red;
     }
 
 /*om mobil*/
-
+.sectionwrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3vw 10vw;
+    }
 
 #kampagnevideo {
         padding-left: 7vw;
@@ -468,9 +487,7 @@ iframe{
     border: none;
     }
 
-#sektioncitat h1, #about h1, #start h1{
-    margin-bottom: 5%;
-}
+
 
 .citat{
     margin-top: 5%;
@@ -482,11 +499,6 @@ iframe{
     margin-right: 1vw;
 }
 
-#about,
-#start {
-    padding-right: 7vw;
-    padding-left: 7vw;
-}
 
 
 #start{
@@ -494,10 +506,6 @@ iframe{
 }
 
 
-#start img, #about img {
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
 
 
 .desktoponly {
@@ -524,18 +532,9 @@ iframe{
     flex-wrap: wrap;
 }
 
-#sectionactual h1{
-    text-align: center;
-    margin-top: 6%;
-    margin-bottom: 5%;
-}
-
-.actual h2{
-    margin-left: 5vw;
-}
 
 
-.newspicture,
+
 .text {
     padding: 1rem;
 
@@ -549,11 +548,6 @@ iframe{
     margin-bottom: 8vw;
 }
 
-#contacth1 {
-    text-align: center;
-    margin-top: 6%;
-    margin-bottom: 5%;
-}
 
 input[type=text],
 input[type=password],
@@ -638,6 +632,7 @@ footer p {
         
          footer h2 {
             font-size: 2rem;
+             padding: 0vw 0vw;
         }
 
         footer h3 {
@@ -767,15 +762,12 @@ footer p {
     
     .column {
         flex-basis: 300px;
-        padding-right: 2vw;
-        padding-left: 7vw;
+       
     }
 
     .column2 {
         flex-basis: 300px;
         flex-grow: 2;
-        padding-right: 7vw;
-        padding-left: 2vw;
     }
     
     .desktoponly {
@@ -915,11 +907,7 @@ footer p {
     }
 
 
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 5%;
-    }
-    
+
    
     
 
@@ -996,10 +984,7 @@ footer p {
         padding-right: 0vw;
         padding-left: 0vw;
     }
-    
-    #sectionactual h1{
-    margin-top: 15%;
-}
+
     
   
 
@@ -1056,6 +1041,8 @@ footer p {
         font-family: 'Montserrat', sans-serif;
         padding: 1.5rem;
         font-weight: bolder;
+        text-transform: uppercase;
+        
 
     }
     
@@ -1068,6 +1055,7 @@ footer p {
         font-family: 'Montserrat', sans-serif;
         padding: 1.5rem;
         font-weight: bolder;
+        text-transform: uppercase;
     }
 
     #navbarwhite #logoa {
@@ -1165,6 +1153,9 @@ footer p {
 
     #kampagnevideo{
     padding-top: 12vw;
+    padding-left: 0;
+    padding-right: 0;
+    
     }
     
     #brochure img{
@@ -1177,10 +1168,7 @@ footer p {
         text-align: center;
     }
    
-    #sektioncitat h1, #about h1, #start h1 {
-    margin-bottom: 3%;
-}
-    
+   
     iframe{
         height:380px;
         width: 100%; 
@@ -1191,8 +1179,7 @@ footer p {
     }
     
     .citat p{
-        display: inline-block;
-        float: left;
+        text-align: center;
         font-size: 1em;
         margin-bottom: 2%;
         font-size: 1.5em;
@@ -1210,6 +1197,8 @@ footer p {
     .citat br{
         display: none;
     }
+    
+    
 
     /*Værker Ipad*/
     
@@ -1222,25 +1211,26 @@ footer p {
     .produkt{
         position: relative;
     display: inline-block;
+
     }
     
     .produkthover{
-        display: none;
-        background: rgba(216, 212, 212, 0.45);
+        opacity: 0;
         height: 100%;
         width: 100%;
         text-align: center;
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         padding-left: 0%;
         padding-bottom: 0%;
+        transition: opacity 1s;
     }
 
 
     
     .produkt:hover .produkthover {
-        display: block;
+        opacity: 1;
     }
     
     #indhold{
@@ -1304,10 +1294,6 @@ margin: 4rem 3rem;
 
     }
 
-    #contacth1 {
-        margin-bottom: 0%;
-        margin-top: 12%;
-    }
 
     input[type=text],
     input[type=password],
@@ -1405,6 +1391,31 @@ margin: 4rem 3rem;
     .slagelse:hover #atelier {
         display: block;
     }
+    
+    .pulse {
+    animation-name: pulse_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+    0% {
+        transform: translateZ(1px);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
+}
+    
+    .no-animate {
+    transform: none;
+   transition: none;
+}
+
 
     /*footer ipad*/
     
@@ -1414,6 +1425,7 @@ margin: 4rem 3rem;
             
              footer h2 {
                 font-size: 1.7rem;
+                 padding: 1vw 0vw;
             }
             
              footer h3 {
@@ -1468,11 +1480,12 @@ margin: 4rem 3rem;
         position: relative;
         color: black;
         text-align: center;
-        width: 11vw;
+        width: 14vw;
     }
 
     nav p {
         padding: 1.5rem;
+        text-transform: uppercase;
     }
 
 
@@ -1495,6 +1508,20 @@ margin: 4rem 3rem;
 
 
  /*Forside Desktop*/
+    
+    .blomst{
+        background-image: url(SVG/blomst.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 23vw;
+        height: 25vw;
+        right: 0vw;
+        background-size: 100%;
+        bottom: -70%;
+        display: block;
+        z-index: -1;
+    }
+    
      #splashtekst {
     top: 50%;
     left: 13%;
@@ -1502,8 +1529,8 @@ margin: 4rem 3rem;
     }
     
     #opacity {
-    height: 55.6vw;
-    left: -1.1vw;
+    height: 55.90vw;
+    left: -0.6vw;
 }
     
     .animate a{
@@ -1530,31 +1557,40 @@ right: 5.5em}
 width: 28vw;
 margin-left: auto;}
     
-     #producth1{ 
-    margin-top: 8%;
-        
-    }
+    
 
     /*Aktuelt Desktop*/
 
- #sectionactual h1{
-    margin-top: 8%;
-     margin-bottom: 4%;
-}
+
     
  .actual .column {
         flex-basis: 400px;
         padding-right: 2vw;
-        padding-left: 7vw;
+   
     }
     
-    .actual h2 {
-        margin-left: 50.5vw;}
+     .actual .column2 {
+        flex-basis: 400px;
+        padding-left: 2vw;
+    }
+    
+
     
     .menu{
         padding-top: 6%;
         
     }
+    
+    .streg1 {
+    background-image: url(SVG/stregtegning.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20vw;
+    height: 22vw;
+   right: 1vw;
+    bottom: -53.4vw;
+    background-size: 100%;
+}
   
     /*Om Desktop*/
    #kampagnevideo {
@@ -1567,18 +1603,71 @@ margin-left: auto;}
         margin-left: 14vw;
     }
    
-
-    /*Kontakt Desktop*/
-    #contacth1 {
-        margin-top: 8%;
+    #about .column{
+        padding-right: 2vw;
     }
+
+     #about .column2{
+        padding-left: 2vw;
+    }
+    
+      #start .column{
+        padding-right: 2vw;
+    }
+
+     #start .column2{
+        padding-left: 2vw;
+    }
+    
+    .blomst2{ 
+        background-image: url(SVG/blomst.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 23vw;
+        height: 25vw;
+        background-size: 100%;
+        bottom: -100vw;
+        display: block;
+        z-index: -1;
+        
+    }
+
+    
+    /*Kontakt Desktop*/
     
      #form .column2 {
         padding-top: 0vw;
+         flex-grow: 1;
     }
 
     .streg2 {
-        bottom: -3%;
+        bottom: -16%;
+    }
+    
+      .pil1{
+        background-image: url(SVG/pil1.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 8vw;
+        height: 15vw;
+        right: 40vw;
+        background-size: 100%;
+        bottom: -5%;
+        display: block;
+        z-index: -1;
+    }
+    
+    .pil2{
+        background-image: url(SVG/pil2.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 7vw;
+        height: 15vw;
+        right: 9vw;
+        background-size: 100%;
+        bottom: 17%;
+        display: block;
+        z-index: -1;
     }
 
     /*Footer Desktop*/
