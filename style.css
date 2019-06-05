@@ -794,10 +794,8 @@ footer p {
     
     #splashtekst {
     top: 35%;
-    left: 10%;
+    left: 20%;
     font-size: 2rem;
-    padding-left: 7vw;
-    padding-right: 7vw;
 }
 
 
@@ -1524,8 +1522,8 @@ margin: 4rem 3rem;
     
      #splashtekst {
     top: 50%;
-    left: 13%;
-    font-size: 2.5rem;
+    left: 17%;
+    font-size: 3vw;
     }
     
     #opacity {
