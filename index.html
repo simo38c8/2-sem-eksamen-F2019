@@ -46,38 +46,21 @@
                         <ul id="malerier" class="top2">
                             <li class="white"><a href="works.html" id="a7" class="top2">Malerier på lærred</a></li>
                             <li><a href="works.html" id="a8" class="top2">Malerier på papir</a></li>
-                            <li><a href="works.html" id="a9" class="top2">Kunsttryk</a></li>
                         </ul>
                     </li>
-                    <li><a href="" id="a10" class="top2">Plakater</a></li>
-                    <li><a href="" id="a11" class="top2">Skulpturer</a></li>
-                    <li class="dropdown4">
-                        <p id="a12" class="top">Andet▸</p>
-                        <ul id="dropdown_content4" class="top">
-                            <li><a href="works.html" id="a13" class="top2">Bøger</a></li>
-                            <li><a href="works.html" id="a14" class="top2">Digte</a></li>
-                            <li><a href="works.html" id="a15" class="top2">Krukker</a></li>
-                            <li><a href="works.html" id="a16" class="top2">Tørklæder</a></li>
-                            <li><a href="works.html" id="a17" class="top2">Gavekort</a></li>
-                            <li><a href="works.html" id="a18" class="top2">CD'er</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="" id="a9" class="top2">Kunst tryk</a></li>
+                    <li><a href="" id="a10" class="top2">Stregtegninger</a></li>
+                    <li><a href="" id="a11" class="top2">Plakater</a></li>
                 </ul>
             </li>
-            <li class="dropdown2">
-                <p class="top2" id="a2" >Om ▾</p>
-                <ul id="dropdown_content2" class="top">
-                    <li><a href="om.html" id="a19" class="top2">Per Hillo</a></li>
-                    <li><a href="om.html" id="a20" class="top2">Brochurer</a></li>
-                </ul>
-            </li>
+                <li><a href="om.html" class="top2" id="a2">Om</a></li>
             <li><a href="aktuelt.html" class="top2" id="a4">Aktuelt</a></li>
             <li><a href="kontakt.html" class="top2" id="a5">Kontakt</a></li>
         </ul>
 
 
 
-         <div class="burgermenu">
+        <div class="burgermenu">
             <div id="menuknap" class="">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -86,9 +69,10 @@
 
             <!--Knappen som bringer burgermenuen frem.-->
             <ul id="topmenu" class="hidden">
+               <div class="backgroundimage"></div>
                 <!--Menuen som dukker op med navigationslisten.-->
                 <li><a href="index.html" class="link">Forside</a></li>
-                <li id="dropdownmobil">Værker ▾ <div id="dropdown-contentmobil">
+                <li id="dropdownmobil">Værker ▾<div id="dropdown-contentmobil">
                         <ul>
                             <li> <a href="products.html" class="link">- Malerier</a></li>
                             <li><a href="products.html" class="link">- Kunst tryk</a></li>
@@ -104,6 +88,7 @@
             </ul>
         </div>
     </nav>
+
 
 
 
@@ -230,14 +215,14 @@
 
             <p>Kom forbi galleriet eller ateliet til et kig. Det er også muligt at bestille et maleri til ens egne ønsker.</p>
             <div class="social">
-                <a href="https://www.facebook.com/per.hillo.art/"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook" target="_blank"></a>
-                <a href="https://www.instagram.com/perhillo/?hl=da"><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram" target="_blank"></a>
+                <a href="https://www.facebook.com/per.hillo.art/"  target="_blank"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook"></a>
+                <a href="https://www.instagram.com/perhillo/?hl=da"  target="_blank" ><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram"></a>
             </div>
 
         </div>
         <div class="social2">
-            <a href="https://www.facebook.com/per.hillo.art/"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook" target="_blank"></a>
-            <a href="https://www.instagram.com/perhillo/?hl=da"><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram" target="_blank"></a>
+            <a href="https://www.facebook.com/per.hillo.art/"  target="_blank"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook"></a>
+            <a href="https://www.instagram.com/perhillo/?hl=da"  target="_blank"><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram"></a>
         </div>
         <div class="footer2">
             <div class="kontakt_os">
@@ -303,8 +288,6 @@ window.onscroll = () => {
   if(this.scrollY <= 700){
       document.querySelector('#navbar').className = 'top'; 
       document.querySelector('#dropdown_content').className = 'top'; 
-      document.querySelector('#dropdown_content2').className = 'top';
-      document.querySelector('#dropdown_content4').className = 'top';
       document.querySelector('#malerier').className = 'top';
       document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_hvid.svg')"; 
       document.querySelector('#a1').className = 'top2';
@@ -318,53 +301,24 @@ window.onscroll = () => {
       document.querySelector('#a9').className = 'top2';
       document.querySelector('#a10').className = 'top2';
       document.querySelector('#a11').className = 'top2';
-      document.querySelector('#a12').className = 'top2';
-      document.querySelector('#a13').className = 'top2';
-      document.querySelector('#a14').className = 'top2';
-      document.querySelector('#a15').className = 'top2';
-      document.querySelector('#a16').className = 'top2';
-      document.querySelector('#a17').className = 'top2';
-      document.querySelector('#a18').className = 'top2';
-      document.querySelector('#a19').className = 'top2';
-      document.querySelector('#a20').className = 'top2';
 
-
-       
-      
-      
-       
+            
   } else {
-      document.querySelector('#navbar').className = 'scroll'; 
-      document.querySelector('#dropdown_content').className = 'scroll';
-      document.querySelector('#dropdown_content2').className = 'scroll';
-      document.querySelector('#dropdown_content4').className = 'scroll';
-      document.querySelector('#malerier').className = 'scroll';
+      document.querySelector('#navbar').className = 'scroll3'; 
+      document.querySelector('#dropdown_content').className = 'scroll3';
+      document.querySelector('#malerier').className = 'scroll3';
       document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_sort.svg')";
-      document.querySelector('#a1').className = 'scroll';
-      document.querySelector('#a2').className = 'scroll';
-      document.querySelector('#a3').className = 'scroll';
-      document.querySelector('#a4').className = 'scroll';
-      document.querySelector('#a5').className = 'scroll';
-            document.querySelector('#a6').className = 'scroll';
-      document.querySelector('#a7').className = 'scroll';
-      document.querySelector('#a8').className = 'scroll';
-      document.querySelector('#a9').className = 'scroll';
-      document.querySelector('#a10').className = 'scroll';
-      document.querySelector('#a11').className = 'scroll';
-      document.querySelector('#a12').className = 'scroll';
-      document.querySelector('#a13').className = 'scroll';
-      document.querySelector('#a14').className = 'scroll';
-      document.querySelector('#a15').className = 'scroll';
-      document.querySelector('#a16').className = 'scroll';
-      document.querySelector('#a17').className = 'scroll';
-      document.querySelector('#a18').className = 'scroll';
-      document.querySelector('#a19').className = 'scroll';
-      document.querySelector('#a20').className = 'scroll';
-     
-
-      
-      
-     
+      document.querySelector('#a1').className = 'scroll2';
+      document.querySelector('#a2').className = 'scroll2';
+      document.querySelector('#a3').className = 'scroll2';
+      document.querySelector('#a4').className = 'scroll2';
+      document.querySelector('#a5').className = 'scroll2';
+            document.querySelector('#a6').className = 'scroll2';
+      document.querySelector('#a7').className = 'scroll2';
+      document.querySelector('#a8').className = 'scroll2';
+      document.querySelector('#a9').className = 'scroll2';
+      document.querySelector('#a10').className = 'scroll2';
+      document.querySelector('#a11').className = 'scroll2';
   }
     
 };
