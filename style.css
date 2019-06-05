@@ -1260,7 +1260,7 @@ margin: 4rem 3rem;
     }
 
     .filter {
-       width: 12rem;
+       width: 13rem;
     text-align: left;
     border-right: 2px solid black;
     }
@@ -1442,7 +1442,7 @@ margin: 4rem 3rem;
             footer {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr;
-                border-bottom: 0.5vw solid #035693;
+                border-bottom: 0.5vw solid #2FA7DE;
                 margin-top: 0vw;
             }
 
@@ -1696,7 +1696,7 @@ margin-left: auto;}
 
             footer {
                 padding: 2rem 5rem;
-                border-bottom: 0.5vw solid #035693;
+                border-bottom: 0.5vw solid #2FA7DE;
             }
 
             .footer1 img {
