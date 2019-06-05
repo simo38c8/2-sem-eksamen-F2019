@@ -65,8 +65,8 @@
 
 <nav id="navigationsmenu">
     <div class="menu">
-        <button class="filter valgt" data-kategori="all">Malerier på lærred</button>
-        <button class="filter" data-kategori="malerier">Malerier på papir</button>
+        <button class="filter valgt" data-kategori="malerier">Malerier på lærred</button>
+        <button class="filter" data-kategori="malerier på papir">Malerier på papir</button>
         <button class="filter" data-kategori="kunst tryk">Kunsttryk</button>
         <button class="filter" data-kategori="streg tegning">Stregtegninger</button>
         <button class="filter" data-kategori="plakater">Plakater</button>
@@ -181,7 +181,7 @@
             
             function visSingle(produkt){ /*Denne funktion angiver hvad der sker i singleview samt gøre det muligt at lukke singleview ned igen via #luk knappen*/
           console.log("vis single virker");
-            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <p>${produkt.product_text}</p> <br> <p>Pris: ${produkt.price},-</p></div>`; 
+            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <div class="rammecentrer"><p>${produkt.product_text}</p> <br> <p>Størrelse: ${produkt.size}</p> <p>Pris: ${produkt.price}</p></div></div>`; 
                         document.querySelector("#popup").style.display = "block";
                         document.querySelector("#popup #luk").addEventListener("click", close);
                     }
