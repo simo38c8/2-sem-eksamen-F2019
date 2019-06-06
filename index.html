@@ -11,6 +11,7 @@
     <title>Per Hillo - Kærlighedsmaleren!</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--library til animation. Kilde: https://michalsnik.github.io/aos/-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -85,7 +86,7 @@
     </div>
 
     <section id="splash">
-        <h1 style="display: none">Per Hillo - kærlighedskunsteren</h1>
+        <h1 style="display: none">Per Hillo - kærlighedsmaleren</h1>
         <div id="splashtekst">
             <p><i><i class="fas fa-quote-right"></i>Jeg maler for at gøre folk glade og påvirke<br> mennesker med kærlighed og omsorg <i class="fas fa-quote-left"></i></i></p>
         </div>
@@ -104,7 +105,10 @@
     <div class="blomst"></div>
 
     <div class="grid_index">
-        <section id="news">
+        <section id="news" data-aos="fade-up"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
+           data-aos-duration="500">
             <div>
                <img src="#" class="newspicture" alt="Billede af nyhed på Per Hillo hjemmeside, kunstner med galleri i Ordrup">
                <br><br>
@@ -113,7 +117,10 @@
             </div>
         </section>
 
-        <section id="meet">
+        <section id="meet"data-aos="fade-up"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
+           data-aos-duration="500">
             <div>
                <img src="#" class="meetpicture" alt="Læs mere om Per Hillo på hjemmeside, en kunstner med galleri i Ordrup">
                <br><br>
@@ -336,6 +343,10 @@ function kryds(){
     
 
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--Script til animation. Kilde: https://michalsnik.github.io/aos/-->
+<script>
+  AOS.init({disable: 'mobile'});
+</script>   
 </body>
 
 </html>

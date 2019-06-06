@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Per Hillo maler i alle størrelser! Om du ønsker en stregtegning, et fantastisk kunsttryk eller et stort maleri Per Hillo kan klare det hele.">
+    <meta name="description" content="Per Hillo maler i alle størrelser! Om du ønsker en stregtegning, et fantastisk kunsttryk eller et stort maleri Per Hillo kan klare det hele.">
     <meta name="keywords" content="per hillo, kunstner, nærvær, billedkunst, galleri, atelier, malerier, art, maler, kærlighed, litografi, love, værker">
     <meta name="author" content="">
     <meta name="robots" content="noindex">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--library til animation. Kilde: https://michalsnik.github.io/aos/-->
     <link rel="stylesheet" type="text/css" href="style.css">
      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -94,7 +95,9 @@
 
     <template>
                 
-                <div class="produkt"><img src="" alt="værk af Per Hillo" class="item"><div class="produkthover"><h2 class="title"></h2>
+                <div class="produkt" data-aos="fade-down"
+     data-aos-easing="ease-in-sine"
+           data-aos-duration="500"><img src="" alt="værk af Per Hillo" class="item" ><div class="produkthover"><h2 class="title"></h2>
                    <p class="size"></p>
                     <p class="price"></p></div></div>
                 
@@ -235,6 +238,12 @@
       
         
     </script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!--Script til animation. Kilde: https://michalsnik.github.io/aos/-->
+<script>
+  AOS.init({
+      once:true
+  });
+</script> 
    
 </body>
 

@@ -317,7 +317,6 @@ h2, h3 {
 
 
 
-
 #logo {
     background-image: url(SVG/Logo_hvid.svg);
     background-repeat: no-repeat;
@@ -1300,11 +1299,16 @@ footer p {
     }
     
     #brochure h5{
-        font-size: 1.2rem;
+        font-size: 2rem;
         text-align: center;
         padding: 0 0 2vw 0;
     }
    
+    #brochure h4{
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 0 0 2vw 0;
+    }
     
     #unique{
         display: block;
@@ -1723,11 +1727,11 @@ top:43vw;
 
     
         #meet{
-padding: 6rem 5rem 5rem 2.5rem;  
+padding: 3rem 5rem 5rem 2.5rem;  
     }
     
       #news{
-padding: 6rem 5rem 5rem 2.5rem;  
+padding: 3rem 5rem 5rem 2.5rem;  
     }
 
 

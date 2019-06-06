@@ -8,10 +8,11 @@
     <meta name="keywords" content="per hillo, information, kunstner, nærvær. Billedkunst,  malerier, art, maler, kærlighed, psykisk syg, love, care, nærvær, om">
     <meta name="author" content="">
     <meta name="robots" content="noindex">
-    <title>Per Hillo - Om Per Hillo's kunst</title>
+    <title>Per Hillo - Om Per Hillos kunst</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--library til animation. Kilde: https://michalsnik.github.io/aos/-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -75,17 +76,17 @@
    <section id="sektioncitat">
    
    
-    <div class="citat">
+    <div class="citat" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine">
     <p><i><i class="fas fa-quote-right"></i>Jeg maler for at gøre folk glade og påvirke<br> mennesker  med kærlighed og omsorg. <br> Det gør jeg med de lyse og lette farver, <br> jeg bruger på mine malerier<i class="fas fa-quote-left"></i></i></p>
     </div>
     </section>
     
      <section id="about">
-     <div class="column">
+     <div class="column" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-sine" data-aos-offset="300">
     <img src="#" class="profilepicture" alt="et billede af Per Hillo, kunstmaler kendt for sin kærlighed og varme">
       </div>
       <div class="column2">
-       <h2>Per Hillo's kunst</h2>
+       <h2>Per Hillos kunst</h2>
         <p class="profiletext"></p>
         
       
@@ -95,23 +96,25 @@
     
     <div class="blomst2"></div>
     <section id="start">
-       <div class="column">
+       <div class="column" >
         <h2 >Sådan startede det</h2>
         <p class="storytext"></p>
   </div>
-  <div class="column2">
+  <div class="column2" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-delay="1500">
    <img src="#" class="storypicture" alt="et billede som fortæller om Per Hillos historie som kunstner og erfaring">
    </div>
     </section>
     
-      <div id="brochure">
-        <h5>Interesseret i at læse mere om Per Hillo? <br> Hent en digital brochure nedenfor</h5>
+      <div id="brochure" >
+        <h5>Interesseret i at læse mere om Per Hillo? </h5>
+        <h4>Hent en digital brochure nedenfor</h4>
         <a href="http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/brochure/ph_bropchure%20print.pdf"><img src="billeder/brochure.jpg" alt="billede af brochure om Per Hillo og hans kunsteriske rejse"></a>
         </div>
     
     <section id="unique"> 
    <div class="uniquetext">
-   <h3>Bestillingsbetingelser</h3>
+   <h2>Skal du have et unikt værk?</h2>
+   <p>Find information i nedenstående bestillingsbetingelser eller kontakt Per Hillo i kontaktformularen <a href="kontakt.html">her</a></p>
    </div>
    
     <div id="infografik">
@@ -135,7 +138,7 @@
                     <div>
                         <img src="billeder/100.png" alt="100 procent tilfreds med dit maleri">
                     </div>
-                    <h3>Tilfredsstillelse</h3>
+                    <h3>Tilfredshed</h3>
                     <div>
                       
                     </div>
@@ -268,4 +271,9 @@
 
 
     </script>
-</body></html>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!--Script til animation. Kilde: https://michalsnik.github.io/aos/-->
+<script>
+  AOS.init({disable: 'mobile'});
+</script>   
+</body>
+</html>
