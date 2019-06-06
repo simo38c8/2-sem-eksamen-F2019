@@ -49,6 +49,8 @@
 
 
         <div class="burgermenu">
+           
+           
             <div id="menuknap" class="">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -58,6 +60,7 @@
             <div class="centre_menu">
                 <!--Knappen som bringer burgermenuen frem.-->
                 <ul id="topmenu" class="hidden">
+                   <div id="usynlig"></div>
                     <!--Menuen som dukker op med navigationslisten.-->
 
                     <li><a href="index.html" class="link">Forside</a></li>
@@ -191,9 +194,6 @@
                 let jsonData = await fetch(url);
                 forside = await jsonData.json();
                 visIndhold();
-                document.querySelector('.bar1').style.backgroundColor = "white";
-                document.querySelector('.bar2').style.backgroundColor = "white";
-                document.querySelector('.bar3').style.backgroundColor = "white";
                 
             } /*Her bliver JSON hentet fra vores backend (wordpress) til at hente dynamisk data. */
             function visIndhold() {
@@ -235,14 +235,20 @@
                 if (window.innerWidth < 900) {
                     console.log("under 700");
                     if (this.scrollY <= 600) {
-                        document.querySelector('.bar1').style.backgroundColor = "white";
-                        document.querySelector('.bar2').style.backgroundColor = "white";
-                        document.querySelector('.bar3').style.backgroundColor = "white";
+                        document.querySelector('.bar1').classList.add("white");
+                        document.querySelector('.bar2').classList.add("white");
+                        document.querySelector('.bar3').classList.add("white");
+                         document.querySelector('.bar1').classList.remove("black");
+                        document.querySelector('.bar2').classList.remove("black");
+                        document.querySelector('.bar3').classList.remove("black");
 
                     } else {
-                        document.querySelector('.bar1').style.backgroundColor = "black";
-                        document.querySelector('.bar2').style.backgroundColor = "black";
-                        document.querySelector('.bar3').style.backgroundColor = "black";
+                        document.querySelector('.bar1').classList.add("black");
+                        document.querySelector('.bar2').classList.add("black");
+                        document.querySelector('.bar3').classList.add("black");
+                        document.querySelector('.bar1').classList.remove("white");
+                        document.querySelector('.bar2').classList.remove("white");
+                        document.querySelector('.bar3').classList.remove("white");
                     }
                 }
 
@@ -259,6 +265,75 @@
             let dage = ["I dag har galleriet lukket", "I dag har galleriet lukket.", "I dag har galleriet lukket", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbnet fra kl 10:00 til 15:00"];
             document.querySelector(".time").innerHTML = dage[dato.getDay()];
         }
+        
+        window.addEventListener("load", sidenVises);
+        function sidenVises() {
+            console.log("siden vises");
+            //klik på topmenu-knap
+            
+            document.querySelector("#menuknap").addEventListener("click", toggletopmenu);
+            
+            
+
+} /*Denne funktion sætte eventlistener på navigastionsbaren og bekræfter vinduet bliver loadet korrekt.*/
+
+        function toggletopmenu() {
+            console.log("toggle topmenu");
+          document.querySelector("#topmenu").classList.toggle("hidden");
+            document.querySelector("#usynlig").style.display = "block";
+            document.querySelector('.bar1').classList.add("black");
+            document.querySelector('.bar2').classList.add("black");
+            document.querySelector('.bar3').classList.add("black");
+             document.querySelector('.bar1').classList.remove("white");
+                    document.querySelector('.bar2').classList.remove("white");
+                    document.querySelector('.bar3').classList.remove("white");
+            document.querySelector("#menuknap").style.pointerEvents = "none";
+            document.querySelector("#usynlig").addEventListener("click", kryds);
+            
+            let element = document.getElementById("menuknap");
+            element.classList.toggle("change");
+            
+
+        } /*Her bliver burgermenuen tooglet fra og til*/
+
+    
+    function test(){
+                if (window.innerWidth < 900) {
+                    console.log("Nu skulle den blive hvid");
+                    if (this.scrollY <= 600) {
+                        document.querySelector('.bar1').classList.add("white");
+                    document.querySelector('.bar2').classList.add("white");
+                    document.querySelector('.bar3').classList.add("white");
+                        document.querySelector('.bar1').classList.remove("black");
+                    document.querySelector('.bar2').classList.remove("black");
+                    document.querySelector('.bar3').classList.remove("black");
+                    }
+                    else{
+                        console.log("Nu bliver den sort");
+                    document.querySelector('.bar1').classList.add("black");
+                    document.querySelector('.bar2').classList.add("black");
+                    document.querySelector('.bar3').classList.add("black");
+                        document.querySelector('.bar1').classList.remove("white");
+                    document.querySelector('.bar2').classList.remove("white");
+                    document.querySelector('.bar3').classList.remove("white");
+                    }
+                        
+    }
+    
+}
+
+function kryds(){
+    console.log("funktion kryds virker");
+    document.querySelector("#topmenu").classList.toggle("hidden");
+    let element = document.getElementById("menuknap");
+            element.classList.toggle("change");
+    document.querySelector("#menuknap").style.pointerEvents = "auto";
+    
+    
+    test();   
+    
+}
+    
 
     </script>
 </body>

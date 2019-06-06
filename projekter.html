@@ -43,9 +43,9 @@
 
          <div class="burgermenu">
             <div id="menuknap" class="">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+                <div class="bar1 black"></div>
+                <div class="bar2 black"></div>
+                <div class="bar3 black"></div>
             </div>
 <div class="backgroundimage"></div>
            <div class="centre_menu">
@@ -153,6 +153,7 @@
                 let jsonData = await fetch(url);
                 nyheder = await jsonData.json();
                 visNyheder();
+                document.querySelector("#menuknap").addEventListener("click", toggletopmenu);
             }
 
             function visNyheder() {
@@ -168,6 +169,17 @@
             }
             getJson();
         }
+        
+        
+        function toggletopmenu() {
+            console.log("toggle topmenu");
+          document.querySelector("#topmenu").classList.toggle("hidden");
+            let element = document.getElementById("menuknap");
+            element.classList.toggle("change");
+        } /*Her bliver burgermenuen tooglet fra og til*/
+
+
+
     </script>
 </body>
 </html>
