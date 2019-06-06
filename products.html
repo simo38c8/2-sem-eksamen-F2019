@@ -4,10 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Per Hillo maler i alle størrelser! Om du ønsker en stregtegning, et fantastisk kunsttryk eller et stort maleri Per Hillo kan klare det hele.">
+    <meta name="keywords" content="kunstner, nærvær, billedkunst, galleri, atelier, malerier, art, maler, kærlighed, litografi, love, værker">
+    <meta name="author" content="">
+    <meta name="robots" content="noindex">
     <title>Per Hillo</title>
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
     <style>
 
     </style>
@@ -134,14 +149,11 @@
             </div>
         </div>
     </footer>
-    
-  <script src="main.js">
 
-    </script>
 
     <script>
-        let filter = "malerier";
-        let produkter = [];
+        let filter = "malerier"; /* Her starter filteret på "malerier" som er Malerier på lærred, dvs. at når man trykker på værker er dette start kategorien fremfor eksempelvis alle værker. */
+        let produkter = []; 
         document.addEventListener("DOMContentLoaded", start); /*Her defineres hvor JSON hentes fra*/
 
         function start() {
@@ -151,7 +163,7 @@
                 let url = "http://www.simonchristiansen.dk/kea/2-semester/2-sem-eksamen-F2019/wordpress/wp-json/wp/v2/produkter?per_page=100"; /*Her defineres hvor JSON hentes fra*/
                 let jsonData = await fetch(url);
                 produkter = await jsonData.json();
-                visProdukter();
+                visProdukter(); /* Funktionen kaldes, denne funktion gør at produkterne bliver vist på siden */
                 document.querySelector("#menuknap").addEventListener("click", toggletopmenu);
             
             }
@@ -160,18 +172,18 @@
                 let dest = document.querySelector(".produkter")
                 let temp = document.querySelector("template");
 
-                dest.innerHTML = "";
+                dest.innerHTML = ""; /* Denne linje sikrer sig, at filteringen korrekt fungerer. Herved "genstarter" den og fjerner alle produkter da ellers ville den blot tilføje nye produkter og ikke erstatte de gamle.  */
                 produkter.forEach(produkt => {
 
-                    if (filter == "all" || filter == produkt.kategori) {
+                    if (filter == "all" || filter == produkt.kategori) { /* Her filtrer den ud fra produkternes angivet kategori, dette er fastslået i JSON. */
                         let klon = temp.cloneNode(true).content;
-                        klon.querySelector(".item").src = produkt.picture.guid;
+                        klon.querySelector(".item").src = produkt.picture.guid; 
                         klon.querySelector(".title").textContent = produkt.title.rendered;
                         klon.querySelector(".price").textContent = produkt.price;
                         klon.querySelector(".size").textContent = produkt.size;
                         dest.appendChild(klon);
                         dest.lastElementChild.addEventListener("click", () => {
-                    visSingle(produkt);
+                    visSingle(produkt); /* Her kalder vi funktionen VisSingle således at vi kan vise produkterne i singleview når de klikkes på. */
                     });
                     }
                     
@@ -183,8 +195,8 @@
             
             function visSingle(produkt){ /*Denne funktion angiver hvad der sker i singleview samt gøre det muligt at lukke singleview ned igen via #luk knappen*/
           console.log("vis single virker");
-            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <div class="rammecentrer"><p>${produkt.product_text}</p> <br> <p>Størrelse: ${produkt.size}</p> <p>Pris: ${produkt.price}</p></div></div>`; 
-                        document.querySelector("#popup").style.display = "block";
+            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <div class="rammecentrer"><p>${produkt.product_text}</p> <br> <p>Størrelse: ${produkt.size}</p> <p>Pris: ${produkt.price}</p></div></div>`;  /* Dette er hvad der skal fremgå i singleview, dette er altså hvad der skal erstattes i HTML. */
+                        document.querySelector("#popup").style.display = "block"; /* "#popup" skal fjernes */
                         document.querySelector("#popup #luk").addEventListener("click", close);
                     }
                     function close() {
@@ -214,7 +226,8 @@
           document.querySelector("#topmenu").classList.toggle("hidden");
             let element = document.getElementById("menuknap");
             element.classList.toggle("change");
-        } /*Her bliver burgermenuen tooglet fra og til*/
+        } /*Her toogles class "hidden" som skjuler navigationsbaren på mobilen. 
+            Herudover skifter bars class til "change" som gør, at de skifter position til et kryds.*/
 
 
 

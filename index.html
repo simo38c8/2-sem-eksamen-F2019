@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Velkommen til mit univers! Per Hillo har en masse spændende at byde på, uanset hvem du er! Alt fra det store maleri til den mindre stemningsfyldte stregtegning.">
+    <meta name="keywords" content="art, maler, litografi, psykologi, malerier, atelier, kunst, galleri, kærlighed, love, care, billeder til væggen, billeder, psykisk syg, kunstner, nærvær, billedkunst">
     <meta name="author" content="">
     <meta name="robots" content="noindex">
     <title>Per Hillo - Forside</title>
@@ -110,7 +110,7 @@
                 <h2>Mød Per</h2>
                 <p class="newstext"></p>
                 <br>
-                <img src="#" class="newspicture" alt="Billede af nyhed på Per Hillo hjemmeside, kunstner med galleri i ordrup">
+                <img src="#" class="newspicture" alt="Billede af nyhed på Per Hillo hjemmeside, kunstner med galleri i Ordrup">
             </div>
         </section>
 
@@ -118,7 +118,7 @@
             <div>
                 <h2>Det sker</h2>
                 <p class="meettext"></p>
-                <img src="#" class="meetpicture" alt="Læs mere om Per Hillo på hjemmeside, en kunstner med galleri i ordrup">
+                <img src="#" class="meetpicture" alt="Læs mere om Per Hillo på hjemmeside, en kunstner med galleri i Ordrup">
 
             </div>
 
@@ -180,7 +180,7 @@
 
 
 
-    <script src="main.js">
+
 
     </script>
 
@@ -206,6 +206,7 @@
             getJson();
             scroll();
             day();
+            /*Overstående er funktioner som bliver kaldt fra start når hjemmesiden loades. */
         }
 
 
@@ -232,9 +233,9 @@
                 }
                 console.log("width " + window.innerWidth);
 
-                if (window.innerWidth < 900) {
-                    console.log("under 700");
-                    if (this.scrollY <= 600) {
+                if (window.innerWidth < 900) { /*Dette gør, at nederstående kode fungerer udelukkende i en størrelse mindre end 900. Det er lignede en mediaquery. */
+                    console.log("under 700"); 
+                    if (this.scrollY <= 600) { /*Hvis der er scrollet mere end 600 så skal nederstående ske. Herved skifter bars farve mellem hvid og sort, afhængigt om mobilen er ved start eller længere nede på siden */
                         document.querySelector('.bar1').classList.add("white");
                         document.querySelector('.bar2').classList.add("white");
                         document.querySelector('.bar3').classList.add("white");
@@ -264,18 +265,17 @@
             let dato = new Date();
             let dage = ["I dag har galleriet lukket", "I dag har galleriet lukket.", "I dag har galleriet lukket", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbnet fra kl 10:00 til 15:00"];
             document.querySelector(".time").innerHTML = dage[dato.getDay()];
-        }
+        } /*Dette er et array af foreskellige åbningstider og de bliver sorteret ud fra den pågældende dag. Derved udskiftes tidspunkterne hver dag automatisk.*/
         
         window.addEventListener("load", sidenVises);
         function sidenVises() {
             console.log("siden vises");
-            //klik på topmenu-knap
             
             document.querySelector("#menuknap").addEventListener("click", toggletopmenu);
             
             
 
-} /*Denne funktion sætte eventlistener på navigastionsbaren og bekræfter vinduet bliver loadet korrekt.*/
+} /*Denne funktion sætte eventlistener på "#menuknap" som indeholder de 3 bars som danner burgermenuen og bekræfter vinduet bliver loadet korrekt.*/
 
         function toggletopmenu() {
             console.log("toggle topmenu");
@@ -294,10 +294,10 @@
             element.classList.toggle("change");
             
 
-        } /*Her bliver burgermenuen tooglet fra og til*/
+        } /*Her toogles class "hidden" som skjuler navigationsbaren på mobilen. Herudover er denne funktion anderledes på forsiden, da splashbilledet har en hvid burgermenu, derfor har ændre den også classen "black" til "white" på bars og samtidig giver funktionen "#usynlig" eventlisten til funktion kryds. #Menuknap får også nul pointer events, så man ikke kan trykke på den igen før senere. Herudover skifter bars class til "change" som gør, at de skifter position til et kryds.*/
 
     
-    function test(){
+    function splashIcon(){
                 if (window.innerWidth < 900) {
                     console.log("Nu skulle den blive hvid");
                     if (this.scrollY <= 600) {
@@ -320,7 +320,7 @@
                         
     }
     
-}
+} /*Denne funktion starter med at sikre bredden er mindre end 900, derved er den fungerende på mobil. Herefter sikre den sig at hvis siden er scrollet længere end den angivet længde så skifter den farve på bars til sort. Herved sikre vi os, at bars ikke skifter farve når man har været på menuen og trykket kryds. */
 
 function kryds(){
     console.log("funktion kryds virker");
@@ -328,11 +328,10 @@ function kryds(){
     let element = document.getElementById("menuknap");
             element.classList.toggle("change");
     document.querySelector("#menuknap").style.pointerEvents = "auto";
-    
-    
-    test();   
+    splashIcon();   
     
 }
+/*Her bliver menuen skjult, bars bliver ændret tilbage til en burger menu og samtidig bliver "#menuknap# muligt at klikke på igen. Ydermere kalder den på funktion splashicon således, at vi sikrer os, at burgermenuen får den korrekte farve.  */
     
 
     </script>

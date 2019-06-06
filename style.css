@@ -204,6 +204,9 @@ producth1 {
     height: 10vw;
 }
 
+
+/*Classen "Change" & bars styling er taget fra følgende kilde: https://www.w3schools.com/howto/howto_css_menu_icon.asp*/
+
 .bar1,
 .bar2,
 .bar3 {
@@ -212,14 +215,6 @@ producth1 {
     margin: 6px 0;
     transition: 0.4s;
     background-color: #ffffff; 
-}
-
-.white{
-  background-color: #ffffff;  
-}
-
-.black{
-  background-color: #000000;  
 }
 
 
@@ -236,6 +231,16 @@ producth1 {
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+.white{
+  background-color: #ffffff;  
+}
+
+.black{
+  background-color: #000000;  
 }
 
 #dropdownmobil {
@@ -355,7 +360,6 @@ h2, h3 {
 }
 
 
-
 .infowrap {
     flex-basis: 200px;
     flex-grow: 1;
@@ -390,7 +394,6 @@ h2, h3 {
 
 .info2 {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.67);
     height: 25vw;
     margin: 0;
     display: inline-block;
@@ -498,7 +501,7 @@ text-align: center;
 
       .menu{
     display: grid;
-    grid-template-columns: repeat (5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     padding: 10vw;
@@ -585,21 +588,25 @@ iframe{
 
 
 #start{
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 
 
 
-.desktoponly {
-    display: none;
-}
 
 
 
  #start .column{
     flex-basis: 0px;
     }
+
+ #start .column2{
+    flex-basis: 0px;
+         padding: 5vw 0vw 3vw 0vw;
+    }
+
+
 
 /*aktuelt mobil*/
 
@@ -708,6 +715,10 @@ label {
 
 .streg2 {
     display: none;
+}
+
+.kontaktlinks{
+    color: black;
 }
 
 /*Footer Mobil*/
@@ -872,10 +883,6 @@ footer p {
         flex-basis: 300px;
         flex-grow: 2;
     }
-    
-    .desktoponly {
-        display: block;
-    }
 
 
 
@@ -917,6 +924,12 @@ footer p {
      #events{
     padding: 8vw 10vw 0vw 10vw
     }
+    
+    
+/*
+    Nederstående kode vedrørende "#arrow"" er taget fra https://codepen.io/karinajdavila/pen/Pbyzzd
+    og derefter tilpasset til hjemmesiden. 
+*/
 
     #arrow {
         position: relative;
@@ -1094,6 +1107,10 @@ footer p {
         flex-basis: 300px;
         padding-left: 2vw;  
     }
+    
+    .sectionwrapper:nth-child(even){
+        flex-direction: row-reverse;
+    }
  
 
     /*NAVIGATION*/
@@ -1102,8 +1119,8 @@ footer p {
         position: fixed;
         top: 0;
         left: 0;
-        transition: background-color 0.5s ease-out;
         z-index: 3;
+           transition: background-color 5s ease-out;
     }
 
 
@@ -1512,6 +1529,10 @@ margin: 4rem 3rem;
    transition: none;
 }
 
+    .kontaktlinks{
+    color: white;
+    text-decoration: none;
+}
 
     /*footer ipad*/
     
