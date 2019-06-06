@@ -12,6 +12,9 @@ window.addEventListener("load", sidenVises);
         function toggletopmenu() {
             console.log("toggle topmenu");
           document.querySelector("#topmenu").classList.toggle("hidden");
+            document.querySelector('.bar1').style.backgroundColor = "black";
+            document.querySelector('.bar2').style.backgroundColor = "black";
+            document.querySelector('.bar3').style.backgroundColor = "black";
 
 
         } /*Her bliver burgermenuen tooglet fra og til*/

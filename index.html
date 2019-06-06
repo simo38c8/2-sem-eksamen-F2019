@@ -23,24 +23,26 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-<style>
+    <style>
 
-        
 
-        
+
+
     </style>
 </head>
 
 <body>
 
-    <nav id="navbar" class="top" >
-        <a href="index.html" id="logoa"><div id="logo">
-            </div></a>
+    <nav id="navbar" class="top">
+        <a href="index.html" id="logoa">
+            <div id="logo">
+            </div>
+        </a>
         <ul class="pcmenu">
-            <li class="active" ><a href="index.html" id="a3" class="top2">Forside</a></li>
-              <li><a href="products.html" class="top2" id="a1">Værker</a></li>
-                <li><a href="om.html" class="top2" id="a2">Om</a></li>
-            <li><a href="aktuelt.html" class="top2" id="a4">Aktuelt</a></li>
+            <li class="active"><a href="index.html" id="a3" class="top2">Forside</a></li>
+            <li><a href="products.html" class="top2" id="a1">Værker</a></li>
+            <li><a href="om.html" class="top2" id="a2">Om</a></li>
+            <li><a href="projekter.html" class="top2" id="a4">Projekter</a></li>
             <li><a href="kontakt.html" class="top2" id="a5">Kontakt</a></li>
         </ul>
 
@@ -52,26 +54,21 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
+            <div class="backgroundimage"></div>
+            <div class="centre_menu">
+                <!--Knappen som bringer burgermenuen frem.-->
+                <ul id="topmenu" class="hidden">
+                    <!--Menuen som dukker op med navigationslisten.-->
 
-            <!--Knappen som bringer burgermenuen frem.-->
-            <ul id="topmenu" class="hidden">
-               <div class="backgroundimage"></div>
-                <!--Menuen som dukker op med navigationslisten.-->
-                <li><a href="index.html" class="link">Forside</a></li>
-                <li id="dropdownmobil">Værker ▾<div id="dropdown-contentmobil">
-                        <ul>
-                            <li> <a href="products.html" class="link">- Malerier</a></li>
-                            <li><a href="products.html" class="link">- Kunst tryk</a></li>
-                            <li><a href="products.html" class="link">- Stregtegninger</a></li>
-                            <li><a href="products.html" class="link">- Plakater</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="om.html" class="link">Om </a></li>
-                <li><a href="aktuelt.html" class="link">Aktuelt</a></li>
-                <li><a href="kontakt.html" class="link">Kontakt</a></li>
+                    <li><a href="index.html" class="link">Forside</a></li>
+                    <li><a href="products.html" class="link">Værker</a></li>
+                    <li><a href="om.html" class="link">Om </a></li>
+                    <li><a href="projekter.html" class="link">Projekter</a></li>
+                    <li><a href="kontakt.html" class="link">Kontakt</a></li>
 
-            </ul>
+
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -79,32 +76,38 @@
 
 
 
-   
-<div id="arrow" class="animate">
 
-        <a href="#news"><span></span></a>
+    <div id="arrow" class="animate">
+
+        <a href="#events"><span></span></a>
+    </div>
+
+    <section id="splash">
+        <h1 style="display: none">Per Hillo - kærlighedskunsteren</h1>
+        <div id="splashtekst">
+            <p><i><i class="fas fa-quote-right"></i>Jeg maler for at gøre folk glade og påvirke<br> mennesker med kærlighed og omsorg <i class="fas fa-quote-left"></i></i></p>
         </div>
-
-        <section id="splash">
-<div id="splashtekst">
-    <p><i><i class="fas fa-quote-right"></i>Jeg maler for at gøre folk glade og påvirke<br> mennesker  med kærlighed og omsorg <i class="fas fa-quote-left"></i></i></p>
-</div>
-       <div id="opacity"></div>
+        <div id="opacity"></div>
         <video id="splashdesktop" muted loop autoplay src="video/splash.mp4"></video>
         <img src="billeder/mobile_portrait.jpg" id="mobilsplash" alt="Splash billede af Per Hillo til mobil devices">
-        
+
     </section>
 
-    
+    <section id="events">
+        <h2 class="time">Idag er galleriet åbnet til kl 18:00.</h2>
+        <h3 class="nextevent">Næste event hvor Per Hillo deltager</h3>
+    </section>
+
+
     <div class="blomst"></div>
 
     <div class="grid_index">
         <section id="news">
-           <div>
-            <h2>Mød Per</h2>
-            <p class="newstext"></p>
-            <br>
-            <img src="#" class="newspicture" alt="Billede af nyhed på Per Hillo hjemmeside, kunstner med galleri i ordrup">
+            <div>
+                <h2>Mød Per</h2>
+                <p class="newstext"></p>
+                <br>
+                <img src="#" class="newspicture" alt="Billede af nyhed på Per Hillo hjemmeside, kunstner med galleri i ordrup">
             </div>
         </section>
 
@@ -120,97 +123,27 @@
         </section>
     </div>
 
-   
 
-   <section id="unique"> 
-   <div class="uniquetext">
-   <h3>Skal du have et unikt værk?</h3>
-   <p> Find inspiration i de eksisterende værker eller kontakt Per Hillo i formularen <a href="kontakt.html">her</a></p>
-   </div>
-   
-    <div id="infografik">
-            <div class="infowrap">
-                <div class="info1">
-                    <div>
-                        <img src="billeder/30.png" alt="infografik af antal dage Per Hillo tager at skabe det bestilte værk">
-                    </div>
-                    <div>
-                      
-                    </div>
-                </div>
-                <div class="info2">
-                    <p>Det tager Per Hillo 30 dage at skabe det bestilte værk.</p>
-                </div>
-            </div>
 
-            <div class="infowrap">
-                <div class="info1">
-                    <div>
-                        <img src="billeder/100.png" alt="100 procent tilfreds med dit maleri">
-                    </div>
-                    <div>
-                      
-                    </div>
-                </div>
-                <div class="info2">
-                    <p>Hvis du ikke er tilfreds med maleriet Per Hillo fremstiller for dig, skal du ikke være bekymret. Hvis maleriet ikke var det du havde i tankerne, maler Per et helt nyt maleri til dig.</p>
-                </div>
-            </div>
-            <div class="infowrap">
-                <div class="info1">
-                    <div>
-                        <img src="billeder/8.png" alt="malerier og værker kan males i 8 foreskellige størrelser hos Per Hillo">
-                    </div>
-                    <div>
-                     
-                    </div>
-                </div>
-                <div class="info2">
-                    <div>
-                        <p>Per Hillos værker kan males i 8 størrelser&#58;</p>
-                        <ul>
-                            <li>100cm x 200cm</li>
-                            <li>80cm x 150cm</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="infowrap">
-                <div class="info1">
-                    <div>
-                        <img src="billeder/20.png" alt="Per Hillos depression startede for 20 år siden og har siden malet med fokus på kærlighed">
-                    </div>
-                    <div>
-                      
-                    </div>
-                </div>
-                <div class="info2">
-                    <div>
-                        <p>Per Hillo har malet siden sin depression for 20 år siden. Pers historie, erfaring og fokus på kærlighed kan ses i hvert enkelt penselstrøg.</p>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        </section>
-        
-    
-         <footer>
+
+
+    <footer>
 
         <div class="footer1">
             <h2>Smuk og levende kunst</h2>
             <h5>Leder du efter dit næste kunstværk til hjemmet?</h5>
 
-            <p>Kom forbi galleriet eller ateliet til et kig. Det er også muligt at bestille et maleri til ens egne ønsker.</p>
+            <p>Kom forbi galleriet eller ateliet til et kig. Det er også muligt at bestille et maleri efter ens egne ønsker.</p>
             <div class="social">
-                <a href="https://www.facebook.com/per.hillo.art/"  target="_blank"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook"></a>
-                <a href="https://www.instagram.com/perhillo/?hl=da"  target="_blank" ><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram"></a>
+                <a href="https://www.facebook.com/per.hillo.art/" target="_blank"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook"></a>
+                <a href="https://www.instagram.com/perhillo/?hl=da" target="_blank"><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram"></a>
             </div>
 
         </div>
         <div class="social2">
-            <a href="https://www.facebook.com/per.hillo.art/"  target="_blank"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook"></a>
-            <a href="https://www.instagram.com/perhillo/?hl=da"  target="_blank"><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram"></a>
+            <a href="https://www.facebook.com/per.hillo.art/" target="_blank"><img src="SVG/facebook-icon.svg" alt="Tilgå Per Hillos Facebook"></a>
+            <a href="https://www.instagram.com/perhillo/?hl=da" target="_blank"><img src="SVG/instagram-icon.svg" alt="Tilgå Per Hillos Instagram"></a>
         </div>
         <div class="footer2">
             <div class="kontakt_os">
@@ -241,8 +174,8 @@
             </div>
         </div>
     </footer>
-        
-    
+
+
 
     <script src="main.js">
 
@@ -258,48 +191,76 @@
                 let jsonData = await fetch(url);
                 forside = await jsonData.json();
                 visIndhold();
+                document.querySelector('.bar1').style.backgroundColor = "white";
+                document.querySelector('.bar2').style.backgroundColor = "white";
+                document.querySelector('.bar3').style.backgroundColor = "white";
+                
             } /*Her bliver JSON hentet fra vores backend (wordpress) til at hente dynamisk data. */
             function visIndhold() {
                 document.querySelector(".newspicture").src = forside.news_picture.guid;
                 document.querySelector(".newstext").innerHTML = forside.news_text;
                 document.querySelector(".meettext").innerHTML = forside.meet_text;
                 document.querySelector(".meetpicture").src = forside.meet_picture.guid;
+                document.querySelector(".nextevent").textContent = forside.event;
             } /*Her bliver de angivet HTML-elementer indhold ændret dynamisk fra JSON dataen. */
             getJson();
             scroll();
-            
+            day();
         }
-        
-        
-        function scroll(){  /*Denne funktion ændre navigationsbaren fra en gennemsigtig til hvid, 700 er den angivet længde bestemt */
-window.onscroll = () => {
-  if(this.scrollY <= 700){
-      document.querySelector('#navbar').className = 'top'; 
-      document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_hvid.svg')"; 
-      document.querySelector('#a1').className = 'top2';
-      document.querySelector('#a2').className = 'top2';
-      document.querySelector('#a3').className = 'top2';
-      document.querySelector('#a4').className = 'top2';
-      document.querySelector('#a5').className = 'top2';
-
-            
-  } else {
-      document.querySelector('#navbar').className = 'scroll3'; 
-      document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_sort.svg')";
-      document.querySelector('#a1').className = 'scroll2';
-      document.querySelector('#a2').className = 'scroll2';
-      document.querySelector('#a3').className = 'scroll2';
-      document.querySelector('#a4').className = 'scroll2';
-      document.querySelector('#a5').className = 'scroll2';
-            
-  }
-    
-};
-}
-    
 
 
-    
+        function scroll() { /*Denne funktion ændre navigationsbaren fra en gennemsigtig til hvid, 700 er den angivet længde bestemt */
+            window.onscroll = () => {
+                console.log("scroll");
+                if (this.scrollY <= 700) {
+                    document.querySelector('#navbar').className = 'top';
+                    document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_hvid.svg')";
+                    document.querySelector('#a1').className = 'top2';
+                    document.querySelector('#a2').className = 'top2';
+                    document.querySelector('#a3').className = 'top2';
+                    document.querySelector('#a4').className = 'top2';
+                    document.querySelector('#a5').className = 'top2';
+                } else {
+                    document.querySelector('#navbar').className = 'scroll3';
+                    document.querySelector("#logo").style.backgroundImage = "url('SVG/Logo_sort.svg')";
+                    document.querySelector('#a1').className = 'scroll2';
+                    document.querySelector('#a2').className = 'scroll2';
+                    document.querySelector('#a3').className = 'scroll2';
+                    document.querySelector('#a4').className = 'scroll2';
+                    document.querySelector('#a5').className = 'scroll2';
+
+                }
+                console.log("width " + window.innerWidth);
+
+                if (window.innerWidth < 900) {
+                    console.log("under 700");
+                    if (this.scrollY <= 600) {
+                        document.querySelector('.bar1').style.backgroundColor = "white";
+                        document.querySelector('.bar2').style.backgroundColor = "white";
+                        document.querySelector('.bar3').style.backgroundColor = "white";
+
+                    } else {
+                        document.querySelector('.bar1').style.backgroundColor = "black";
+                        document.querySelector('.bar2').style.backgroundColor = "black";
+                        document.querySelector('.bar3').style.backgroundColor = "black";
+                    }
+                }
+
+
+
+
+
+            }
+        }
+
+
+        function day() {
+            let dato = new Date();
+            let dage = ["I dag har galleriet lukket", "I dag har galleriet lukket.", "I dag har galleriet lukket", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbent fra kl. 11:00 til 18:00", "I dag har galleriet åbnet fra kl 10:00 til 15:00"];
+            document.querySelector(".time").innerHTML = dage[dato.getDay()];
+        }
+
     </script>
 </body>
+
 </html>
