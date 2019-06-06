@@ -93,32 +93,32 @@ producth1 {
 }
 
 .grid_index {
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
 }
 
 #unique {
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
 }
 
 #form {
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
 }
 
 #sectionactual {
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
 }
 
 #sektioncitat {
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
 }
 
 
 #about {
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
 }
 
 #start {
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
 }
 
 /*BURGERMENU*/
@@ -139,25 +139,16 @@ producth1 {
     z-index: 4;
     background-color: white;
     text-align: center;  
+     background-image: url(SVG/blomst.svg);
+    background-position: 3vw 30vw;
+    background-size: 120%
 }
 
 .centre_menu {
     text-align: left;
 }
 
-.backgroundimage{
-       background-image: url(SVG/blomst.svg);
-    list-style-type: none;
-    transition: transform 1s;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 3rem;
-    position: fixed;
-    background-repeat: no-repeat;
-    z-index: -1;
 
-}
 
 #topmenu a {
     text-decoration: none;
@@ -372,7 +363,6 @@ h2, h3 {
     text-align: center;
     height: auto;
     margin: 0;
-    padding: 10px 10px 0 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -419,7 +409,7 @@ h2, h3 {
 
   .produkter { 
       padding-left: 20vw;
-    padding-right: 14vw;
+    padding-right: 15vw;
 }
 
 .produkthover{
@@ -552,7 +542,7 @@ text-decoration: underline solid gold;
 .sectionwrapper{
     display: flex;
     flex-wrap: wrap;
-    padding: 3vw 10vw;
+    padding: 3vw 15vw;
     }
 
 #kampagnevideo {
@@ -570,7 +560,6 @@ iframe{
 .uniquetext{
     text-align: left;
     margin-left: 0vw;
-    margin-top: 5vw;
     margin-bottom: 5vw;
 }
 
@@ -585,6 +574,14 @@ iframe{
     margin-right: 1vw;
 }
 
+ #brochure{
+        padding: 15vw 3vw;
+     
+    }
+
+#brochure img {
+    padding-top: 3vw;
+}
 
 
 #start{
@@ -622,7 +619,12 @@ iframe{
     flex-wrap: wrap;
 }
 
-
+.dato {
+    float: right;
+    font-size: 1.5rem;
+    color: #035693;
+    padding-top: 3vw;
+}
 
 
 .text {
@@ -756,7 +758,7 @@ footer p {
             padding: 1rem 2rem;
             background-color: #807c7c;
             color: white;
-            border-bottom: 2vw solid #035693;
+            border-bottom: 2vw solid #2FA7DE;
             margin-top: 7vw;
         }
 
@@ -884,6 +886,29 @@ footer p {
         flex-grow: 2;
     }
 
+    
+    @keyframes fade-in-kf{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    
+    .fade-in{
+    animation-name: fade-in-kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in; 
+    }
+    
+    .fade-in-slow{
+    animation-name: fade-in-kf;
+    animation-duration: 2.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in; 
+    }
 
 
     /*Forside Ipad*/
@@ -922,7 +947,7 @@ footer p {
 }
     
      #events{
-    padding: 8vw 10vw 0vw 10vw
+    padding: 8vw 15vw 0vw 15vw
     }
     
     
@@ -1066,8 +1091,7 @@ footer p {
     
     .uniquetext{
     text-align: center;
-    margin-top: 0vw;
-    margin-left: 14vw;
+        display: block;
     margin-bottom: 3vw;
 }
 
@@ -1110,9 +1134,18 @@ footer p {
     
     .sectionwrapper:nth-child(even){
         flex-direction: row-reverse;
-    }
- 
 
+    }
+     
+    .sectionwrapper:nth-child(even) .column {
+        padding-left: 2vw;
+        padding-right: 0vw;
+    }
+    
+       .sectionwrapper:nth-child(even) .column2 {
+        padding-right: 2vw;
+        padding-left: 0vw;
+    }
     /*NAVIGATION*/
 
     nav {
@@ -1257,9 +1290,11 @@ footer p {
     
     }
     
+
     #brochure img{
     padding: 4vw;
-    padding-top: 0
+    padding-top: 0;
+    width: 65%;
     }
     
     #brochure h5{
@@ -1268,6 +1303,10 @@ footer p {
         padding: 0 0 2vw 0;
     }
    
+    
+    #unique{
+        display: block;
+    }
    
     iframe{
         height:380px;
@@ -1289,6 +1328,10 @@ footer p {
         flex-basis: 400px;
     }
     
+    #start .column2{
+        flex-basis: auto;
+    }
+    
     #start{
     flex-direction: row;
     padding-bottom: 3vw;
@@ -1298,11 +1341,7 @@ footer p {
         display: none;
     }
     
-    #start .column {
-        padding-right: 2vw;}
-    
-    #start .column2 {
-        padding-left: 2vw;}
+  
         
     
 
@@ -1312,6 +1351,7 @@ footer p {
     
     .produkter {
     column-count: 3;
+    padding-left: 27vw;
     
   }
   
@@ -1351,7 +1391,6 @@ footer p {
 
     
     #navigationsmenu{
-        margin-top: 9vw;
         margin-right: 20vw;
         position: fixed;
         z-index: 1;
@@ -1361,7 +1400,7 @@ footer p {
       display: block;
     flex-direction: column;
     width: 10vw;
-padding: 10rem 0;
+padding: 6rem 0;
 margin: 4rem 3rem;
     }
 
@@ -1689,6 +1728,7 @@ padding: 6rem 5rem 5rem 2.5rem;
     /*Værker Desktop*/
     .produkter {
     column-count: 4;
+        padding-left: 24vw;
   }
     
 #luk{
@@ -1697,6 +1737,15 @@ right: 5.5em}
 #indhold{
 width: 28vw;
 margin-left: auto;}
+    
+    #navigationsmenu{
+        margin-top: 9vw;
+    }
+    
+      .menu{
+        padding-top: 11%;
+        
+    }
     
     
 
@@ -1717,10 +1766,7 @@ margin-left: auto;}
     
 
     
-    .menu{
-        padding-top: 11%;
-        
-    }
+  
     
     .streg1 {
     background-image: url(SVG/stregtegning.svg);
@@ -1758,11 +1804,10 @@ margin-left: auto;}
 
      #start .column2{
         padding-left: 2vw;
+         flex-basis: 400px;
     }
     
-       .uniquetext{
-    margin-left: 24%;
-}
+   
     
     .blomst2{ 
         background-image: url(SVG/blomst.svg);
@@ -1828,13 +1873,13 @@ margin-left: auto;}
            
 
             footer {
-                padding: 2rem 5rem;
+                padding: 4vw 15vw;
                 border-bottom: 0.5vw solid #2FA7DE;
                 margin-top: 4vw;
             }
 
             .footer1 img {
-                width: 10%;
+                width: 15%;
             }
 
             .social {

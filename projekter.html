@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Per Hillo’s aktuelle projekter og arrangementer. Her kan du læse mere om hvad der rører sig i mit liv!">
-    <meta name="keywords" content=" kunstner, nærvær. Billedkunst, galleri, atelier, malerier, art, maler, kærlighed, arrangement, projekt, news">
+    <meta name="keywords" content="per hillo, kunstner, nærvær. Billedkunst, galleri, atelier, malerier, art, maler, kærlighed, arrangement, projekt, news">
     <meta name="author" content="">
     <meta name="robots" content="noindex">
     <title>Per Hillo - Aktuelt</title>
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -26,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="fade-in">
 
        <nav id="navbarwhite" class="scroll">
         <a href="index.html" id="logoa"><div id="logo2">
@@ -47,7 +46,7 @@
                 <div class="bar2 black"></div>
                 <div class="bar3 black"></div>
             </div>
-<div class="backgroundimage"></div>
+
            <div class="centre_menu">
             <!--Knappen som bringer burgermenuen frem.-->
             <ul id="topmenu" class="hidden">
@@ -78,7 +77,9 @@
                 <div class="column2">
                     <h2> </h2>
                     <p></p>
+                    <h4 class="dato"></h4>
                 </div>
+                
             </div>
 
         </template>
@@ -159,6 +160,7 @@
                     klon.querySelector("img").src = nyhed.picture.guid;
                     klon.querySelector("h2").textContent = nyhed.title.rendered;
                     klon.querySelector("p").innerHTML = nyhed.text;
+                    klon.querySelector("h4").innerHTML = nyhed.dato;
                     dest.appendChild(klon);
                 }) /*Her bliver de angivet HTML-elementer indhold ændret dynamisk fra JSON dataen. */
             }
