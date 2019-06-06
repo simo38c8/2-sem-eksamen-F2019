@@ -198,7 +198,7 @@
             
             function visSingle(produkt){ 
           console.log("vis single virker");
-            document.querySelector("#indhold").innerHTML = `<div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <div class="rammecentrer"><p>${produkt.product_text}</p> <br> <p>Størrelse: ${produkt.size}</p> <p>Pris: ${produkt.price}</p></div></div>`;  /* Dette er hvad der skal fremgå i singleview, dette er altså hvad der skal erstattes i HTML. */
+            document.querySelector("#indhold").innerHTML = `<div class="heightramme"><div class="ramme"><img src=${produkt.picture.guid} alt=${produkt.title.rendered}><h2>${produkt.title.rendered}</h2> <div class="rammecentrer"><p>${produkt.product_text}</p> <br> <p>Størrelse: ${produkt.size}</p> <p>Pris: ${produkt.price}</p></div></div></div>`;  /* Dette er hvad der skal fremgå i singleview, dette er altså hvad der skal erstattes i HTML. */
                         document.querySelector("#popup").style.display = "block"; /* "#popup" skal fjernes */
                         document.querySelector("#popup #luk").addEventListener("click", close);
                     } /*Denne funktion angiver hvad der sker i singleview samt gøre det muligt at lukke singleview ned igen via #luk knappen*/

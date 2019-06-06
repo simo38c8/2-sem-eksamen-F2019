@@ -130,7 +130,6 @@ producth1 {
 #topmenu {
     list-style-type: none;
     transition: transform 1s;
-    z-index: 1;
     width: 100%;
     height: 106%;
     top: -1rem;
@@ -316,6 +315,9 @@ h2, h3 {
     text-align: center;}
 
 
+#meet img{
+        padding-top: 4vw;
+}
 
 #logo {
     background-image: url(SVG/Logo_hvid.svg);
@@ -375,7 +377,7 @@ h2, h3 {
 
 .info2 p,
 .info2 ul {
-    padding: 0 2rem 0 2rem;
+     padding: 0rem 1rem 1rem 2rem;
     list-style: none;
     font-family: 'Montserrat', sans-serif;
 }
@@ -383,7 +385,6 @@ h2, h3 {
 
 .info2 {
     text-align: center;
-    height: 25vw;
     margin: 0;
     display: inline-block;
     text-align: left;
@@ -403,7 +404,6 @@ h2, h3 {
 }
 
 /*værker mobil */
-
 
 
   .produkter { 
@@ -446,7 +446,7 @@ text-align: center;
         position: fixed;
         background-color: hsla(0, 1%, 69%, 0.5);
         display: none;
-        z-index: 1;
+        z-index: 5;
     }
 
     #indhold {
@@ -473,7 +473,9 @@ text-align: center;
 .ramme{
     background-color: white;
     text-align: center;
-    padding: 2rem;
+    width: 100vw;
+    padding: 5vw 26vw;
+  
 }
 
 .rammecentrer {
@@ -760,7 +762,7 @@ footer p {
             border-bottom: 2vw solid #2FA7DE;
             margin-top: 7vw;
             position: relative;
-            z-index: 5;
+            z-index: 3;
         }
 
 
@@ -952,6 +954,10 @@ footer p {
     }
     
     
+    #meet img{
+    padding-top: 0vw;
+    }
+    
 /*
     Nederstående kode vedrørende "#arrow"" er taget fra https://codepen.io/karinajdavila/pen/Pbyzzd
     og derefter tilpasset til hjemmesiden. 
@@ -1099,7 +1105,6 @@ footer p {
     
      /*infografik ipad*/
     #infografik {
-    height: 25vw;
     vertical-align: middle;
 }
       #infografik img {
@@ -1110,9 +1115,13 @@ footer p {
 
 
 .info1 {
-    height: 25vw;
+    height: 18vw;
 
 }
+    
+    .uniquetext{
+        padding-bottom: 2vw;
+    }
 
 .infowrap {
     flex-basis: 156px;
@@ -1361,21 +1370,21 @@ footer p {
     
   }
   
+    .ramme{
+    padding: 3vw 7vw 3vw 7vw;
+    margin-top: -3.9vw;
+}
+    
     
     .produkt{
         position: relative;
     }
     
     .produkthover{
-        display: none;
-        background: rgba(255, 255, 255, 0.76);
         height: 100%;
         width: 100%;
         text-align: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        cursor: pointer;
+        position: relative;
     }
 
 
@@ -1384,10 +1393,16 @@ footer p {
         display: block;
     }
     
+    .produkthover h2{
+font-size: 1rem;
+ padding: 1vw 0 0.5vw 0
+}
+    
     #indhold{
     width: 39vw;
     margin-left: 34vw;
     margin: 6rem auto;
+        
 }
     
     #luk{
@@ -1611,7 +1626,7 @@ margin: 4rem 3rem;
                 border-bottom: 0.5vw solid #2FA7DE;
                 margin-top: 4vw;
                 position: relative;
-                z-index: 10;
+                z-index: 6;
             }
 
             .footer1 img {
@@ -1741,12 +1756,36 @@ padding: 3rem 5rem 5rem 2.5rem;
         padding-left: 24vw;
   }
     
+    .ramme{
+    padding: 3vw 5vw 3vw 5vw;
+    margin-top: -2.5vw;
+    }
+    
+     .produkthover{
+        display: none;
+        background: rgba(255, 255, 255, 0.76);
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+
+    }
+    
+    .produkt:hover .produkthover {
+        display: block;
+    }
+    
+    .heightramme{  max-height: 25vw;
+    }
+    
 #luk{
 right: 5.5em}
 
 #indhold{
 width: 28vw;
-margin-left: auto;}
+margin-left: auto;
+
+    }
     
     #navigationsmenu{
         margin-top: 9vw;
@@ -1784,8 +1823,8 @@ margin-left: auto;}
     position: absolute;
     width: 20vw;
     height: 22vw;
-   right: 1vw;
-    bottom: -53.4vw;
+    right: 1vw;
+    bottom: -40.4vw;
     background-size: 100%;
 }
   
@@ -1817,18 +1856,26 @@ margin-left: auto;}
          flex-basis: 400px;
     }
     
-   
+    #infografik {
+    height: 25vw;
+}
+    
+   .info2{
+height: 25vw}
+
+.info1{
+height: 25vw}
     
     .blomst2{ 
         background-image: url(SVG/blomst.svg);
         background-repeat: no-repeat;
         position: absolute;
-        width: 23vw;
-        height: 25vw;
-        background-size: 100%;
-        bottom: -100vw;
-        display: block;
-        z-index: -1;
+        width: 36vw;
+    height: 39vw;
+    background-size: 100%;
+    bottom: -120vw;
+    display: block;
+    z-index: -1;
     }
     
      #atelier{
